@@ -10,10 +10,10 @@ public class ThreadInterrupts {
 		parent.start();
 		
 		try {
-			Thread.sleep(8000);
+			Thread.sleep(10000);
 			parent.interrupt();
 		
-			parent.join();
+			parent.join(); //carefull as child nothing is waiting on Child thread to finish!!
 		} catch (InterruptedException e) {
 			System.out.println("Main thread Interrupted");
 			e.printStackTrace();
@@ -29,7 +29,9 @@ public class ThreadInterrupts {
 				System.out.println("Parent Thread hello");
 				ChildThread childThread = new ChildThread();
 				childThread.start();
-				Thread.sleep(5000);
+				Thread.sleep(2000);
+				childThread.interrupt();
+				Thread.sleep(2000);
 				childThread.interrupt();
 				childThread.join();
 				
@@ -37,19 +39,21 @@ public class ThreadInterrupts {
 			} catch (InterruptedException e) {
 				System.out.println("Parent thread interrupted");
 			}
-			
 		}
 	}
 	
 	public static class ChildThread extends Thread {
+		int interruptCount = 0;
 		@Override
 		public void run() {
-			try {
-				Thread.sleep(10000);
-				System.out.println("Child Thread hello");
-			} catch (InterruptedException e) {
-				System.out.println("Child thread interrupted");
-//				e.printStackTrace();
+			while(interruptCount <2) {
+				try {
+					Thread.sleep(10000);
+					System.out.println("Child Thread hello [should never see this!!]");
+				} catch (InterruptedException e) {
+					System.out.println("Child thread interrupted");
+					interruptCount++;
+				}
 			}
 			
 		}
