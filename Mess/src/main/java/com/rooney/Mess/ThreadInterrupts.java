@@ -45,7 +45,7 @@ public class ThreadInterrupts {
 
 		public void run() {
 			try {
-				System.out.println("Parent Thread hello");
+				System.out.println("Parent Thread Begin");
 				childThread.start();
 
 				Thread.sleep(2000);
@@ -59,6 +59,7 @@ public class ThreadInterrupts {
 			} catch (InterruptedException e) {
 				System.out.println("Parent thread interrupted");
 			}
+			System.out.println("ParentThread finishing");
 		}
 	}
 
@@ -68,6 +69,7 @@ public class ThreadInterrupts {
 		public void run() {
 			while (interruptCount < 2) {
 				try {
+					System.out.println("SimpleChildThread sleeping");
 					Thread.sleep(10000);
 					System.out.println("SimpleChildThread hello [should never see this!!]");
 				} catch (InterruptedException e) {
@@ -75,6 +77,7 @@ public class ThreadInterrupts {
 					interruptCount++;
 				}
 			}
+			System.out.println("SimpleChildThread finishing");
 		}
 	}
 
@@ -94,16 +97,20 @@ public class ThreadInterrupts {
 					interruptCount++;
 				}
 			}
+			System.out.println("BlockedReaderChildThread finishing");
 		}
 	}
 
-	//
+	//Any InputStream can be wrapped and made Interruptible
 	public static class InterruptibleReaderChild extends Thread {
 		public void run() {
 			int interruptCount = 0;
-//			InputStream in = Channels.newInputStream((new FileInputStream(FileDescriptor.in)).getChannel()); //shortcut
-			InputStream anInputStream = new FileInputStream(FileDescriptor.in);
-			ReadableByteChannel readableByteChannel = Channels.newChannel(anInputStream); //gives Interruptible
+//			InputStream interruptibleInputStream = Channels.newInputStream((new FileInputStream(FileDescriptor.in)).getChannel()); // shortcut
+//			InputStream anInputStream = new FileInputStream(FileDescriptor.in); //long hand
+//			ReadableByteChannel readableByteChannel = Channels.newChannel(anInputStream); //gives Interruptible
+
+//			InputStream interruptibleInputStream = Channels.newInputStream( Channels.newChannel(System.in)); //shortcut
+			ReadableByteChannel readableByteChannel = Channels.newChannel(System.in); //gives Interruptible
 			InputStream interruptibleInputStream = Channels.newInputStream(readableByteChannel);
 			
 			while (interruptCount < 2) {
@@ -116,6 +123,7 @@ public class ThreadInterrupts {
 					interruptCount++;
 				}
 			}
+			System.out.println("InterruptibleReaderChild finishing");
 		}
 	}
 }
