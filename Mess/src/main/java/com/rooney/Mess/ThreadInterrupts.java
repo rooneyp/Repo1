@@ -26,7 +26,7 @@ public class ThreadInterrupts {
 				System.out.println("Parent Thread hello");
 				ChildThread childThread = new ChildThread();
 				childThread.start();
-				
+
 				Thread.sleep(2000);
 				childThread.interrupt();
 				Thread.sleep(2000);
