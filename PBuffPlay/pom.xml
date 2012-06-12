@@ -28,8 +28,13 @@
 				<groupId>com.google.protobuf.tools</groupId>
 				<artifactId>maven-protoc-plugin</artifactId>
 				<configuration>
+					<protocExecutable>/Dev/Apps/protobuf-2.4.1/src/protoc.exe </protocExecutable>
+                    <outputDirectory>/Users/prooney/git/Repo1/PBuffPlay/src/main/generated</outputDirectory>
+					<!-- 
                     <protocExecutable>/usr/local/bin/protoc</protocExecutable>
                     <outputDirectory>/Users/Paul/Dev/Code/PBuffPlay/src/main/generated</outputDirectory>
+                     -->
+                    <checkStaleness>true</checkStaleness> 
                 </configuration>
 				<executions>
 					<execution>
@@ -67,7 +72,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<execute></execute>
+										<ignore></ignore>
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -86,7 +91,7 @@
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<execute></execute>
+										<ignore></ignore>
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
