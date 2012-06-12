@@ -158,5 +158,33 @@
 			</exclusions>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.ftpserver</groupId>
+			<artifactId>ftpserver-core</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.ftpserver</groupId>
+			<artifactId>ftplet-api</artifactId>
+			<version>1.0.6</version>
+		</dependency>
+		
+		<dependency>
+	<groupId>org.apache.sshd</groupId>
+	<artifactId>sshd-core</artifactId>
+	<version>0.6.0</version>
+</dependency>
+            <dependency>
+	<groupId>org.apache.sshd</groupId>
+	<artifactId>sshd-pam</artifactId>
+	<version>0.6.0</version>
+</dependency>
+
+		<dependency>
+			<groupId>com.jcraft</groupId>
+			<artifactId>jsch</artifactId>
+			<version>0.1.48</version>
+		</dependency>
+            
 	</dependencies>
 </project>
