@@ -73,6 +73,7 @@ class AddPerson {
     }
 
     AddressBook.Builder addressBook = AddressBook.newBuilder();
+    AddressBook.getDescriptor()
 
     // Read the existing address book.
     try {
