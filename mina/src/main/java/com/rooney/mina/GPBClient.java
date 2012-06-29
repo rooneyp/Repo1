@@ -8,27 +8,27 @@ import org.apache.mina.core.future.ConnectFuture;
 import org.apache.mina.core.service.IoHandlerAdapter;
 import org.apache.mina.core.session.IoSession;
 import org.apache.mina.filter.codec.ProtocolCodecFilter;
+import org.apache.mina.filter.codec.protobuf.ProtobufCodecFactory;
 import org.apache.mina.filter.codec.textline.TextLineCodecFactory;
 import org.apache.mina.transport.socket.nio.NioSocketConnector;
 
-public class EchoClient {
+import com.rooney.pbuff.KitchenSinkProtos.KitchenSink;
 
-	public static class EchoClientSessionHandler extends IoHandlerAdapter {
+public class GPBClient {
+
+	public static class GPBClientSessionHandler extends IoHandlerAdapter {
 		@Override
 		public void sessionOpened(IoSession session) {
 			// send summation requests
 			for (int i = 0; i < 5; i++) {
-				session.write(Thread.currentThread().getName() + " hello" + i);
+				KitchenSink kitchenSink = KitchenSink.newBuilder().setMyFixed32(i).build();
+				session.write(kitchenSink);
 			}
 		}
 
 		@Override
 		public void messageReceived(IoSession session, Object message) {
-			String str = (String) message;
-			System.out.println(Thread.currentThread().getName() + " client received: " + str);
-			if ("quit".equals(str)) {
-				session.close(true);
-			}
+			System.out.println("Received " + message);
 
 		}
 
@@ -46,10 +46,10 @@ public class EchoClient {
 		NioSocketConnector connector = new NioSocketConnector();
 
 		connector.setConnectTimeoutMillis(1000);
-		connector.getFilterChain().addLast("codec", new ProtocolCodecFilter(new TextLineCodecFactory(Charset.forName("UTF-8"))));
+		connector.getFilterChain().addLast("codec", new ProtocolCodecFilter(ProtobufCodecFactory.newInstance(KitchenSink.getDefaultInstance())));
 		// connector.getFilterChain().addLast("logger", new LoggingFilter());
 
-		connector.setHandler(new EchoClientSessionHandler());
+		connector.setHandler(new GPBClientSessionHandler());
 
 		IoSession session;
 		for (;;) {
