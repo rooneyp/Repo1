@@ -1,13 +1,17 @@
 package com.rooney.Mess;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class DelMe {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		new DelMe().go();
+
+        List<String> strings = Arrays.asList("a", "b");
+        System.out.println(strings);
 	}
 
 	private void go() {
