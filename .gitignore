@@ -1,18 +1,20 @@
-
-mina/.settings/org.eclipse.core.resources.prefs
-
+.DS_Store
+.project
+.settings/
+.classpath
+.DS_Store
+target/
+mina/target/*
 mina/.classpath
 
 mina/.DS_Store
 
-PBuffPlay/.project
+Mess/.project
 
-Mess/.settings/org.eclipse.jdt.core.prefs
+mina/.settings/
 
-Mess/.settings/org.eclipse.m2e.core.prefs
+mina/target/classes/*
 
-Mess/.classpath
+mina/target/classes/META-INF/maven/com.rooney/mina/pom.properties
 
-.DS_Store
-
-mina/.DS_Store
+mina/target/classes/META-INF/maven/com.rooney/mina/pom.xml
