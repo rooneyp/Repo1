@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location" value="classpath:com/rooney/spring/properties.properties" />
+	</bean>
+
+
+	<bean id="parent" class="com.rooney.spring.Parent" scope="prototype">
+		<property name="child">
+			<bean class="com.rooney.spring.Child">
+                <property name="string" value="${foo.bar}"/> <!-- spring 3+ #{3 * 100}-->
+			</bean>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+	                <!-- ref bean="cronTrigger1" />
+	                <ref bean="cronTrigger2" / -->
+	
+				<ref bean="simpleTrigger" />
+			</list>
+		</property>
+	</bean>
+    
+	<bean id="simpleTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+	    <property name="jobDetail" ref="jobDetailInstance1" />
+	    <property name="startDelay" value="10000" />
+	    <!--property name="repeatInterval" value="0"/-->
+	    <property name="repeatCount" value="0"/>
+	</bean>    
+    
+    
+    
+    <bean id="cronTrigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="jobDetailInstance1" />
+        <property name="cronExpression" value="*/10 * * * * ?" />
+    </bean>
+    
+    <bean id="jobDetailInstance1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+       <property name="targetObject" ref="parent" />
+       <property name="targetMethod" value="scheduled" />
+    </bean>
+    
+    <bean id="cronTrigger2" class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="jobDetailInstance2" />
+        <property name="cronExpression" value="*/5 * * * * ?" />
+    </bean>
+    
+    <bean id="jobDetailInstance2" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+       <property name="targetObject" ref="parent" />
+       <property name="targetMethod" value="scheduled" />
+    </bean> 
+    
+</beans>
