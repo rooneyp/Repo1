@@ -1,0 +1,67 @@
+<project default="hello">
+  
+
+<target name="hello">  
+ <script language="javascript"> <![CDATA[
+    importClass(java.io.File);
+    importPackage(java.lang);
+
+    echo = project.createTask("echo");
+    fs = project.createDataType("fileset");
+     dir = project.getProperty("project.build.directory") + "/concordion"; 
+    fs.setDir( new File( dir ) );
+    fs.setIncludes( "**/*.html" );
+
+    srcFiles = fs.getDirectoryScanner( project ).getIncludedFiles( );
+    f = new java.io.File(dir + "/index.html")
+    echo.setFile( f );
+    
+    var allFileNames = "";
+    for ( i = 0; i < srcFiles.length; i++ ) {
+        var filename = srcFiles[i];
+        allFileNames += ("<A href=\"" + filename + " \">" + filename + "</A><BR/>");
+    }
+    
+    System.out.println(allFileNames);     
+    echo.setMessage( allFileNames );
+    echo.perform();
+    
+    ]]> </script>
+  </target>
+
+
+
+<target name="helloJSBasic">  
+ <script language="javascript"> <![CDATA[
+      importPackage(java.lang);
+      System.out.println("Hello");
+
+    ]]> </script>
+  </target>
+  
+  <target name="helloxx">
+      <pathconvert property="x" targetos="unix">
+        <path path="Aj.Java"/>
+        <mapper>
+        <chainedmapper>
+          <flattenmapper/>
+          <globmapper from="a*.java" to="*" casesensitive="no"/>
+        </chainedmapper>
+        </mapper>
+      </pathconvert>
+      <echo>x is ${x}</echo>
+  </target>
+  
+  
+  <target name="hellozzz">
+    <echo message="Hello, World"/>
+    <fileset id="myfileset" dir="target/concordion">
+        <include name="**/*.html" />
+    </fileset>
+    
+    <property name="sounds" refid="myfileset" />
+    <echo >${sounds}</echo>    
+    <echo file="index.html">${sounds}</echo>    
+    
+  </target>
+</project>
