@@ -20,10 +20,10 @@
 	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
 		<property name="triggers">
 			<list>
-	                <!-- ref bean="cronTrigger1" />
-	                <ref bean="cronTrigger2" / -->
+	                <ref bean="cronTrigger1"/>
+	                <!-- ref bean="cronTrigger2" / -->
 	
-				<ref bean="simpleTrigger" />
+				<!-- ref bean="simpleTrigger" /-->
 			</list>
 		</property>
 	</bean>
@@ -39,7 +39,7 @@
     
     <bean id="cronTrigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
         <property name="jobDetail" ref="jobDetailInstance1" />
-        <property name="cronExpression" value="*/10 * * * * ?" />
+        <property name="cronExpression" value="7/5 * * * * ?" />
     </bean>
     
     <bean id="jobDetailInstance1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
