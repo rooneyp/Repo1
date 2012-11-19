@@ -39,7 +39,7 @@
     
     <bean id="cronTrigger1" class="org.springframework.scheduling.quartz.CronTriggerBean">
         <property name="jobDetail" ref="jobDetailInstance1" />
-        <property name="cronExpression" value="7/5 * * * * ?" />
+        <property name="cronExpression" value="3/5 * * * * ?" />
     </bean>
     
     <bean id="jobDetailInstance1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">

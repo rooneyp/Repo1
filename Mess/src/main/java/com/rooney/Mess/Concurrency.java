@@ -20,10 +20,15 @@ public class Concurrency {
 
         ExecutorService executor = Executors.newCachedThreadPool();
 
-        runThread(LockType.READ, rwl, executor, 3000, 0);
-        runThread(LockType.READ, rwl, executor, 3000, 0);
-        Thread.sleep(500); // want to delay the write lock aquistion as it will block read lock acquisitions
-        runThread(LockType.WRITE, rwl, executor, 3000, 1000);
+        // share lock across threads
+        Lock readLock = rwl.readLock();
+        Lock writeLock = rwl.writeLock();
+
+
+        runThread(LockType.READ, rwl, executor, 3000, 0, readLock);
+        runThread(LockType.READ, rwl, executor, 3000, 0, readLock);
+        // Thread.sleep(500); // want to delay the write lock aquistion as it will block read lock acquisitions
+        // runThread(LockType.WRITE, rwl, executor, 3000, 1000, writeLock);
     }
 
     public enum LockType {
@@ -31,21 +36,21 @@ public class Concurrency {
     }
 
     public void runThread(final LockType lockType, final ReadWriteLock rwl, ExecutorService executor,
-            final int sleepTimeMills, final int timeToWaitOnLockMillis) {
+            final int sleepTimeMills, final int timeToWaitOnLockMillis, final Lock lock) {
         executor.execute(new Runnable() {
             public void run() {
                 log(Thread.currentThread() + " acquiring Lock " + lockType);
 
-                Lock lock = null;
-                switch (lockType) {
-                    case READ:
-                        lock = rwl.readLock();
-                        break;
-
-                    case WRITE:
-                        lock = rwl.writeLock();
-                        break;
-                }
+                // Lock lock = null;
+                // switch (lockType) {
+                // case READ:
+                // lock = rwl.readLock();
+                // break;
+                //
+                // case WRITE:
+                // lock = rwl.writeLock();
+                // break;
+                // }
 
                 boolean lockAcquired = false;
                 try {
