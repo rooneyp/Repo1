@@ -47,7 +47,7 @@ public class BlockingIOClientAndServer {
                 for (int i = 0; i < 1000; i++) {
                     Thread.sleep(1 * 1000);
                     System.out.println("Client sending chars of size: " + numCharsToSend + ", loop: " + i);
-                    out.println(charsToSend);
+                    out.println(charsToSend); //he blocks after 25 calls with default send buffer of 8192
                 }
                 
             } catch (Exception e) {
