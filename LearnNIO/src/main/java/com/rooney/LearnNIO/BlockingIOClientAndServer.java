@@ -1,5 +1,6 @@
 package com.rooney.LearnNIO;
 
+import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
@@ -99,7 +100,7 @@ public class BlockingIOClientAndServer {
             System.out.println("Server Handler Thread [" + Thread.currentThread().getName() + "] started");
             try {
                 while (!halt) {
-                    InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream());
+                    InputStreamReader inputStreamReader = new InputStreamReader(new BufferedInputStream(socket.getInputStream()));
                     char[] chars = new char[5];
                     inputStreamReader.read(chars);
                     System.out.println("Server Handler read : " + String.copyValueOf(chars));

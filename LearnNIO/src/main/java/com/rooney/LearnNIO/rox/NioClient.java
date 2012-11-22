@@ -44,26 +44,21 @@ public class NioClient implements Runnable {
         this.selector = this.initSelector();
     }
 
-    public void send(byte[] data, RspHandler handler) throws IOException {
-        // Start a new connection
-        SocketChannel socket = this.initiateConnection();
-        
-        // Register the response handler
-        this.rspHandlers.put(socket, handler);
-        
-        // And queue the data we want written
-        synchronized (this.pendingData) {
-            List queue = (List) this.pendingData.get(socket);
-            if (queue == null) {
-                queue = new ArrayList();
-                this.pendingData.put(socket, queue);
-            }
-            queue.add(ByteBuffer.wrap(data));
-        }
 
-        // Finally, wake up our selecting thread so it can make the required changes
-        this.selector.wakeup();
-    }
+    public static void main(String[] args) {
+        try {
+            NioClient client = new NioClient(InetAddress.getByName("www.google.com"), 80);
+            Thread t = new Thread(client);
+            t.setDaemon(true);
+            t.start();
+            
+            RspHandler handler = new RspHandler();
+            client.send("GET / HTTP/1.0\r\n\r\n".getBytes(), handler);
+            handler.waitForResponse();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }    
 
     public void run() {
         while (true) {
@@ -114,6 +109,8 @@ public class NioClient implements Runnable {
         }
     }
 
+
+    
     private void read(SelectionKey key) throws IOException {
         SocketChannel socketChannel = (SocketChannel) key.channel();
 
@@ -144,6 +141,27 @@ public class NioClient implements Runnable {
         this.handleResponse(socketChannel, this.readBuffer.array(), numRead);
     }
 
+    public void send(byte[] data, RspHandler handler) throws IOException {
+        // Start a new connection
+        SocketChannel socket = this.initiateConnection();
+        
+        // Register the response handler
+        this.rspHandlers.put(socket, handler);
+        
+        // And queue the data we want written
+        synchronized (this.pendingData) {
+            List queue = (List) this.pendingData.get(socket);
+            if (queue == null) {
+                queue = new ArrayList();
+                this.pendingData.put(socket, queue);
+            }
+            queue.add(ByteBuffer.wrap(data));
+        }
+
+        // Finally, wake up our selecting thread so it can make the required changes
+        this.selector.wakeup();
+    }    
+    
     private void handleResponse(SocketChannel socketChannel, byte[] data, int numRead) throws IOException {
         // Make a correctly sized copy of the data before handing it
         // to the client
@@ -229,19 +247,7 @@ public class NioClient implements Runnable {
         return SelectorProvider.provider().openSelector();
     }
 
-    public static void main(String[] args) {
-        try {
-            NioClient client = new NioClient(InetAddress.getByName("www.google.com"), 80);
-            Thread t = new Thread(client);
-            t.setDaemon(true);
-            t.start();
-            RspHandler handler = new RspHandler();
-            client.send("GET / HTTP/1.0\r\n\r\n".getBytes(), handler);
-            handler.waitForResponse();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+
     
     public static class RspHandler {
         private byte[] rsp = null;
