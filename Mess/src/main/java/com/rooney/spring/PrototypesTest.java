@@ -12,6 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "classpath:com/rooney/spring/MyApplicationContext1.xml" })
 public class PrototypesTest {
 
+    @Autowired String myString;
+    
     @Autowired
     private ApplicationContext applicationContext;
 
@@ -21,10 +23,14 @@ public class PrototypesTest {
                 new ClassPathXmlApplicationContext(new String[] { "com/rooney/spring/MyApplicationContext1.xml" });
         // getBeans(appContext);
 
-
         Thread.sleep(1000 * 30);
     }
 
+    @Test
+    public void testSysProps() {
+        System.out.println(myString);
+    }
+    
     @Test
     public void testPrototypes() throws Exception {
         getBeans(applicationContext);
