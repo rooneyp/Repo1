@@ -97,11 +97,10 @@ public class Sockets {
         System.out.println("getTcpNoDelay(): " + socket.getTcpNoDelay());
     }
     
-    public static void simpleAccept() {
+    public static void simpleAccept(int sleepTime, int listenPort) {
         System.out.println("Start");
         ServerSocket ss;
         try {
-            int listenPort = 10000;
             ss = new ServerSocket(listenPort); 
         } catch (IOException e1) {
             e1.printStackTrace();
@@ -113,8 +112,8 @@ public class Sockets {
             while (true) {
                 Socket accept = ss.accept();
                 System.out.println("accepted from " + accept);
-            }
-        } catch (IOException e) {
+                Thread.sleep(sleepTime);            }
+        } catch (Exception e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }

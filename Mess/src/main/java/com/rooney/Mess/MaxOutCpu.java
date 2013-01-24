@@ -29,30 +29,32 @@ public class MaxOutCpu extends Thread{
 	public void run() {
 		System.out.println("Thread running" + Thread.currentThread());
 		while(keepRunning) {
-			// calc pi inefficiently
-			int N = 1000000; // # of terms
-			double sum = 0.0; // final sum
-			double term; // term without sign
-			double sign = 1.0; // sign on each term
-			for (int k = 0; k < N; k++) {
-				term = 1.0 / (2.0 * k + 1.0);
-				sum = sum + sign * term;
-				//if (k % (N / 50) == 0) // print one in 50
-				// System.out.println ("k: " + k + ", " + sum + ", pi: " +
-				// sum*4.0);
-					sign = -sign;
-			}
-			// System.out.println("Final pi/4 (approx., " +
-			// N + " terms): " + sum);
-			// System.out.println("Actual pi/4: " +
-			// Math.PI/4.0);
-			// System.out.println("Final pi (approx., " +
-			// N + " terms): " + sum*4.0);
-			// System.out.println("Actual pi: " + Math.PI);
-			
+			calcPiInefficiently(1000000);
 		}
 		
 	}
+
+    public static void calcPiInefficiently(long numTerms) {
+        // calc pi inefficiently
+        double sum = 0.0; // final sum
+        double term; // term without sign
+        double sign = 1.0; // sign on each term
+        for (int k = 0; k < numTerms; k++) {
+        	term = 1.0 / (2.0 * k + 1.0);
+        	sum = sum + sign * term;
+        	//if (k % (N / 50) == 0) // print one in 50
+        	// System.out.println ("k: " + k + ", " + sum + ", pi: " +
+        	// sum*4.0);
+        		sign = -sign;
+        }
+        // System.out.println("Final pi/4 (approx., " +
+        // N + " terms): " + sum);
+        // System.out.println("Actual pi/4: " +
+        // Math.PI/4.0);
+        // System.out.println("Final pi (approx., " +
+        // N + " terms): " + sum*4.0);
+        // System.out.println("Actual pi: " + Math.PI);
+    }
 
 	
 	
