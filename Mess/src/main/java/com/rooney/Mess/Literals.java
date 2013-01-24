@@ -1,5 +1,7 @@
 package com.rooney.Mess;
 
+import java.math.BigDecimal;
+
 /**
 * Output is:
 * int 1
@@ -15,6 +17,9 @@ public class Literals {
     public static void main(String[] args) {
         foo((byte)1); //byte
         foo(1); //int
+        foo(1); //int
+        foo(2147483647);
+        foo(2147483648L); //needs L 
         foo(1L); //long
         foo(Integer.MAX_VALUE + 1); //broken it needs 'L' added. so its illegal?
         foo(1.1111); //double
@@ -34,6 +39,18 @@ public class Literals {
         
         byte b = (byte) 128; //messed up value, can we validate this?
         foo(b);
+        
+        //or just parse numbers using BigDecimal 
+        BigDecimal bd = new BigDecimal("1111111111111111111111111111111.12345");
+        System.out.println(bd.toPlainString());
+        System.out.println(bd.toString());
+        System.out.println(bd.scale());
+        
+        //if no scale: treat as whole no. if > Int.MAX then append 'L'
+        //else treat as double (no need to add 'D' as this is the default). Do not try and reduce to float (as this is hard/impossible with where the decimal place is)
+        //for byte, treat as int
+        
+        
     }
 
     
