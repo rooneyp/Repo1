@@ -7,7 +7,7 @@ public class Generics {
      * @param args
      */
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
+        String foo = Generics.<String>any();
 
     }
 
@@ -17,4 +17,11 @@ public class Generics {
     
     private <T> void foo(){          
     }
+
+    public static <T> T any() {
+        return (T) null;
+    }
+
 }
+
+
