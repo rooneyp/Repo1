@@ -50,6 +50,18 @@ public class Literals {
         //else treat as double (no need to add 'D' as this is the default). Do not try and reduce to float (as this is hard/impossible with where the decimal place is)
         //for byte, treat as int
         
+        System.out.println("int division: " + ( (double)(100/2) ));
+        
+        Character character = new Character('b');
+        int i = character;
+        Integer bigI = Integer.valueOf(character);
+        
+        float f = character;
+        
+//        byte b1 = character; illegal
+//        byte b2 =   
+        
+        int i1 = (int) 100f;
         
     }
 

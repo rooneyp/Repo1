@@ -24,9 +24,11 @@ import javax.tools.SimpleJavaFileObject;
 import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 
+import org.apache.commons.lang3.StringUtils;
+
 public class DynamicHalloWorld {   
     private final static String HALLO_WORLD_PACKAGE = "com.rooney.Mess.codegen";
-    private static final String OUTPUT_DIR = "D:/delme2/" + HALLO_WORLD_PACKAGE.replace(".", "/") + "/";
+    private static final String OUTPUT_DIR = "D:/delme/" + HALLO_WORLD_PACKAGE.replace(".", "/") + "/";
     private final static String HALLO_WORLD_CLASS_NAME = "HalloWorldTest";   
     private final static String HALLO_WORLD_SOURCE =
         "package "+ HALLO_WORLD_PACKAGE +"; \n" +
@@ -37,6 +39,7 @@ public class DynamicHalloWorld {
         "        x++; \n" +
         "        i++; \n" +
         "        System.out.println(\"Hallo world: x=\" + x + \" i=\" +i);\n" +           
+//"        System.out.println(\"Hallo world: \";\n" +
         "    }\n" +           
         "}";
 
@@ -57,7 +60,9 @@ public class DynamicHalloWorld {
     }    
     
     private static void writeSrcToDisk() throws Exception {
-        FileWriter writer = new FileWriter(new File(OUTPUT_DIR + HALLO_WORLD_CLASS_NAME + ".java"));
+        File file = new File(OUTPUT_DIR + HALLO_WORLD_CLASS_NAME + ".java");
+        file.getParentFile().mkdirs();
+        FileWriter writer = new FileWriter(file);
         writer.write(HALLO_WORLD_SOURCE);
         writer.close();
     }
@@ -88,7 +93,7 @@ public class DynamicHalloWorld {
             
             List<String> options = Arrays.asList("-g"); //List options = Collections.emptyList();
             List<InMemorySourceFileObjectX> compilationUnits = Arrays.asList(new InMemorySourceFileObjectX(className, halloWorldProgram));           
-            Writer out = new PrintWriter(System.err);           
+            Writer out = getWriter();           
             JavaCompiler.CompilationTask compile = javac.getTask(out, fileManager, null, options, null, compilationUnits);           
 
             boolean res = compile.call();           
@@ -99,6 +104,27 @@ public class DynamicHalloWorld {
             e.printStackTrace();       
         }       
         return null;   
+    }
+
+    private static Writer getWriter() {
+        Writer logWriter = new Writer() {
+            @Override
+            public void write(char[] cbuf, int off, int len) throws IOException {
+                String msg = String.valueOf(cbuf, off, len);
+                if(StringUtils.isNotBlank(msg)) {
+                    System.err.println(msg); 
+                }
+            }
+            
+            @Override
+            public void flush() throws IOException {
+            }
+            
+            @Override
+            public void close() throws IOException {
+            }
+        };
+        return logWriter;
     }
 }
 

@@ -62,4 +62,36 @@
        <property name="targetMethod" value="scheduled" />
     </bean> 
     
+    <!-- context:property-placeholder location="classpath:ExePipelineTest.properties" /-->
+
+    <!-- bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:ExePipelineTest.properties</value>
+            </list>
+        </property>
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+    </bean-->
+    
+    <!-- bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:ExePipelineTest.properties</value>
+            </list>
+        </property>
+    </bean-->
+
+    <!-- bean id="propertyConfigurerRemote" class="com.tektronix.nm.iris.spring.OAMConfigurationPropertyPlaceholder">
+        <property name="ignoreUnresolvablePlaceholders" value="true" />
+        <property name="plists">
+            <list>
+    
+                <value>com.tektronix.kpi-flex.common</value>
+            </list>
+        </property>
+        <property name="oamPort" value="#{systemProperties['oamPort']}" />
+        <property name="placeholderPrefix" value="$[" />
+        <property name="placeholderSuffix" value="]" />
+    </bean-->    
+    
 </beans>
