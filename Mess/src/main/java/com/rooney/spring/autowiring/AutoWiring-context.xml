@@ -11,4 +11,8 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.rooney"/>
     <task:scheduler id="scheduler" /> <!-- default is 1   pool-size="10" -->
+    
+    <bean id="test" class="java.lang.String">
+        <constructor-arg value="test"/>
+    </bean>
 </beans>        
