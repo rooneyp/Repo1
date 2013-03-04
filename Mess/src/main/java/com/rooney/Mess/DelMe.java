@@ -10,18 +10,37 @@ import java.util.Map;
 
 public class DelMe {
 
-    public void main(String[] args) throws Exception {
-        Object[] foo = new Object[] {"A", 100L};
+    public static void main(String[] args) throws Exception {
+        new Thread(){
+            public void run() {
+            }
+        }.start();
+
+        System.out.println("main sleeping");
         
-        for (Object object : foo) {
-            long result = 100 * (Long)object;
-        }
+        Thread.sleep(10000);
         
-//        loopWithChannel();
-//        multiObj();
-        //ReadableByteChannel newChannel = Channels.newChannel(socket.getInputStream());
+//        new Child().doStuff();
     }
 
+    public static class Parent {
+        private int parentVar = 100;
+        
+        public void doStuff() {
+            System.out.println("this.parentVar " + this.parentVar);
+        }
+    }
+
+    public static class Child extends Parent{
+        
+        @Override
+        public void doStuff() {
+            System.out.println("Calling parent");
+            super.doStuff();
+        }
+    }    
+    
+    
     public  void loopWithChannel() throws Exception{
         int loopCount = 2;
         String obj = "I'm an Object";

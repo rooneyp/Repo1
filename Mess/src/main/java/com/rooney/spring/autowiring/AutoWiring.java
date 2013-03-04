@@ -32,7 +32,7 @@ public class AutoWiring {
     }
 
     public static void chooseBeanImplUsingLabelInConfigOrSysProp() {
-        System.setProperty("oam.choice", "remote"); //friendly value 'remote' for meaningful property 'oam.choice'
+//        System.setProperty("oam.choice", "remote"); //friendly value 'remote' for meaningful property 'oam.choice'
         ApplicationContext appCtx = new ClassPathXmlApplicationContext("classpath:**/AutoWiring-context.xml");
         System.out.println(appCtx.getBean(MyInterface.class));
     }
@@ -48,7 +48,6 @@ public class AutoWiring {
     }
     
     public static interface MyInterface {
-        public String toString();
     }    
     
     public static class MyImpl1 implements MyInterface{
@@ -56,5 +55,4 @@ public class AutoWiring {
     
     public static class MyImpl2 implements MyInterface{
     }    
-    
 }
