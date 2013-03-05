@@ -8,16 +8,7 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
         
-    <context:annotation-config/>
-    <context:component-scan base-package="com.rooney"/>
-
-    <context:property-placeholder location="classpath:/com/rooney/spring/spel/Spel.properties"/>
- 
-    
-    <!-- NOT WORKING are import must happen before props are processed 
-    http://stackoverflow.com/questions/1520055/import-spring-config-file-based-on-property-in-properties-file
-    -->
-    <import resource="classpath:/com/rooney/spring/spel/${context2}"/>
-    <!-- import resource="classpath:/com/rooney/spring/spel/Spel-context2.xml"/-->
-    
+    <bean id="stringBean" class="java.lang.String" >
+        <constructor-arg value="hello from Spel-context3.xml"/>
+    </bean>    
 </beans>        

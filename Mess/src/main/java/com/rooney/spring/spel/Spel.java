@@ -10,7 +10,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class) 
-@ContextConfiguration
+@ContextConfiguration(locations = { "classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml" })
 public class Spel {
     @Autowired String stringBean;
     
@@ -21,7 +21,7 @@ public class Spel {
     }
     
     @Test public void testImportUsingPropertyInAppCtxName() throws Exception {
-        assertEquals("hello", stringBean);
+        assertEquals("hello from context 3", stringBean);
     }
     
 }
