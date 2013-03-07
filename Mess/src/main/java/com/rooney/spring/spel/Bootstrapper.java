@@ -5,9 +5,11 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.support.AbstractRefreshableConfigApplicationContext;
+import org.springframework.context.support.GenericApplicationContext;
 
 public class Bootstrapper implements ApplicationContextAware, InitializingBean {
-    private AbstractRefreshableConfigApplicationContext context;
+    private AbstractRefreshableConfigApplicationContext configSettableContext;
+    private GenericApplicationContext genContext;
     private String[] configLocations;
 
     public void setConfigLocations(final String[] configLocations) {
@@ -15,12 +17,20 @@ public class Bootstrapper implements ApplicationContextAware, InitializingBean {
     }
 
     public void afterPropertiesSet() throws Exception {
-        context.setConfigLocations(configLocations);
-        context.refresh();
+        if(configSettableContext != null) {
+            configSettableContext.setConfigLocations(configLocations);
+            configSettableContext.refresh();
+        } else {
+            genContext.refresh();
+        }
     }
 
 	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException {
-		context =  (AbstractRefreshableConfigApplicationContext) applicationContext;		
+	    if(applicationContext instanceof AbstractRefreshableConfigApplicationContext) {
+	        configSettableContext =  (AbstractRefreshableConfigApplicationContext) applicationContext;		
+	    } else {
+	        genContext = (GenericApplicationContext) applicationContext;
+	    }
 	}
 }

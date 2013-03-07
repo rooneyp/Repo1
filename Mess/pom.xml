@@ -19,6 +19,33 @@
 
 	<dependencies>
         <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>14.0</version>
+        </dependency>	
+	
+	   <!-- GS-Collections fork available in mvn central repo -->
+		<dependency>
+		 <groupId>com.webguys.ponzu</groupId>
+		 <artifactId>api</artifactId>
+		 <version>1.2.0</version>
+		</dependency>
+		
+		<dependency>
+		 <groupId>com.webguys.ponzu</groupId>
+		 <artifactId>impl</artifactId>
+		 <version>1.2.0</version>
+		</dependency>
+		
+		<dependency>
+		 <groupId>com.webguys.ponzu</groupId>
+		 <artifactId>testutils</artifactId>
+		 <version>1.2.0</version>
+		 <scope>test</scope>
+		</dependency>	   
+	
+	
+        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>1.9.0</version>

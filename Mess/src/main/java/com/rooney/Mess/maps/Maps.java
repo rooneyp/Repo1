@@ -1,4 +1,4 @@
-package com.rooney.Mess;
+package com.rooney.Mess.maps;
 
 import java.util.HashMap;
 import java.util.Map;

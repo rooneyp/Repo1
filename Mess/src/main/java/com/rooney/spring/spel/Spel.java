@@ -10,7 +10,10 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class) 
-@ContextConfiguration(locations = { "classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml" })
+@ContextConfiguration( locations = { "classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml" }, loader = SpelContextLoader.class)
+//TODO http://blog.springsource.com/2011/06/21/spring-3-1-m2-testing-with-configuration-classes-and-profiles/
+//use classes or @ContextConfiguration(loader=AnnotationConfigContextLoader.class) and a class annotated with @Configuration
+
 public class Spel {
     @Autowired String stringBean;
     
@@ -21,7 +24,7 @@ public class Spel {
     }
     
     @Test public void testImportUsingPropertyInAppCtxName() throws Exception {
-        assertEquals("hello from context 3", stringBean);
+        assertEquals("hello from Spel-context3.xml", stringBean);
     }
     
 }

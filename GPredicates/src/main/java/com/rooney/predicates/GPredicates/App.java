@@ -1,14 +1,16 @@
 package com.rooney.predicates.GPredicates;
 
-import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.*;
+import static com.google.common.base.Predicates.*;
 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+import org.junit.Test;
+
 import com.google.common.base.CharMatcher;
 import com.google.common.base.Predicate;
-import static com.google.common.base.Predicates.*;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Collections2;
 /**
@@ -48,6 +50,15 @@ public class App {
 
 	public static void main(String[] args) {
 		new App().useRemoveOneListFromAnother(); //useMethodToBuildAnonPredicate(); //useIn();
+	}
+	
+	@Test
+	public void testVistAllAndExecuteCode() {
+//        Collections2.transform(MY_MAP.entrySet(), new Function(){
+//            public Object apply(Object input) {
+//                System.out.println(input); 
+//                return input;
+//            }});   
 	}
 	
 	void splitting() {
