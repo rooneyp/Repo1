@@ -3,6 +3,8 @@ package com.rooney.spring.spel;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -11,17 +13,33 @@ import org.springframework.context.support.GenericApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.MutablePropertySources;
 import org.springframework.core.env.PropertySource;
+import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-
+@RunWith(SpringJUnit4ClassRunner.class) 
+@ContextConfiguration(locations = { "classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml" })
 public class SpelMainline {
+    @Autowired ApplicationContext appCtx;
+    
+    @Test
+    public void test() { //NOT WOrking as GenericApplicationContext does not support multiple refresh attempts
+        assertEquals("hello from Spel-context3.xml", appCtx.getBean("stringBean"));
+    }
+    
 	public static void main(String[] args) {
-//		mess();
-
 		bootstrap();
-		
-//    	oldWayWithSysProp();
+	}
+	
+	//works sort of. doesn't resolve placeholders in the loaded context. can;t load beans from bootstrap context
+	public static void bootstrap() {
+//	    System.setProperty("context", "Spel-context2.xml");
+	    ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml");
+	    System.out.println(ctx.getBean("stringBean"));
+	    System.out.println(ctx.getBean("stringBeanBootstrap"));
 	}
 
+	
 	protected static void mess() {
 		//		System.setProperty("spring.profiles.active","foo");
 //		    	ConfigurableApplicationContext ctx = 
@@ -38,19 +56,6 @@ public class SpelMainline {
 		System.out.println(ctx.getBean("stringBean"));
 	}
     
-	//works
-	public static void bootstrap() {
-    	ConfigurableApplicationContext ctx = 
-    			new ClassPathXmlApplicationContext("classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml");
-		System.out.println(ctx.getBean("stringBean"));
-		
-//		    @Value("${foo}") private String foo;
-//    
-//    @Test public void testUppercase() throws Exception {
-//        assertEquals("FOO", foo);
-//    }
-		
-	}
 	
 	public static class MyPropertySource extends PropertySource {
 		

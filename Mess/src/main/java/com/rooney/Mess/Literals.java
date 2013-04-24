@@ -36,9 +36,14 @@ public class Literals {
         
         //above works when using 
         //** what about byte, only applies to LHS assignment
+
+        //byte -> int
         
         byte b = (byte) 128; //messed up value, can we validate this?
         foo(b);
+        int byteAsInt = (int) b;
+        System.out.println("byteAsInt" + byteAsInt);
+        
         
         //or just parse numbers using BigDecimal 
         BigDecimal bd = new BigDecimal("1111111111111111111111111111111.12345");

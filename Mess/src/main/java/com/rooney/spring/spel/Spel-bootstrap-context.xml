@@ -7,7 +7,12 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
-	<context:property-placeholder location="classpath:/com/rooney/spring/spel/Spel.properties" />
+	<context:property-placeholder location="classpath:/com/rooney/spring/spel/Spel.properties" system-properties-mode="OVERRIDE"/>
+	
+	<bean id="stringBeanBootstrap" class="java.lang.String" >
+        <constructor-arg value="${foo}"/> <!-- hello from Spel-context3.xml  -->
+    </bean>    
+	
 	<bean id="bootstrapper" class="com.rooney.spring.spel.Bootstrapper">
 		<property name="configLocations">
 			<list>
