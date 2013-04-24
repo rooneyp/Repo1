@@ -7,17 +7,40 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
         http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
-	<context:property-placeholder location="classpath:/com/rooney/spring/spel/Spel.properties" system-properties-mode="OVERRIDE"/>
+	<!-- context:property-placeholder id="bootstrapProperties" location="classpath:/com/rooney/spring/spel/Spel.properties" system-properties-mode="OVERRIDE"/-->
+	
+    <bean id="my.propertyPlaceholderConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:/com/rooney/spring/spel/Spel.properties</value>
+            </list>
+        </property>
+    </bean>	
 	
 	<bean id="stringBeanBootstrap" class="java.lang.String" >
         <constructor-arg value="${foo}"/> <!-- hello from Spel-context3.xml  -->
     </bean>    
 	
-	<bean id="bootstrapper" class="com.rooney.spring.spel.Bootstrapper">
+	<!-- bean id="bootstrapper" class="com.rooney.spring.spel.Bootstrapper">
 		<property name="configLocations">
 			<list>
 				<value>classpath:/com/rooney/spring/spel/${context}</value>
 			</list>
 		</property>
-	</bean>
+	</bean-->
+	
+    <bean id="my.applicationContextLoader"
+          class="com.rooney.spring.spel.ApplicationContextLoader"
+          init-method="initialize"
+          destroy-method="close">
+        <property name="propertyPlaceholder" ref="my.propertyPlaceholderConfigurer"/>
+        <property name="contextLocations">
+            <list>
+                <value>classpath:/com/rooney/spring/spel/${context}</value>
+            </list>
+        </property>
+    </bean>	
+	
+	
 </beans>        
