@@ -36,7 +36,7 @@ public class SpelMainline {
 //	    System.setProperty("context", "Spel-context2.xml");
 	    ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/com/rooney/spring/spel/Spel-bootstrap-context.xml");
 	    System.out.println(ctx.getBean("stringBean"));
-	    System.out.println(ctx.getBean("stringBeanBootstrap"));
+	    //System.out.println(ctx.getBean("stringBeanBootstrap"));
 	}
 
 	
