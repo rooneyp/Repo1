@@ -18,3 +18,5 @@ mina/target/classes/*
 mina/target/classes/META-INF/maven/com.rooney/mina/pom.properties
 
 mina/target/classes/META-INF/maven/com.rooney/mina/pom.xml
+
+*.prefs
