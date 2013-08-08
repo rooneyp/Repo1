@@ -16,15 +16,25 @@ public class Scheduling {
     @Autowired TaskScheduler scheduler;
     
     @Test public void testScheduling() throws Exception {
-        scheduler.schedule(new MyRunnable(), new CronTrigger("*/5 * * * * ?"));
+        scheduler.schedule(new MyRunnable(10), new CronTrigger("*/5 * * * * ?"));
+        
+        scheduler.schedule(new MyRunnable(1), new CronTrigger("*/5 * * * * ?"));
+//        scheduler.schedule(new MyRunnable(), new CronTrigger("0 */1 * * * ?")); //every min
         Thread.sleep(600000);
     }
     
     public static class MyRunnable implements Runnable {
+        
+        private int delay;
+
+        public MyRunnable(int i) {
+            this.delay = i;
+        }
+
         public void run() {
-            System.out.println("Running: " + new Date() + ", " + this);
+            System.err.println(Thread.currentThread() + " delay:"+ delay +"\tRunning: " + new Date() + ", " + this);
             try {
-                Thread.sleep(10000);
+                Thread.sleep(delay * 1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
