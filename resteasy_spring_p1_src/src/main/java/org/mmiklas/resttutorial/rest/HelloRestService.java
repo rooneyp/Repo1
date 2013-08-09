@@ -18,8 +18,12 @@ import org.mmiklas.resttutorial.server.HelloSpringService;
 @Named
 @Path("/Hello")
 public class HelloRestService {
+	
+    public HelloRestService() {
+    	System.err.println("CREATING HelloRestService instance " + this);
+	}
 
-    @Inject
+	@Inject
     private HelloSpringService halloService;
 
     // curl http://localhost:8080/resteasy_spring_p1/rest/Hello/text?msg=Hi%20There
