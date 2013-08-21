@@ -1,0 +1,50 @@
+<html xmlns:concordion="http://www.concordion.org/2007/concordion" xmlns:myext="http://myorg.org/my/extension">
+<link href="../../concordion.css" rel="stylesheet" type="text/css" />
+<body>
+
+    <h1>Hello World!</h1>
+
+    <p>
+    	After a user logs into the system, a greeting is
+    	displayed saying "Hello [user's first name]!"
+    </p>
+
+    <div class="example">
+
+		<h3>Example</h3>
+		
+		<table myext:myexecute="addRowCloneFromBaseRecord()">
+			<tr>
+			    <th>### test description ###</th>
+			    <th concordion:execute="updateCell(#TEXT, #a)"><span concordion:set="#a">EndTimeInMillis</span></th>
+			    <th concordion:execute="updateCell(#TEXT, #a)"><span concordion:set="#a">FirstMsgOpCode</span></th>
+			    <th concordion:execute="updateCell(#TEXT, #a)"><span concordion:set="#a">StartTimeInMillis</span></th>
+			</tr>
+			<tr>
+			  <td>firstOpCode==2, it's Update Location</td>
+			  <td>1370350500000</td>
+			  <td>2</td>
+			  <td>1370350500000</td>
+			</tr>
+			<tr>
+			  <td>firstOpCode==99, it's Update Location</td>
+			  <td>1370350500099</td>
+			  <td>299</td>
+			  <td>1370350500099</td>
+			</tr>			
+		</table>
+		
+		<p concordion:execute="logLastHeaderRow()"/>
+		
+    <p>Searching for "<b concordion:set="#searchString">arr</b>" will return:</p>
+
+    <table concordion:verifyRows="#username : getSearchResultsFor(#searchString)">
+        <tr><th concordion:assertEquals="#username">Matching Usernames</th></tr>
+        <tr><td>george.harrison</td></tr>
+        <tr><td>ringo.starr</td></tr>
+    </table>		
+		
+    </div>
+
+</body>
+</html>			

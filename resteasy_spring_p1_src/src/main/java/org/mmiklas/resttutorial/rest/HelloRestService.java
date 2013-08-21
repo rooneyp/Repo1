@@ -37,7 +37,7 @@ public class HelloRestService {
 
     // *NIX: curl -X POST -H "Content-Type: application/json" -d '{"msg":"Hi There","gender":"MALE"}' http://localhost:8080/resteasy_spring_p1/rest/Hello/javabean
     //  WIN: curl -i -X POST -H "Content-Type: application/json" -d "{\"msg\":\"Hi There\",\"gender\":\"MALE\"}"  http://134.64.166.12:8080/resteasy_spring_p1/rest/Hello/javabean
-    //  WIN: curl -i -X POST -H "Content-Type: application/json" -d @\foo.txt  http://134.64.166.12:8080/resteasy_spring_p1/rest/Hello/javabean
+    //  WIN: curl -i -X POST -H "Content-Type: application/json" -d @\msg.txt  http://134.64.166.12:8080/resteasy_spring_p1/rest/Hello/javabean
     @POST
     @Path("javabean")
     @Produces({ MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML })
