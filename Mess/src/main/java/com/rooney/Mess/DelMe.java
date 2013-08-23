@@ -1,42 +1,22 @@
 package com.rooney.Mess;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.nio.charset.Charset;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-
-import com.google.common.io.Files;
-import com.rooney.Mess.codegen.Foo;
 
 public class DelMe {
 
     public static void main(String[] args) throws Exception {
+    	String before = "ab";
+    	char[] afterChars = new char[before.length()];
     	
-    }
-
-    public static class Parent {
-    	protected static boolean foo = true;
-
-		public boolean isFoo() {
-			return foo;
-		}
-
-		public void setFoo(boolean foo) {
-			Parent.foo = foo;
-		}
+    	int length = before.length() -1;
+    	int i = 0;
     	
-    }
-    
-    public static class child extends Parent{
-    	public void go() {
-    		System.out.println(isFoo() + "" +  foo);
+    	for(i = 0; length -i >= i; i++) {
+    		afterChars[i] = before.charAt(length -i);
+    		afterChars[length -i] = before.charAt(i);
     	}
+    	
+    	System.out.println(afterChars);
+    	System.out.println(i);
     }
+
 }
