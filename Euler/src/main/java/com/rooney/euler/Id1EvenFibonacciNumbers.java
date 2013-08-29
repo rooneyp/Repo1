@@ -14,22 +14,76 @@ public class Id1EvenFibonacciNumbers {
 	 */
 	public static void main(String[] args) {
 		int maxTermSize = 90;
-//		System.out.println(attempt1(maxTermSize));
-		System.out.println(attempt2(maxTermSize));
+		System.out.println(attempt1(maxTermSize));
+		System.out.println(attempt2NoTmpVar(maxTermSize));
+		System.out.println(attempt3(maxTermSize));
+		System.out.println(attempt4Given1And2(maxTermSize));
 		
 	}
 
-	private static long attempt2(int maxTermSize) {
-		int a = 0; 
-		int b = 1;
+	
+	private static long attempt4Given1And2(int maxTermSize) {
+		int a = 1; 
+		int b = 2;
 		int tmpB; 
 		
 		long sumOfEven = 0;
 		
-		while(a+b < maxTermSize) {
+		while(true) {
 			tmpB = a+b;
 			a=b;
 			b=tmpB;
+			
+			if(a+b >= maxTermSize)
+			
+			if(b % 2 ==0) {
+				sumOfEven += b;
+			} 
+			
+		}
+		return sumOfEven;
+	}
+	
+	private static long attempt3(int maxTermSize) {
+		int a = 0; 
+		int b = 1;
+		long sumOfEven = 0;
+		
+		return attempt3RecurMethod(a, b, sumOfEven, maxTermSize);
+	}	
+	
+	
+	private static long attempt3RecurMethod(int a, int b, long sumOfEven, int maxTermSize) {
+		a = a+b; // a holds next in fib seq
+		
+		//swap
+		a=a+b; 
+		b=a-b; 
+		a=a-b;
+		
+		if(b % 2 ==0) {
+			sumOfEven += b;
+		} 
+		
+		if(a+b < maxTermSize) {
+			sumOfEven =  attempt3RecurMethod(a, b, sumOfEven, maxTermSize);
+		}
+		
+		return sumOfEven;
+	}
+	
+	
+	private static long attempt2NoTmpVar(int maxTermSize) {
+		int a = 0; 
+		int b = 1;
+		long sumOfEven = 0;
+		
+		while(a+b < maxTermSize) {
+			a = a+b; 
+			
+			a=a+b; 
+			b=a-b; 
+			a=a-b;
 			
 			if(b % 2 ==0) {
 				sumOfEven += b;
