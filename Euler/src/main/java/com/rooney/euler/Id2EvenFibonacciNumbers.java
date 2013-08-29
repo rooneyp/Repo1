@@ -7,7 +7,7 @@ package com.rooney.euler;
  * @author prooney
  *
  */
-public class Id1EvenFibonacciNumbers {
+public class Id2EvenFibonacciNumbers {
 
 	/**
 	 * ans is 4613732
@@ -16,12 +16,12 @@ public class Id1EvenFibonacciNumbers {
 		int maxTermSize = 90;
 		System.out.println(attempt1(maxTermSize));
 		System.out.println(attempt2NoTmpVar(maxTermSize));
-		System.out.println(attempt3(maxTermSize));
+		System.out.println(attempt3Recursion(maxTermSize));
 		System.out.println(attempt4Given1And2(maxTermSize));
 		
 	}
 
-	
+	//not working
 	private static long attempt4Given1And2(int maxTermSize) {
 		int a = 1; 
 		int b = 2;
@@ -34,7 +34,9 @@ public class Id1EvenFibonacciNumbers {
 			a=b;
 			b=tmpB;
 			
-			if(a+b >= maxTermSize)
+			if(a+b >= maxTermSize){
+				break;
+			}
 			
 			if(b % 2 ==0) {
 				sumOfEven += b;
@@ -44,7 +46,7 @@ public class Id1EvenFibonacciNumbers {
 		return sumOfEven;
 	}
 	
-	private static long attempt3(int maxTermSize) {
+	private static long attempt3Recursion(int maxTermSize) {
 		int a = 0; 
 		int b = 1;
 		long sumOfEven = 0;
