@@ -1,0 +1,14 @@
+<html>
+<body>
+	<h1>Sample rest project</h1>
+	
+	call with<BR>
+	   <code>curl http://localhost:8080/resteasy_spring_p1/rest/Hello/text?msg=Hi%20There</code><BR>
+	and<BR> 
+	<code> 
+	    *NIX: curl -X POST -H "Content-Type: application/json" -d '{"msg":"Hi There","gender":"MALE"}' http://localhost:8080/resteasy_spring_p1/rest/Hello/javabean<BR>
+        WIN: curl -i -X POST -H "Content-Type: application/json" -d "{\"msg\":\"Hi There\",\"gender\":\"MALE\"}"  http://134.64.166.12:8080/resteasy_spring_p1/rest/Hello/javabean<BR>
+        WIN: curl -i -X POST -H "Content-Type: application/json" -d @\msg.txt  http://134.64.166.12:8080/resteasy_spring_p1/rest/Hello/javabean<BR>
+    </code>
+</body>
+</html>
