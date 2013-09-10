@@ -19,9 +19,9 @@ import org.mmiklas.resttutorial.server.HelloSpringService;
 @Path("/Hello")
 public class HelloRestService {
 	
-    public HelloRestService() {
-    	System.err.println("CREATING HelloRestService instance " + this);
-	}
+//    public HelloRestService() {
+//    	System.err.println("CREATING HelloRestService instance " + this);
+//	}
 
 	@Inject
     private HelloSpringService halloService;
