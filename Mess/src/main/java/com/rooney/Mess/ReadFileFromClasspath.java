@@ -4,9 +4,9 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 
-import org.apache.commons.vfs2.FileObject;
-import org.apache.commons.vfs2.FileSystemException;
-import org.apache.commons.vfs2.FileType;
+//import org.apache.commons.vfs2.FileObject;
+//import org.apache.commons.vfs2.FileSystemException;
+//import org.apache.commons.vfs2.FileType;
 
 public class ReadFileFromClasspath {
 	public static void main(String[] args) {
