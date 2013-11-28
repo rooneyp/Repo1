@@ -9,41 +9,29 @@ import java.util.List;
  */
 public class App {
     public static void main(String[] args) {
-    	Parent[] objs = new Parent[] {new Parent(), new Child()};
+    	String s = "abcdef";
     	
-    	for (Parent parent : objs) {
-			process(parent);
-		}
+    	char[] charArray = s.toCharArray();
+    	char[] charArrayOut = new char[charArray.length];
     	
-    	Parent p = new Parent();
-    	Child c = new Child();
+    	int lastIndex = charArray.length -1;
+
+//    	for(int i=0; i< charArray.length / 2 + charArray.length % 2; i++) {
+//    		charArrayOut[i] = charArray[arrayLen -i];
+//    		charArrayOut[arrayLen -i] = charArray[i];
+//    		System.out.println("loop");
+//    	}
     	
-    	process(p);
-    	process(c); 
+    	
+    	int i = 0;
+    	while(i <= (lastIndex -i)) {
+    		charArrayOut[i] = charArray[lastIndex -i];
+    		charArrayOut[lastIndex -i] = charArray[i];
+    		System.out.println("loop");
+    	}
+
+    	System.out.println(charArrayOut);
     	
     }
 
-    public static void process(Parent p) {
-    	System.out.println(" process(Parent p) {");
-    	p.foo();
-    };
-    
-    public static void process(Child c) {
-    	System.out.println(" process(Child c) {");
-    	c.foo();
-    };
-    
-    public static class Parent {
-    	public void foo() {
-    		System.out.println("Parent.foo");
-    	}
-    }
-    
-    public static class Child extends Parent {
-    	public void foo() {
-    		System.out.println("Child.foo");
-    	}
-    }
-    
-    
 }

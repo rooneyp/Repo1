@@ -1,6 +1,7 @@
 package com.rooney.Mess;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 /**
 * Output is:
@@ -15,7 +16,47 @@ import java.math.BigDecimal;
 */
 public class Literals {
     public static void main(String[] args) {
-        foo((byte)1); //byte
+//        parseTest();
+        
+    	floatingPointCalcs();
+    	
+    }
+
+
+
+	/**
+	 * http://floating-point-gui.de/basic/
+	 */
+	private static void floatingPointCalcs() {
+		System.out.println("default double: " + (0.1 + 0.2)); //results in 0.30000000000000004
+		System.out.println("double :" + (0.1d + 0.2d)); //results in 0.30000000000000004
+		System.out.println("double rounded:" + Math.round(0.1d + 0.2d)); //results in 0.30000000000000004
+		
+		System.out.println("+ 2 float literals: " + (0.1f + 0.2f)); //results in 0.3
+		
+		Float f1 = new Float(0.1);
+		Float f2 = new Float(0.2);
+		
+		System.out.println("+ 2 Floats: " + (f1 + f2)); //results in 0.3
+	
+		float f3 = 0.1f;
+		float f4 = 0.2f;
+		System.out.println("sumConvertToStringThenBDecThenDouble: " + sumConvertToStringThenBDecThenDouble(f3, f4)); //results in 0.3
+	}
+
+
+    public static double sumConvertToStringThenBDecThenDouble(float arg1, float arg2) {
+        return sumUsingBigDecimal(Float.toString(arg1), Float.toString(arg2)).doubleValue();
+    }
+
+    private static int floatNumDecimalPlaces = 4;
+	
+    private static BigDecimal sumUsingBigDecimal(String arg1, String arg2) {
+        return new BigDecimal(arg1).add(new BigDecimal(arg2)).setScale(floatNumDecimalPlaces, RoundingMode.HALF_EVEN);
+    }    
+    
+	private static void parseTest() {
+		foo((byte)1); //byte
         foo(1); //int
         foo(1); //int
         foo(2147483647);
@@ -67,8 +108,7 @@ public class Literals {
 //        byte b2 =   
         
         int i1 = (int) 100f;
-        
-    }
+	}
 
     
     
