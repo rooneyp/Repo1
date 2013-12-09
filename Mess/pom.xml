@@ -59,7 +59,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>14.0</version>
+            <version>15.0</version>
         </dependency>	
 	
 	   <!-- GS-Collections fork available in mvn central repo -->
