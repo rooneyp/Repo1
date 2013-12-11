@@ -1,11 +1,12 @@
 package com.rooney.predicates.GPredicates;
 
-import static com.google.common.base.Predicates.alwaysFalse;
-import static com.google.common.base.Predicates.and;
+import static com.google.common.base.Strings.*;
+import static com.google.common.base.Predicates.*;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Splitter;
@@ -30,7 +31,7 @@ public class BooleanRegexFilterNamePair {
 	}
 
 	private Predicate<Map.Entry<String, String>> buildFilterPredicate(String filterPattern) {
-		if(Strings.isNullOrEmpty(filterPattern)) {
+		if(isNullOrEmpty(filterPattern)) {
 			System.err.println("invalid filter pattern: " + filterPattern);
 			return alwaysFalse();
 		}
@@ -38,43 +39,18 @@ public class BooleanRegexFilterNamePair {
 		List<Predicate<Map.Entry<String, String>>> allPredicates = new ArrayList<Predicate<Map.Entry<String,String>>>();
 		
 		for (String aFilter : Splitter.on(',').split(filterPattern)) {
-			final List<String> splitFilter = Splitter.on(':').splitToList(aFilter);
+			final List<String> splitFilter = Splitter.on(':').splitToList(aFilter.trim());
 			if(splitFilter.size() != 2) {
-				System.err.println("invalid filter " + splitFilter);
+				System.err.println("invalid filter " + aFilter);
 				return alwaysFalse();
 			}
 			
-			final String fieldName = splitFilter.get(0);
-			final String fieldFilter = splitFilter.get(1);
+			final String fieldName = splitFilter.get(0).trim();
+			final String fieldFilter = splitFilter.get(1).trim();
 			
 			
 			allPredicates.add(
-				new Predicate<Map.Entry<String, String>>() { //todo use factory method
-					public boolean apply(Entry<String, String> dataToFilter) {
-						if(fieldName.equals(dataToFilter.getKey())
-								&& buildIndividualFilterPredicate(fieldFilter).apply(dataToFilter.getValue())
-								) {
-							return true;
-						} else {
-							return false;
-						}
-					}
-
-					private Predicate<String> buildIndividualFilterPredicate(String fieldFilter) {
-						List<Predicate<String>> orPredicates = new ArrayList<Predicate<String>>();
-						
-						Iterable<String> splitByOR = Splitter.on("||").split(fieldFilter);
-						
-						
-						for (String orFilter : splitByOR) {
-							if(orFilter.startsWith("!")) {
-								
-							}
-						}
-						
-						return null;
-					};
-				}
+				buildMapEntryPredicate(fieldName, fieldFilter)
 			);
 		}
 		
@@ -82,5 +58,49 @@ public class BooleanRegexFilterNamePair {
 		
 		return and(allPredicates);
 	}
+
+	private Predicate<Entry<String, String>> buildMapEntryPredicate(
+			final String fieldName, final String fieldFilter) {
+		return new Predicate<Map.Entry<String, String>>() { //todo use factory method
+			public boolean apply(Map.Entry<String, String> dataToFilter) {
+				if(fieldName.equals(dataToFilter.getKey())
+						&& buildIndividualFilterPredicate(fieldFilter).apply(dataToFilter.getValue())
+						) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		};
+	}
+	
+	private Predicate<String> buildIndividualFilterPredicate(String fieldFilter) {
+		List<Predicate<String>> orPredicates = new ArrayList<Predicate<String>>();
+		
+		Iterable<String> splitByOR = Splitter.on("||").split(fieldFilter);
+		
+		
+		for (String orFilter : splitByOR) {
+			orFilter = orFilter.trim(); //TODO do we need these?
+			
+			if(orFilter.startsWith("!")) {
+				if(orFilter.length() == 1) {
+					System.err.println("invalid filter " + fieldFilter);
+					return alwaysFalse();
+				}
+				
+				orPredicates.add(not(equalTo(orFilter.substring(1))));
+			} else {
+				if(isNullOrEmpty(orFilter)) {
+					System.err.println("invalid filter " + fieldFilter);
+					return alwaysFalse();
+				}
+				
+				orPredicates.add(equalTo(orFilter));
+			}
+		}
+		
+		return or(orPredicates);
+	};	
 	
 }
