@@ -169,11 +169,11 @@
             <version>3.2</version>
         </dependency>   
         
-          <!-- dependency>
+          <dependency>
         <groupId>opensymphony</groupId>
         <artifactId>quartz-all</artifactId>
         <version>1.6.1</version>
-      </dependency-->        
+      </dependency>        
                 
         <dependency>
             <groupId>org.apache.commons</groupId>
