@@ -14,6 +14,13 @@ import com.google.common.base.Strings;
 import com.google.common.collect.Maps;
 
 public class BooleanRegexFilterNamePair {
+	Predicate<Map.Entry<String, String>> filterPredicate;
+	
+	
+	public BooleanRegexFilterNamePair(String filterPattern) {
+		filterPredicate = buildFilterPredicate(filterPattern);
+	}
+
 
 	/**
 	 * 
@@ -22,7 +29,6 @@ public class BooleanRegexFilterNamePair {
 	 * @return true if matched
 	 */
 	public boolean filter(Map<String, String> map, String filterPattern) {
-		Predicate<Map.Entry<String, String>> filterPredicate = buildFilterPredicate(filterPattern);
 		
 		Map<String, String> filteredEntries = Maps.filterEntries(map, filterPredicate);
 		
@@ -61,10 +67,17 @@ public class BooleanRegexFilterNamePair {
 
 	private Predicate<Entry<String, String>> buildMapEntryPredicate(
 			final String fieldName, final String fieldFilter) {
+		
+		
 		return new Predicate<Map.Entry<String, String>>() { //todo use factory method
+			{
+				buildIndividualFilterPredicate(fieldFilter);
+				
+			}
+			
 			public boolean apply(Map.Entry<String, String> dataToFilter) {
 				if(fieldName.equals(dataToFilter.getKey())
-						&& buildIndividualFilterPredicate(fieldFilter).apply(dataToFilter.getValue())
+						&& .apply(dataToFilter.getValue())
 						) {
 					return true;
 				} else {
@@ -81,7 +94,7 @@ public class BooleanRegexFilterNamePair {
 		
 		
 		for (String orFilter : splitByOR) {
-			orFilter = orFilter.trim(); //TODO do we need these?
+			orFilter = orFilter.trim();
 			
 			if(orFilter.startsWith("!")) {
 				if(orFilter.length() == 1) {
