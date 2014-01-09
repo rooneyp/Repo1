@@ -18,6 +18,15 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
 public class BooleanRegexFilterNamePair {
+<<<<<<< HEAD
+	Predicate<Map.Entry<String, String>> filterPredicate;
+	
+	
+	public BooleanRegexFilterNamePair(String filterPattern) {
+		filterPredicate = buildFilterPredicate(filterPattern);
+	}
+
+=======
 	final String filterPattern;
 	private final Predicate<String> dataKeysFilter;
 	private final Map<String, Predicate<CharSequence>> filtersByKey;
@@ -27,6 +36,7 @@ public class BooleanRegexFilterNamePair {
 		dataKeysFilter = buildFilterForKeys(filterPattern);
 		filtersByKey = buildFilterPredicate(filterPattern);
     }
+>>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 
 	/**
 	 * , is treated as AND
@@ -49,7 +59,11 @@ public class BooleanRegexFilterNamePair {
 	 * @param filterPattern
 	 * @return true if matched
 	 */
+<<<<<<< HEAD
+	public boolean filter(Map<String, String> map, String filterPattern) {
+=======
 	public boolean match(Map<String, String> dataToMatch) {
+>>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 		
 		//remove data fields that are not filtered on
 		Map<String, String> dataByFilterKeysOnly = Maps.filterKeys(dataToMatch, dataKeysFilter);
@@ -130,8 +144,36 @@ public class BooleanRegexFilterNamePair {
 			predicatesByKeyANDed.put(key, andPredicate);
         }
 		
+<<<<<<< HEAD
+		
+		return and(allPredicates);
+	}
+
+	private Predicate<Entry<String, String>> buildMapEntryPredicate(
+			final String fieldName, final String fieldFilter) {
+		
+		
+		return new Predicate<Map.Entry<String, String>>() { //todo use factory method
+			{
+				buildIndividualFilterPredicate(fieldFilter);
+				
+			}
+			
+			public boolean apply(Map.Entry<String, String> dataToFilter) {
+				if(fieldName.equals(dataToFilter.getKey())
+						&& .apply(dataToFilter.getValue())
+						) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+		};
+	}
+=======
 		return predicatesByKeyANDed; 
 	}	
+>>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 	
 	/**
 	 * Builds a filter Predicate for a keys' value from syntax:
@@ -155,8 +197,13 @@ public class BooleanRegexFilterNamePair {
 		
 		Iterable<String> splitByOR = Splitter.on("||").split(fieldFilterPattern); //just support OR for now
 		
+<<<<<<< HEAD
+		for (String orFilter : splitByOR) {
+			orFilter = orFilter.trim();
+=======
 		for (String orFilterPattern : splitByOR) {
 			orFilterPattern = orFilterPattern.trim(); //TODO do we need these?
+>>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 			
 			if(orFilterPattern.startsWith("!")) {
 				if(orFilterPattern.length() == 1) {
