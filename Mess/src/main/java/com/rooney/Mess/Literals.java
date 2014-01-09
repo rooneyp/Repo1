@@ -18,8 +18,26 @@ public class Literals {
     public static void main(String[] args) {
 //        parseTest();
         
-    	floatingPointCalcs();
+//    	floatingPointCalcs();
+    	floatingPointCalcs2();
     	
+    }
+
+
+
+	private static void floatingPointCalcs2() {
+		long l1 = 3;
+		float f1 = 3.3f;
+		float f2 = 3.333333333333333333f;
+		
+		double d1 = 3.3;
+		
+		System.out.println(f1);
+		System.out.println(l1 + f2);
+		
+		System.out.println(d1);
+		
+		//float to double when summing, and we need to preserve 
     }
 
 
