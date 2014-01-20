@@ -16,7 +16,8 @@ public class FreeMarker {
 	 */
 	public static void main(String[] args) throws Exception {
 		StringWriter out = new StringWriter();
-		new FreeMarker().codeGen("", "Scratch.ftl", out);
+//		System.setProperty("foo", "");
+		new FreeMarker().codeGen("", "Scratch2.ftl", out);
 		System.out.println(out);
 	}
 
