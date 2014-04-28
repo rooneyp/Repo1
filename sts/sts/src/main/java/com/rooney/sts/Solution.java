@@ -6,12 +6,15 @@ import java.io.InputStreamReader;
 /**
  * Task: Find the missing term in an Arithmetic Progression.
 	 
-	An Arithmetic Progression is defined as one in which there is a constant difference between the consecutive terms of a given series of numbers. You are provided with consecutive elements of an Arithmetic Progression. There is however one hitch: Exactly one term from the original series is missing from the set of numbers which have been given to you. The rest of the given series is the same as the original AP.  Find the missing term.  
+	An Arithmetic Progression is defined as one in which there is a constant difference between the consecutive terms of a given series of numbers. You are provided with
+    consecutive elements of an Arithmetic Progression. There is however one hitch: Exactly one term from the original series is missing from the set of numbers which have
+    been given to you. The rest of the given series is the same as the original AP.  Find the missing term.
 	 
 	 
 	Input Format
 	The first line contains an Integer N, which is the number of terms which will be provided as input.
-	This is followed by N consecutive Integers, with a space between each pair of integers. All of these are on one line, and they are in AP (other than the point where an integer is missing).
+	This is followed by N consecutive Integers, with a space between each pair of integers. All of these are on one line,
+    and they are in AP (other than the point where an integer is missing).
 	 
 	 
 	Output Format
@@ -25,7 +28,8 @@ import java.io.InputStreamReader;
 	7
 	 
 	Explanation
-	You are provided with 5 integers. As you can can observe, they have been picked from a series, in which the starting term is 1 and the common difference is 2. The only abberration, i.e. the missing term (7), occurs between 5 and 9. This is the missing element which you need to find.
+	You are provided with 5 integers. As you can can observe, they have been picked from a series, in which the starting term is 1 and the common difference is 2.
+  The only abberration, i.e. the missing term (7), occurs between 5 and 9. This is the missing element which you need to find.
 	 
 	Constraints
 	3 <= N <= 2500
@@ -41,26 +45,38 @@ public class Solution {
         String termsString = inputReader.readLine();
         
         
-        findMissingTerm(numberOfTermsString, termsString);
+        int missingTerm = findMissingTerm(numberOfTermsString, termsString);
     }
 
-	private static void findMissingTerm(String numberOfTermsString,	String termsString) {
-		int numOfTerms = Integer.valueOf(numberOfTermsString);
+    //1 3 5 7 11
+    //1 5 7 11 13
+    //
+	static int findMissingTerm(String numberOfTermsString,	String termsString) {
+		int missingTerm = -1;
+
+        int numOfTerms = Integer.valueOf(numberOfTermsString);
         String[] splitTermsString = termsString.split(" ", numOfTerms);
         int[] splitTerms = new int[splitTermsString.length];
+
         for (int i = 0; i < splitTermsString.length; i++) {
 			splitTerms[i] = Integer.valueOf(splitTermsString[i]);
 		}
-        
-        int diff = splitTerms[1] - splitTerms[0];
-        for (int i = 2; i < splitTerms.length; i++) {
-        	if(splitTerms[i] - splitTerms[i-1] != diff) {
-        		System.out.println();
-        	}
+
+        //2 diffs the same finds th diff
+        int diff = -1;
+        for (int i = 1; i < splitTerms.length; i++) {
+            int curDiff = splitTerms[i] - splitTerms[i - 1];
+
+            if(i ==1) {
+                diff = curDiff;
+            }
+
+
         }
-        
-        
-	}
+
+
+        return missingTerm;
+    }
     
     
 }
