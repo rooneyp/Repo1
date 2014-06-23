@@ -22,8 +22,7 @@ public class OpenCSV {
             System.err.println("file exists " + file);
         }
 
-        OutputStreamWriter outputStreamWriter =
-                new OutputStreamWriter(new FileOutputStream(file.getAbsolutePath()), "UTF-8");
+        OutputStreamWriter outputStreamWriter = new OutputStreamWriter(new FileOutputStream(file.getAbsolutePath()), "UTF-8");
         
         CSVWriter writer = new CSVWriter(new BufferedWriter(outputStreamWriter), ',');
         // feed in your array (or convert your data to an array)

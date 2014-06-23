@@ -52,6 +52,7 @@ public class Jaxenter {
 
 	}
 
+    // parallel stream (uses 1 global threadpool maybe?), filter and forEach
     private static void listing26() {
         people.parallelStream()
                 .filter((it) -> it.getAge() >= 21)
