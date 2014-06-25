@@ -17,7 +17,15 @@
         <!-- spring.version>2.5.6</spring.version-->
 	</properties>
 
+
+
 	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.antlr</groupId>
 			<artifactId>antlr-complete</artifactId>
@@ -113,12 +121,6 @@
 		  <scope>test</scope>
 		</dependency>	
 			
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.10</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>com.jcraft</groupId>
 			<artifactId>jsch</artifactId>

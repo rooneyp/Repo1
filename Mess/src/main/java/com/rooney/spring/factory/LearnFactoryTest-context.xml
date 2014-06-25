@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:util="http://www.springframework.org/schema/util"
+    xmlns:task="http://www.springframework.org/schema/task"
+    xmlns:c="http://www.springframework.org/schema/c"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+    
+    <context:annotation-config/>
+    <context:component-scan base-package="com.rooney.spring.factory" />
+    
+    
+     <bean id="abstractFooFactory"
+     	scope="prototype"
+  		abstract="true"
+        factory-bean="fooFactory"
+        factory-method="newFoo"
+        c:arg1="I_AM_ARG1"
+        c:arg2="100"/>
+    
+    <!-- can we just pass in one ctor here and get the others for free? -->
+    <bean id="childFooFactory" scope="prototype"
+    	parent="abstractFooFactory"
+    	c:arg1="I_AM_ARG1"
+    	>
+    </bean> 
+    
+    <!-- need scope="prototype" when passing args -->
+    <bean id="realFooFactory"
+    	scope="prototype"
+        factory-bean="fooFactory"
+        factory-method="newFoo"
+        c:arg1="I_AM_ARG1"
+        c:arg2="100"/>
+    
+    <bean id="testBean" class="java.lang.String">
+        <constructor-arg value="testBean"/>
+    </bean>
+</beans>    

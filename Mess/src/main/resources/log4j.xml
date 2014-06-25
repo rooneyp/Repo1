@@ -9,12 +9,12 @@
         </layout>
     </appender>
 
-    <category name="org.springframework">
+    <!-- category name="org.springframework">
          <priority value="DEBUG" />  
-    </category>
+    </category-->
 
     <root>
-        <priority value="DEBUG" />
+        <priority value="INFO" />
         <appender-ref ref="consoleLog" />
     </root>
 
