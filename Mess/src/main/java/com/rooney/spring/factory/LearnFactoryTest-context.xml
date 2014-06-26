@@ -14,30 +14,40 @@
     <context:component-scan base-package="com.rooney.spring.factory" />
     
     
-     <bean id="abstractFooFactory"
-     	scope="prototype"
+	<!-- it supplies only one 'common' ctor arg, children must supply the other 
+		supports prototype and singleton as we use factory-bean instead of class -->    
+     <bean id="abstractFooPrototype"
   		abstract="true"
         factory-bean="fooFactory"
         factory-method="newFoo"
-        c:arg1="I_AM_ARG1"
-        c:arg2="100"/>
+        c:arg1="abstractFooProtoType_ARG1"/>
     
-    <!-- can we just pass in one ctor here and get the others for free? -->
-    <bean id="childFooFactory" scope="prototype"
-    	parent="abstractFooFactory"
-    	c:arg1="I_AM_ARG1"
-    	>
+    <!-- for prototype needs non static method and scope-->
+    <bean id="childFooPrototype" parent="abstractFooPrototype" scope="prototype"
+    	c:arg2="childFooPrototype_ARG2">
     </bean> 
+
+    <bean id="childFooSingleton" parent="abstractFooPrototype"
+    	c:arg2="childFooSingleton_ARG2">
+    </bean> 
+
+    <!-- singleton -->
+    <bean id="nonAbstractFooFactory" class="com.rooney.spring.factory.FooFactory"
+        factory-method="newSingletonFoo"
+        c:arg1="nonAbstractFooFactory_ARG1"
+        c:arg2="nonAbstractFooFactory_ARG2"/>
     
-    <!-- need scope="prototype" when passing args -->
-    <bean id="realFooFactory"
-    	scope="prototype"
-        factory-bean="fooFactory"
-        factory-method="newFoo"
-        c:arg1="I_AM_ARG1"
-        c:arg2="100"/>
     
-    <bean id="testBean" class="java.lang.String">
+    <bean id="testBean" class="java.lang.String" c:_0="poppop"/>
+    
+    <bean id="testInt" class="java.lang.Integer" c:_0="100"/>
+    
+    <bean id="testDouble" class="java.lang.Double" c:_0="100.001"/>
+    
+    <!-- bean id="testBean" class="java.lang.String" c:original="poppop"/--> <!--not working-->
+	<!-- bean id="testBean" class="java.lang.String">
         <constructor-arg value="testBean"/>
-    </bean>
+        <constructor-arg index="0" type="java.lang.String" value="testBean"/>
+        <constructor-arg name="original" value="testBean"/> not working: used when there are multi args to a ctor 
+    </bean-->    
 </beans>    

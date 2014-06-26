@@ -14,7 +14,7 @@
     </category-->
 
     <root>
-        <priority value="INFO" />
+        <priority value="WARN" />
         <appender-ref ref="consoleLog" />
     </root>
 

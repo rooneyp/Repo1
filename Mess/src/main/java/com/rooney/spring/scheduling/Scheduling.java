@@ -13,14 +13,16 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class) 
 @ContextConfiguration
 public class Scheduling {
+	
     @Autowired TaskScheduler scheduler;
     
     @Test public void testScheduling() throws Exception {
-        scheduler.schedule(new MyRunnable(10), new CronTrigger("*/5 * * * * ?"));
+        //scheduler.schedule(new MyRunnable(10), new CronTrigger("*/5 * * * * ?"));
         
-        scheduler.schedule(new MyRunnable(1), new CronTrigger("*/5 * * * * ?"));
+//        scheduler.schedule(new MyRunnable(1), new CronTrigger("*/5 * * * * ?"));
 //        scheduler.schedule(new MyRunnable(), new CronTrigger("0 */1 * * * ?")); //every min
-        Thread.sleep(600000);
+        scheduler.schedule(new MyRunnable(0), new CronTrigger("0 * * * * ?")); //every min
+        Thread.sleep(120 * 1000);
     }
     
     public static class MyRunnable implements Runnable {
@@ -32,7 +34,7 @@ public class Scheduling {
         }
 
         public void run() {
-            System.err.println(Thread.currentThread() + " delay:"+ delay +"\tRunning: " + new Date() + ", " + this);
+            System.err.println(new Date() + " " + Thread.currentThread() + " delay:"+ delay +"\tRunning: " + new Date() + ", " + this);
             try {
                 Thread.sleep(delay * 1000);
             } catch (InterruptedException e) {
