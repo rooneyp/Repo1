@@ -17,28 +17,33 @@ public class LearnFactoryTest {
 	@Autowired @Qualifier("testBean") String testBean;
 	@Autowired ApplicationContext ctx;
 	
-	@Test public void test2() {
+	@Test public void testDelme() {
+		assertEquals("A_B", ctx.getBean("childFooPrototype", "A", "B")); //able to override all ctor params"
+		assertEquals("A_B", ctx.getBean("childFooPrototype", "A", "B")); //able to override all ctor params"
+	}
+	
+	@Test public void testAll() {
 		assertThat(testBean, is("poppop"));
 		
-		assertEquals("abstractFooProtoType_ARG1_childFooPrototype_ARG2", ctx.getBean("childFooPrototype"));
-		assertNotSame(ctx.getBean("childFooPrototype"), ctx.getBean("childFooPrototype")); //"expecting diff instances"
+		assertEquals("abstractFooProtoType_ARG1_childFooPrototype_ARG2", ctx.getBean("childFooPrototypeXML"));
+		assertNotSame(ctx.getBean("childFooPrototypeXML"), ctx.getBean("childFooPrototypeXML")); //"expecting diff instances"
 		
-		assertEquals("abstractFooProtoType_ARG1_childFooSingleton_ARG2", ctx.getBean("childFooSingleton"));
-		assertSame(ctx.getBean("childFooSingleton"), ctx.getBean("childFooSingleton")); //"expecting same instance"
+		assertEquals("abstractFooProtoType_ARG1_childFooSingleton_ARG2", ctx.getBean("childFooSingletonXML"));
+		assertSame(ctx.getBean("childFooSingletonXML"), ctx.getBean("childFooSingletonXML")); //"expecting same instance"
 		
-		assertEquals("A_B", ctx.getBean("childFooPrototype", "A", "B")); //able to override all ctor params"
+		assertEquals("A_B", ctx.getBean("childFooPrototypeXML", "A", "B")); //able to override all ctor params"
 //
 //		//can we just supply a ctor param to the child and take advantage of the parents default params = NO!!!
 //		
 		boolean caughtEx = false;
 		try {
-			System.out.println(ctx.getBean("childFooPrototype", "101")); //NPE as it prob can't fund ctor
+			System.out.println(ctx.getBean("childFooPrototypeXML", "101")); //NPE as it prob can't fund ctor
 		} catch (Exception e){ caughtEx = true; }
 		assertTrue(caughtEx); //
 		
 		caughtEx = false;
 		try {
-			System.out.println(ctx.getBean("childFooSingleton", "101", "102")); 
+			System.out.println(ctx.getBean("childFooSingletonXML", "101", "102")); 
 		} catch (Exception e){ caughtEx = true; }
 		assertTrue(caughtEx); //org.springframework.beans.factory.BeanDefinitionStoreException: Can only specify arguments for the getBean method when referring to a prototype bean definition
 
@@ -59,7 +64,4 @@ public class LearnFactoryTest {
 	}
 	
 	
-//	@Test public void test1() {
-//		
-//	}
 }

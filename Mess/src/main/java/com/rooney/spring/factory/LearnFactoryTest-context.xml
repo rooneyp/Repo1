@@ -16,32 +16,30 @@
     
 	<!-- it supplies only one 'common' ctor arg, children must supply the other 
 		supports prototype and singleton as we use factory-bean instead of class -->    
-     <bean id="abstractFooPrototype"
+     <bean id="abstractFooPrototypeXML"
   		abstract="true"
         factory-bean="fooFactory"
         factory-method="newFoo"
         c:arg1="abstractFooProtoType_ARG1"/>
     
     <!-- for prototype needs non static method and scope-->
-    <bean id="childFooPrototype" parent="abstractFooPrototype" scope="prototype"
+    <bean id="childFooPrototypeXML" parent="abstractFooPrototypeXML" scope="prototype"
     	c:arg2="childFooPrototype_ARG2">
     </bean> 
 
-    <bean id="childFooSingleton" parent="abstractFooPrototype"
+    <bean id="childFooSingletonXML" parent="abstractFooPrototypeXML"
     	c:arg2="childFooSingleton_ARG2">
     </bean> 
 
     <!-- singleton -->
-    <bean id="nonAbstractFooFactory" class="com.rooney.spring.factory.FooFactory"
+    <bean id="nonAbstractFooFactoryXML" class="com.rooney.spring.factory.FooFactory"
         factory-method="newSingletonFoo"
         c:arg1="nonAbstractFooFactory_ARG1"
         c:arg2="nonAbstractFooFactory_ARG2"/>
     
     
     <bean id="testBean" class="java.lang.String" c:_0="poppop"/>
-    
     <bean id="testInt" class="java.lang.Integer" c:_0="100"/>
-    
     <bean id="testDouble" class="java.lang.Double" c:_0="100.001"/>
     
     <!-- bean id="testBean" class="java.lang.String" c:original="poppop"/--> <!--not working-->

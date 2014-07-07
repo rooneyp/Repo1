@@ -8,10 +8,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+// This gives many instances of the factory @Scope("prototype")
 @Component
 public class FooFactory {
 	public FooFactory() {
-//		System.out.println("FooFactory Constructed " + System.identityHashCode(this));
+		System.out.println("FooFactory Constructed " + System.identityHashCode(this));
 	}
 
 	//MUST be non static for prototype
@@ -53,6 +54,7 @@ public class FooFactory {
 	
 	
 	//autowiring not specified, but we get it for free
+	//@Bean(name = "whateveryoulike")
 	@Bean
 	@Scope("prototype")
 	public static String newAnnotatedFooRelyingOnUniqueAutowiredBeans(Integer arg1, Double arg2) {
