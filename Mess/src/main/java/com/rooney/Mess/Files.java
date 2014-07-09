@@ -1,10 +1,15 @@
 package com.rooney.Mess;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,6 +38,15 @@ public class Files {
         }
     }
 
+    private static void loadFileFromJar() throws Exception {
+    	String csvLocation = "jar:file:/tmp/foo.jar!/adir/afile.CSV";
+    	URL url = new URL(csvLocation);
+		InputStream is = url.openStream();
+		final BufferedReader br = new BufferedReader(new InputStreamReader(is, Charset.forName("UTF-8")));
+		System.out.println(br.readLine());
+		br.close();
+    }
+    
     private static void loadAllFilesFromDir() throws Exception {
         Map<String, String> map = new HashMap<String, String>();
         for (File file : new File("/delme").listFiles()) {
