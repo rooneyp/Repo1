@@ -43,18 +43,17 @@ public class SynchronizedVsReentrantLock implements Runnable{
 		System.out.println(Thread.currentThread().getName() + "BEGIN");
 		
 		for(int i = 0; i< iterationCount; i++) {
-			getProperty(propertyName);
+			getProperty(randomValues.get(i));
 		}
 		System.out.println(Thread.currentThread().getName() + "END");
 	}
 	
 	public void getProperty(String propertyName) {
-			
-		synchronized (this) {
+//		synchronized (this) {
 			if(bean.get(propertyName) == null) {
 				bean.set(propertyName, sampleBeanValue);
 			}
-		}
+//		}
 	}
 
 

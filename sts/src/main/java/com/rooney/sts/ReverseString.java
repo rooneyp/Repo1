@@ -42,7 +42,12 @@ public class ReverseString {
 		return String.valueOf(output);
 	}
 
-
+	/**
+	 * Reverses characters in a String.
+	 * Cost is String length /2.
+	 * @param input
+	 * @return
+	 */
     private static String reverseStringWithoutBreak(String input) {
         if(input == null) {
             return null;
