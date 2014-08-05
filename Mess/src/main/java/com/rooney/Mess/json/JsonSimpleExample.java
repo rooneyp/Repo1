@@ -79,7 +79,8 @@ public class JsonSimpleExample {
 	}
 	
 	public static void jacksonNestedOperatorAndOperandsUsingComposite() throws Exception {
-		Node a1 = buildNodeManually();
+//		Node a1 = buildNodeManually();
+		Node a1 = buildNodeManuallyWithSameChildren();
 		
 //		printNode(a1, "");
 		
@@ -94,6 +95,29 @@ public class JsonSimpleExample {
 	public static enum Keywords {
 		OR, AND,HASVALUE,FIELD,VALUES,EQUALS,ISTRUE,EQUALS_IN
 	}
+	
+	
+	// does this cause a problem when converting to MAP and then to String
+	//could we use multimap?
+	//OR
+	//	EQUALS
+	//		field  a
+	//		values b
+	//	EQUALS
+	//		field  c
+	//		values d
+	private static Node buildNodeManuallyWithSameChildren() {
+		Node a1 = Node.buildRootNode(OR);
+		Node a1b1 = a1.addChild(EQUALS);
+		a1b1.addLeaf(FIELD, "CallAnsweredTimeInMills").addLeaf(VALUES, "101");
+		
+		Node a1b2 = a1.addChild(EQUALS);
+		a1b2.addLeaf(FIELD, "CallAnsweredTimeInMills").addLeaf(VALUES, "999");
+		
+		
+		
+		return a1;
+	}	
 	
 	private static Node buildNodeManually() {
 		Node a1 = Node.buildRootNode(OR);
