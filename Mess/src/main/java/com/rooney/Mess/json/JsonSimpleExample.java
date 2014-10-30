@@ -1,24 +1,7 @@
 package com.rooney.Mess.json;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.JsonSerializer;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectWriter;
-import org.codehaus.jackson.map.SerializerProvider;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
-
 import static com.rooney.Mess.json.JsonSimpleExample.Keywords.*;
+
 /*
  * http://www.mkyong.com/java/json-simple-example-read-and-write-json/
  * https://code.google.com/p/json-simple/wiki/EncodingExamples
@@ -66,6 +49,26 @@ SAMPLE JSON to represent
 
 
  */
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonGenerator;
+import org.codehaus.jackson.JsonProcessingException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.JsonSerializer;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.map.SerializerProvider;
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.JsonNodeFactory;
+import org.codehaus.jackson.node.ObjectNode;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 
 public class JsonSimpleExample {
@@ -84,8 +87,15 @@ public class JsonSimpleExample {
 		
 //		printNode(a1, "");
 		
-		Map map = nodeToMap(a1);
-		System.out.println(serialiseToJson(map,true));
+//		Map map = nodeToMap(a1);
+//		System.out.println(serialiseToJson(map,true));
+		
+		JSONObject jsonObject = nodeToSimpleJsonManually(a1);
+		System.out.println(jsonObject.toJSONString());
+		
+		ObjectNode jacksonJsonObject = nodeToJacksonJsonManually(a1);
+//		ObjectMapper objectMapper = new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(obj)
+		System.out.println(new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(jacksonJsonObject));
 		
 		//WORKS but with arrays for children
 //		JSONObject nodeToJson = nodeToJson(a1);
@@ -113,8 +123,6 @@ public class JsonSimpleExample {
 		
 		Node a1b2 = a1.addChild(EQUALS);
 		a1b2.addLeaf(FIELD, "CallAnsweredTimeInMills").addLeaf(VALUES, "999");
-		
-		
 		
 		return a1;
 	}	
@@ -165,7 +173,7 @@ public class JsonSimpleExample {
 		return a1;
 	}
 	
-	private static JSONObject nodeToJsonManually(Node node) {
+	private static JSONObject nodeToSimpleJsonManually(Node node) {
 
 		if(node.isLeaf()) {
 			JSONObject obj = new JSONObject();
@@ -176,7 +184,7 @@ public class JsonSimpleExample {
 		JSONArray childList = new JSONArray();
 		for(Node child: node.children) {
 			JSONObject obj = new JSONObject();
-			childList.add(nodeToJsonManually(child));
+			childList.add(nodeToSimpleJsonManually(child));
 		}
 		
 		JSONObject obj = new JSONObject();
@@ -189,6 +197,33 @@ public class JsonSimpleExample {
 		return obj;		
 	}
 
+	private static ObjectNode nodeToJacksonJsonManually(Node node) {
+		return nodeToJacksonJsonManually(node, JsonNodeFactory.instance);
+	}
+	
+	private static ObjectNode nodeToJacksonJsonManually(Node node, JsonNodeFactory factory) {
+		if(node.isLeaf()) {
+			ObjectNode obj = new ObjectNode(factory);
+			obj.put(node.id.toString(), Arrays.asList(node.leafValue).toString()); //TODO just concat
+			return obj;
+		}
+		
+		ArrayNode childList = new ArrayNode(factory);
+		for(Node child: node.children) {
+			JSONObject obj = new JSONObject();
+			childList.add(nodeToJacksonJsonManually(child, factory));
+		}
+		
+		ObjectNode obj = new ObjectNode(factory);
+		if(childList.size() == 1) {
+			obj.put(node.id.toString(), childList.get(0));
+		} else {
+			obj.put(node.id.toString(), childList);
+		}
+		
+		return obj;		
+	}	
+	
 	public static Map nodeToMap(Node node) {
 		if (node.isLeaf()) {
 			Map map = new LinkedHashMap();
@@ -221,6 +256,7 @@ public class JsonSimpleExample {
 	}
 	
 	//seems we have to build from bottom up, which is a pain if we are visiting from top down
+	//maps won't allow duplicate children
 	public static void jacksonNestedOperatorAndOperandsUsingMap() throws Exception {
 		Map a1 = new LinkedHashMap();
 		
