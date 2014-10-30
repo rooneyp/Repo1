@@ -3,6 +3,7 @@ package com.rooney.java8.jaxenter;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 //http://jaxenter.com/lambdas-in-java-8-part-1-49700.html
 // for keplar sr2 - jdk8 patch update - http://download.eclipse.org/eclipse/updates/4.3-P-builds/
@@ -23,7 +24,9 @@ public class Jaxenter {
     public static void main(String... args) {
 //	    listing3();
 //		listing4();
-        listing26();
+        //listing26();
+
+        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).collect(Collectors.toList()));
 	  }
 
 	private static void listing4() {
@@ -56,7 +59,7 @@ public class Jaxenter {
     private static void listing26() {
         people.parallelStream()
                 .filter((it) -> it.getAge() >= 21)
-                .forEach((it) -> System.out.println("Have a beer " + it.getFirstName() + Thread.currentThread()));
+                .forEach((it) -> System.out.println("Have a beer " + it.getFirstName() + " " + Thread.currentThread()));
     }
 
 
@@ -72,6 +75,15 @@ public class Jaxenter {
         public String getFirstName() { return firstName; }
         public String getLastName() { return lastName; }
         public int getAge() { return age; }
+
+        @Override
+        public String toString() {
+            return "Person{" +
+                    "firstName='" + firstName + '\'' +
+                    ", lastName='" + lastName + '\'' +
+                    ", age=" + age +
+                    '}';
+        }
     }
 
 }
