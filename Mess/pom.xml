@@ -20,6 +20,13 @@
 
 
 	<dependencies>
+	
+		<dependency>
+		  <groupId>net.hydromatic</groupId>
+		  <artifactId>linq4j</artifactId>
+		  <version>0.4</version>
+		</dependency>
+	
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -219,4 +226,18 @@
 		</dependency-->
                 
 	</dependencies>
+	
+<repositories>
+    <repository>
+      <releases>
+    <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <id>conjars</id>
+      <name>Conjars</name>
+      <url>http://conjars.org/repo</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>	
 </project>
