@@ -18,6 +18,7 @@ import com.example.jinq.sample.jpa.entities.Item;
 import com.example.jinq.sample.jpa.entities.ItemType;
 import com.example.jinq.sample.jpa.entities.Lineorder;
 
+//JINQ: java steam query converted to SQL and executed against DB
 public class SampleMain
 {
    private static EntityManagerFactory entityManagerFactory;

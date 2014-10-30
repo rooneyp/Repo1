@@ -26,7 +26,8 @@ public class Jaxenter {
 //		listing4();
         //listing26();
 
-        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).collect(Collectors.toList()));
+//        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).collect(Collectors.toList()));
+        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).toArray().length);
 	  }
 
 	private static void listing4() {
