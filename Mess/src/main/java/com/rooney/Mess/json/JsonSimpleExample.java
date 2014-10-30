@@ -1,24 +1,12 @@
 package com.rooney.Mess.json;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.JsonSerializer;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectWriter;
-import org.codehaus.jackson.map.SerializerProvider;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
-
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.*;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.AND;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.EQUALS;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.EQUALS_IN;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.FIELD;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.HASVALUE;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.ISTRUE;
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.OR;
 /*
  * http://www.mkyong.com/java/json-simple-example-read-and-write-json/
  * https://code.google.com/p/json-simple/wiki/EncodingExamples
@@ -66,6 +54,27 @@ SAMPLE JSON to represent
 
 
  */
+import static com.rooney.Mess.json.JsonSimpleExample.Keywords.VALUES;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonGenerator;
+import org.codehaus.jackson.JsonProcessingException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.JsonSerializer;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.map.SerializerProvider;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import com.fasterxml.jackson.datatype.guava.GuavaModule;
 
 
 public class JsonSimpleExample {
@@ -76,6 +85,11 @@ public class JsonSimpleExample {
 //		customSerializerToAdvoidJsonArrayFromJavaList();
 //		jacksonNestedOperatorAndOperandsUsingMap();
 		jacksonNestedOperatorAndOperandsUsingComposite();
+	}
+	
+	public static void jacksonMultiMapToJSON() {
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.registerModule(new GuavaModule());
 	}
 	
 	public static void jacksonNestedOperatorAndOperandsUsingComposite() throws Exception {
