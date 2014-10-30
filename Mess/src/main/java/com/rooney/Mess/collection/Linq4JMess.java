@@ -1,13 +1,48 @@
 package com.rooney.Mess.collection;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import com.google.common.base.Predicate;
+import com.google.common.collect.Collections2;
+
+import net.hydromatic.linq4j.Enumerable;
 import net.hydromatic.linq4j.Linq4j;
 import net.hydromatic.linq4j.function.Function0;
 import net.hydromatic.linq4j.function.Function1;
 import net.hydromatic.linq4j.function.Function2;
 import net.hydromatic.linq4j.function.Functions;
+import net.hydromatic.linq4j.function.Predicate1;
 
+/**
+ * https://github.com/julianhyde/linq4j
+ * see https://github.com/julianhyde/linq4j/blob/master/src/test/java/net/hydromatic/linq4j/test/Linq4jTest.java
+ * @author prooney
+ *
+ */
 public class Linq4JMess {
 	public static void main(String[] args) {
+		
+		//BASIC 'where' filter
+		List<Employee> whereResult = Linq4j.asEnumerable(emps).where(new Predicate1<Linq4JMess.Employee>() {
+			public boolean apply(Employee v0) {
+				return v0.name.equals("Fred");
+			}
+		}).toList();
+		System.out.println(whereResult);
+
+		
+		//BASIC 'where' filter replicated by Guava
+		Collection<Employee> filterResult = Collections2.filter(Arrays.asList(emps), new Predicate<Employee>() {
+			public boolean apply(Employee input) {
+				return input.name.equals("Fred");
+			}
+		});
+		System.out.println(filterResult);
+		
+		
+		
 	    String s = Linq4j.asEnumerable(emps)
 	            .groupBy(
 	                EMP_DEPTNO_SELECTOR,
