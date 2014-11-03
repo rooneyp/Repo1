@@ -3,26 +3,19 @@ package com.rooney.Mess.freemarker;
 import java.io.*;
 import java.util.*;
 
+import com.google.common.collect.ImmutableMap;
 
 import freemarker.cache.*;
 import freemarker.ext.beans.*;
 import freemarker.template.*;
 
 public class FreeMarker {
-
-	/**
-	 * @param args
-	 * @throws Exception 
-	 */
 	public static void main(String[] args) throws Exception {
-		StringWriter out = new StringWriter();
-//		System.setProperty("foo", "");
-		new FreeMarker().codeGen("", "Scratch2.ftl", out);
-		System.out.println(out);
+		Object dataModel = ImmutableMap.of("key1", "val1", "key2", "val2");
+		new FreeMarker().codeGen(dataModel, "Hash.ftl", new PrintWriter(System.out));
 	}
 
-	
-    public void codeGen(Object model, String templateName, StringWriter out) throws Exception {
+    public void codeGen(Object model, String templateName, Writer out) throws Exception {
         try {
             Configuration cfg = new Configuration();
             cfg.setTemplateLoader(new ClassTemplateLoader(getClass(), "/"));
@@ -37,7 +30,6 @@ public class FreeMarker {
             template.process(modelMap, out);
         } catch (Exception e) {
             String msg = "Error generating code for template: " + templateName;
-//            LOG.error(msg, e);
             throw new Exception(msg, e);
         } 
         out.flush();

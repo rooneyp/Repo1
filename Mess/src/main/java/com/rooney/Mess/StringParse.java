@@ -14,6 +14,11 @@ import org.junit.Test;
 
 public class StringParse {
 
+	@Test public void testSubString() {
+		String string = "com.rooney.foo.Bar";
+		System.out.println(string.substring(string.lastIndexOf('.') + 1));
+	}
+	
 	@Test
 	public void testURIQueryString() throws MalformedURLException, URISyntaxException {
 		String uri1 = "socket://localhost:11300?field1=value1&field2=value2&field3=value3";

@@ -18,7 +18,6 @@ import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
 
 public class BooleanRegexFilterNamePair {
-<<<<<<< HEAD
 	Predicate<Map.Entry<String, String>> filterPredicate;
 	
 	
@@ -26,7 +25,6 @@ public class BooleanRegexFilterNamePair {
 		filterPredicate = buildFilterPredicate(filterPattern);
 	}
 
-=======
 	final String filterPattern;
 	private final Predicate<String> dataKeysFilter;
 	private final Map<String, Predicate<CharSequence>> filtersByKey;
@@ -36,7 +34,6 @@ public class BooleanRegexFilterNamePair {
 		dataKeysFilter = buildFilterForKeys(filterPattern);
 		filtersByKey = buildFilterPredicate(filterPattern);
     }
->>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 
 	/**
 	 * , is treated as AND
@@ -144,7 +141,6 @@ public class BooleanRegexFilterNamePair {
 			predicatesByKeyANDed.put(key, andPredicate);
         }
 		
-<<<<<<< HEAD
 		
 		return and(allPredicates);
 	}
@@ -170,10 +166,8 @@ public class BooleanRegexFilterNamePair {
 			}
 		};
 	}
-=======
 		return predicatesByKeyANDed; 
 	}	
->>>>>>> e5e99da9d68d311864800a994725d03a329233f2
 	
 	/**
 	 * Builds a filter Predicate for a keys' value from syntax:
