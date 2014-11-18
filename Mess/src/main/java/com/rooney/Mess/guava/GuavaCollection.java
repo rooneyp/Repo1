@@ -8,7 +8,19 @@ public class GuavaCollection {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		arrayListMultiMap();
+//		arrayListMultiMap();
+		
+		fluent();
+	}
+
+	private static void fluent() {
+//		List<State> mdwStates = FluentIterable
+//		.from(states)
+//		.filter(State.byMdwRegion)
+//		.filter(byPopulationGT?)
+//		.filter(whereStateStartsWithC)
+//		.toList();
+		
 	}
 
 	private static void arrayListMultiMap() {

@@ -11,7 +11,11 @@ import freemarker.template.*;
 
 public class FreeMarker {
 	public static void main(String[] args) throws Exception {
-		Object dataModel = ImmutableMap.of("key1", "val1", "key2", "val2");
+		Map<String, Object> nestedMap = new HashMap<String, Object>();
+		nestedMap.put("foo", "bar");
+		
+		Object dataModel = ImmutableMap.of("key1", "val1", "key2", "val2", "nestedMap", nestedMap);
+		
 		new FreeMarker().codeGen(dataModel, "Hash.ftl", new PrintWriter(System.out));
 	}
 
