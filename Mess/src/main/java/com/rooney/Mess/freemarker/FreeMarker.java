@@ -11,10 +11,32 @@ import freemarker.template.*;
 
 public class FreeMarker {
 	public static void main(String[] args) throws Exception {
+		new FreeMarker().testHash();
+	}
+
+	public class MyBeanInner {
+		String name;
+
+		public MyBeanInner(String name) {
+			this.name = name;
+		}
+
+		//must have getter for FM
+		public String getName() {
+			return name;
+		}
+	}
+	
+	private void testHash() throws Exception {
+		Map<String, Object> nestedNestedMap = new HashMap<String, Object>();
+		nestedNestedMap.put("apple", "orange");
+		
 		Map<String, Object> nestedMap = new HashMap<String, Object>();
 		nestedMap.put("foo", "bar");
+		nestedMap.put("nestedNestedMap", nestedNestedMap);
 		
-		Object dataModel = ImmutableMap.of("key1", "val1", "key2", "val2", "nestedMap", nestedMap);
+		Object dataModel = ImmutableMap.of("key1", "val1", "key2", "val2", "nestedMap", nestedMap, 
+				"myBean", new MyBean("aBean"), "myBeanInner", new MyBeanInner("aBeanInner") );
 		
 		new FreeMarker().codeGen(dataModel, "Hash.ftl", new PrintWriter(System.out));
 	}
