@@ -1,17 +1,33 @@
 package com.rooney.Mess.json;
 
-<<<<<<< HEAD
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.AND;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.EQUALS;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.EQUALS_IN;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.FIELD;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.HASVALUE;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.ISTRUE;
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.OR;
-=======
+
 import static com.rooney.Mess.json.JsonSimpleExample.Keywords.*;
 
->>>>>>> FETCH_HEAD
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.codehaus.jackson.JsonGenerator;
+import org.codehaus.jackson.JsonProcessingException;
+import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.JsonSerializer;
+import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.map.ObjectWriter;
+import org.codehaus.jackson.map.SerializerProvider;
+import org.codehaus.jackson.node.ArrayNode;
+import org.codehaus.jackson.node.JsonNodeFactory;
+import org.codehaus.jackson.node.ObjectNode;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+
+import com.fasterxml.jackson.datatype.guava.GuavaModule;
+
+
+
 /*
  * http://www.mkyong.com/java/json-simple-example-read-and-write-json/
  * https://code.google.com/p/json-simple/wiki/EncodingExamples
@@ -59,41 +75,6 @@ SAMPLE JSON to represent
 
 
  */
-<<<<<<< HEAD
-import static com.rooney.Mess.json.JsonSimpleExample.Keywords.VALUES;
-
-=======
->>>>>>> FETCH_HEAD
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-
-import org.codehaus.jackson.JsonGenerator;
-import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.JsonMappingException;
-import org.codehaus.jackson.map.JsonSerializer;
-import org.codehaus.jackson.map.ObjectMapper;
-import org.codehaus.jackson.map.ObjectWriter;
-import org.codehaus.jackson.map.SerializerProvider;
-<<<<<<< HEAD
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
-
-import com.fasterxml.jackson.datatype.guava.GuavaModule;
-=======
-import org.codehaus.jackson.node.ArrayNode;
-import org.codehaus.jackson.node.JsonNodeFactory;
-import org.codehaus.jackson.node.ObjectNode;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
->>>>>>> FETCH_HEAD
-
-
 public class JsonSimpleExample {
 //	private static ObjectWriter prettyObjectWriter = new ObjectMapper().writerWithDefaultPrettyPrinter(); //is this threadsafe???
 
@@ -106,7 +87,7 @@ public class JsonSimpleExample {
 	
 	public static void jacksonMultiMapToJSON() {
 		ObjectMapper mapper = new ObjectMapper();
-		mapper.registerModule(new GuavaModule());
+//		mapper.registerModule(new GuavaModule()); ??
 	}
 	
 	public static void jacksonNestedOperatorAndOperandsUsingComposite() throws Exception {
