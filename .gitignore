@@ -26,3 +26,7 @@ mina/target/classes/META-INF/maven/com.rooney/mina/pom.properties
 mina/target/classes/META-INF/maven/com.rooney/mina/pom.xml
 
 *.prefs
+
+java8/j8ia/gradle/wrapper/gradle-wrapper.jar
+
+java8/j8ia/gradle/wrapper/gradle-wrapper.properties
