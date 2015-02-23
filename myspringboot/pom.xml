@@ -13,7 +13,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.7</java.version>
-        <!--start-class>com.tekcomms.dbm.query.api.rest.config.Application</start-class-->
+        <!--start-class>com.rooney.myspringboot.Example</start-class-->
 	</properties>
 
 	<dependencyManagement>
@@ -58,10 +58,17 @@
 	<!-- Package as an executable jar -->
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- required if not inheriting from spring-boot-starter-parent -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 		</plugins>
 	</build>
 

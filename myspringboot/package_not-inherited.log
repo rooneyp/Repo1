@@ -1,0 +1,56 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.rooney:myspringboot:jar:0.0.1-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.springframework.boot:spring-boot-maven-plugin is missing. @ line 61, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myspringboot 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.4.1:clean (default-clean) @ myspringboot ---
+[INFO] Deleting D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:resources (default-resources) @ myspringboot ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:compile (default-compile) @ myspringboot ---
+[INFO] Compiling 1 source file to D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.5:testResources (default-testResources) @ myspringboot ---
+[debug] execute contextualize
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.3.2:testCompile (default-testCompile) @ myspringboot ---
+[INFO] Compiling 1 source file to D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.10:test (default-test) @ myspringboot ---
+[INFO] Surefire report directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.rooney.myspringboot.ExampleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.056 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.3.2:jar (default-jar) @ myspringboot ---
+[INFO] Building jar: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\myspringboot-0.0.1-SNAPSHOT.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.575s
+[INFO] Finished at: Mon Feb 23 16:35:44 GMT 2015
+[INFO] Final Memory: 20M/490M
+[INFO] ------------------------------------------------------------------------

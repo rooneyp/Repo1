@@ -1,0 +1,1305 @@
+Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 13:51:28+0000)
+Maven home: D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..
+Java version: 1.7.0_55, vendor: Oracle Corporation
+Java home: D:\netqos\Dev\Apps\Java\jdk1.7\jre
+Default locale: en_IE, platform encoding: Cp1252
+OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
+[INFO] Error stacktraces are turned on.
+[DEBUG] Reading global settings from D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\conf\settings.xml
+[DEBUG] Reading user settings from C:\Users\prooney\.m2\settings.xml
+[DEBUG] Using local repository at d:\netqos\repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10 for d:\netqos\repository
+[INFO] Scanning for projects...
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starter-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starter-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starter-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Extension realms for project com.rooney:myspringboot:jar:0.0.1-SNAPSHOT: (none)
+[DEBUG] Looking up lifecyle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.rooney:myspringboot:jar:0.0.1-SNAPSHOT
+[DEBUG] Tasks:   [clean, package]
+[DEBUG] Style:   Regular
+[DEBUG] =======================================================================
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building myspringboot 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-parent:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.rooney:myspringboot:0.0.1-SNAPSHOT
+[DEBUG] Dependencies (collect): [compile+runtime]
+[DEBUG] Dependencies (resolve): [compile, compile+runtime, runtime, test]
+[DEBUG] Repositories (dependencies): [spring-snapshots (http://repo.spring.io/snapshot, releases+snapshots), spring-milestones (http://repo.spring.io/milestone, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] Repositories (plugins)     : [spring-snapshots (http://repo.spring.io/snapshot, releases+snapshots), spring-milestones (http://repo.spring.io/milestone, releases+snapshots), central (http://repo.maven.apache.org/maven2, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-clean-plugin:2.5:clean (default-clean)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <directory default-value="${project.build.directory}"/>
+  <excludeDefaultDirectories default-value="false">${clean.excludeDefaultDirectories}</excludeDefaultDirectories>
+  <failOnError default-value="true">${maven.clean.failOnError}</failOnError>
+  <followSymLinks default-value="false">${clean.followSymLinks}</followSymLinks>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <reportDirectory default-value="${project.reporting.outputDirectory}"/>
+  <retryOnError default-value="true">${maven.clean.retryOnError}</retryOnError>
+  <skip default-value="false">${clean.skip}</skip>
+  <testOutputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <verbose>${clean.verbose}</verbose>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:resources (default-resources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <delimiters>
+    <delimiter>@</delimiter>
+  </delimiters>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.resources}"/>
+  <session default-value="${session}"/>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.compileClasspathElements}"/>
+  <compileSourceRoots default-value="${project.compileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedSourcesDirectory default-value="${project.build.directory}/generated-sources/annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.outputDirectory}"/>
+  <projectArtifact default-value="${project.artifact}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skipMain>${maven.main.skip}</skipMain>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">${maven.compiler.target}</target>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-resources-plugin:2.6:testResources (default-testResources)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <buildFilters default-value="${project.build.filters}"/>
+  <delimiters>
+    <delimiter>@</delimiter>
+  </delimiters>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <escapeString>${maven.resources.escapeString}</escapeString>
+  <escapeWindowsPaths default-value="true">${maven.resources.escapeWindowsPaths}</escapeWindowsPaths>
+  <includeEmptyDirs default-value="false">${maven.resources.includeEmptyDirs}</includeEmptyDirs>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <overwrite default-value="false">${maven.resources.overwrite}</overwrite>
+  <project default-value="${project}"/>
+  <resources default-value="${project.testResources}"/>
+  <session default-value="${session}"/>
+  <skip>${maven.test.skip}</skip>
+  <supportMultiLineFiltering default-value="false">${maven.resources.supportMultiLineFiltering}</supportMultiLineFiltering>
+  <useBuildFilters default-value="true"/>
+  <useDefaultDelimiters default-value="true"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile (default-testCompile)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <basedir default-value="${basedir}"/>
+  <buildDirectory default-value="${project.build.directory}"/>
+  <classpathElements default-value="${project.testClasspathElements}"/>
+  <compileSourceRoots default-value="${project.testCompileSourceRoots}"/>
+  <compilerId default-value="javac">${maven.compiler.compilerId}</compilerId>
+  <compilerReuseStrategy default-value="${reuseCreated}">${maven.compiler.compilerReuseStrategy}</compilerReuseStrategy>
+  <compilerVersion>${maven.compiler.compilerVersion}</compilerVersion>
+  <debug default-value="true">${maven.compiler.debug}</debug>
+  <debuglevel>${maven.compiler.debuglevel}</debuglevel>
+  <encoding default-value="${project.build.sourceEncoding}">${encoding}</encoding>
+  <executable>${maven.compiler.executable}</executable>
+  <failOnError default-value="true">${maven.compiler.failOnError}</failOnError>
+  <forceJavacCompilerUse default-value="false">${maven.compiler.forceJavacCompilerUse}</forceJavacCompilerUse>
+  <fork default-value="false">${maven.compiler.fork}</fork>
+  <generatedTestSourcesDirectory default-value="${project.build.directory}/generated-test-sources/test-annotations"/>
+  <maxmem>${maven.compiler.maxmem}</maxmem>
+  <meminitial>${maven.compiler.meminitial}</meminitial>
+  <mojoExecution>${mojoExecution}</mojoExecution>
+  <optimize default-value="false">${maven.compiler.optimize}</optimize>
+  <outputDirectory default-value="${project.build.testOutputDirectory}"/>
+  <showDeprecation default-value="false">${maven.compiler.showDeprecation}</showDeprecation>
+  <showWarnings default-value="false">${maven.compiler.showWarnings}</showWarnings>
+  <skip>${maven.test.skip}</skip>
+  <skipMultiThreadWarning default-value="false">${maven.compiler.skipMultiThreadWarning}</skipMultiThreadWarning>
+  <source default-value="1.5">${maven.compiler.source}</source>
+  <staleMillis default-value="0">${lastModGranularityMs}</staleMillis>
+  <target default-value="1.5">${maven.compiler.target}</target>
+  <testSource>${maven.compiler.testSource}</testSource>
+  <testTarget>${maven.compiler.testTarget}</testTarget>
+  <useIncrementalCompilation default-value="true">${maven.compiler.useIncrementalCompilation}</useIncrementalCompilation>
+  <verbose default-value="false">${maven.compiler.verbose}</verbose>
+  <mavenSession default-value="${session}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-surefire-plugin:2.17:test (default-test)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <additionalClasspathElements>${maven.test.additionalClasspath}</additionalClasspathElements>
+  <argLine>${argLine}</argLine>
+  <basedir default-value="${basedir}"/>
+  <childDelegation default-value="false">${childDelegation}</childDelegation>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classpathDependencyExcludes>${maven.test.dependency.excludes}</classpathDependencyExcludes>
+  <debugForkedProcess>${maven.surefire.debug}</debugForkedProcess>
+  <dependenciesToScan>${dependenciesToScan}</dependenciesToScan>
+  <disableXmlReport default-value="false">${disableXmlReport}</disableXmlReport>
+  <enableAssertions default-value="true">${enableAssertions}</enableAssertions>
+  <excludedGroups>${excludedGroups}</excludedGroups>
+  <excludes>
+    <exclude>**/Abstract*.java</exclude>
+  </excludes>
+  <failIfNoSpecifiedTests>${surefire.failIfNoSpecifiedTests}</failIfNoSpecifiedTests>
+  <failIfNoTests>${failIfNoTests}</failIfNoTests>
+  <forkCount default-value="1">${forkCount}</forkCount>
+  <forkMode default-value="once">${forkMode}</forkMode>
+  <forkedProcessTimeoutInSeconds>${surefire.timeout}</forkedProcessTimeoutInSeconds>
+  <groups>${groups}</groups>
+  <includes>
+    <include>**/*Tests.java</include>
+    <include>**/*Test.java</include>
+  </includes>
+  <junitArtifactName default-value="junit:junit">${junitArtifactName}</junitArtifactName>
+  <jvm>${jvm}</jvm>
+  <localRepository default-value="${localRepository}"/>
+  <objectFactory>${objectFactory}</objectFactory>
+  <parallel>${parallel}</parallel>
+  <parallelMavenExecution default-value="${session.parallel}"/>
+  <parallelOptimized default-value="true">${parallelOptimized}</parallelOptimized>
+  <parallelTestsTimeoutForcedInSeconds>${surefire.parallel.forcedTimeout}</parallelTestsTimeoutForcedInSeconds>
+  <parallelTestsTimeoutInSeconds>${surefire.parallel.timeout}</parallelTestsTimeoutInSeconds>
+  <perCoreThreadCount default-value="true">${perCoreThreadCount}</perCoreThreadCount>
+  <pluginArtifactMap>${plugin.artifactMap}</pluginArtifactMap>
+  <pluginDescriptor default-value="${plugin}"/>
+  <printSummary default-value="true">${surefire.printSummary}</printSummary>
+  <projectArtifactMap>${project.artifactMap}</projectArtifactMap>
+  <redirectTestOutputToFile default-value="false">${maven.test.redirectTestOutputToFile}</redirectTestOutputToFile>
+  <remoteRepositories default-value="${project.pluginArtifactRepositories}"/>
+  <reportFormat default-value="brief">${surefire.reportFormat}</reportFormat>
+  <reportNameSuffix default-value="">${surefire.reportNameSuffix}</reportNameSuffix>
+  <reportsDirectory default-value="${project.build.directory}/surefire-reports"/>
+  <reuseForks default-value="true">${reuseForks}</reuseForks>
+  <runOrder default-value="filesystem"/>
+  <skip default-value="false">${maven.test.skip}</skip>
+  <skipExec>${maven.test.skip.exec}</skipExec>
+  <skipTests default-value="false">${skipTests}</skipTests>
+  <test>${test}</test>
+  <testClassesDirectory default-value="${project.build.testOutputDirectory}"/>
+  <testFailureIgnore default-value="false">${maven.test.failure.ignore}</testFailureIgnore>
+  <testNGArtifactName default-value="org.testng:testng">${testNGArtifactName}</testNGArtifactName>
+  <testSourceDirectory default-value="${project.build.testSourceDirectory}"/>
+  <threadCount>${threadCount}</threadCount>
+  <threadCountClasses default-value="0">${threadCountClasses}</threadCountClasses>
+  <threadCountMethods default-value="0">${threadCountMethods}</threadCountMethods>
+  <threadCountSuites default-value="0">${threadCountSuites}</threadCountSuites>
+  <trimStackTrace default-value="true">${trimStackTrace}</trimStackTrace>
+  <useFile default-value="true">${surefire.useFile}</useFile>
+  <useManifestOnlyJar default-value="true">${surefire.useManifestOnlyJar}</useManifestOnlyJar>
+  <useSystemClassLoader default-value="true">${surefire.useSystemClassLoader}</useSystemClassLoader>
+  <useUnlimitedThreads default-value="false">${useUnlimitedThreads}</useUnlimitedThreads>
+  <workingDirectory>${basedir}</workingDirectory>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.apache.maven.plugins:maven-jar-plugin:2.5:jar (default-jar)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <archive>
+    <manifest>
+      <mainClass>${start-class}</mainClass>
+      <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+    </manifest>
+  </archive>
+  <classesDirectory default-value="${project.build.outputDirectory}"/>
+  <classifier default-value="">${maven.jar.classifier}</classifier>
+  <defaultManifestFile default-value="${project.build.outputDirectory}/META-INF/MANIFEST.MF"/>
+  <finalName default-value="${project.build.finalName}">${jar.finalName}</finalName>
+  <forceCreation default-value="false">${jar.forceCreation}</forceCreation>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <skipIfEmpty default-value="false">${jar.skipIfEmpty}</skipIfEmpty>
+  <useDefaultManifestFile default-value="false">${jar.useDefaultManifestFile}</useDefaultManifestFile>
+  <project default-value="${project}"/>
+  <session default-value="${session}"/>
+</configuration>
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT:repackage (default)
+[DEBUG] Style:         Regular
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <excludeArtifactIds default-value="">${excludeArtifactIds}</excludeArtifactIds>
+  <excludeGroupIds default-value="">${excludeGroupIds}</excludeGroupIds>
+  <finalName default-value="${project.build.finalName}"/>
+  <mainClass>${start-class}</mainClass>
+  <outputDirectory default-value="${project.build.directory}"/>
+  <project default-value="${project}"/>
+  <skip default-value="false">${skip}</skip>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starter-web:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starter-web:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starter-web:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starters:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starters:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starters:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starter:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starter:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starter:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-autoconfigure:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-autoconfigure:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-autoconfigure:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starter-logging:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starter-logging:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starter-logging:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-starter-tomcat:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-starter-tomcat:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-starter-tomcat:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] com.rooney:myspringboot:jar:0.0.1-SNAPSHOT
+[DEBUG]    org.springframework.boot:spring-boot-starter-web:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]          org.springframework.boot:spring-boot:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]          org.springframework.boot:spring-boot-autoconfigure:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]          org.springframework.boot:spring-boot-starter-logging:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]             org.slf4j:jcl-over-slf4j:jar:1.7.10:compile
+[DEBUG]                org.slf4j:slf4j-api:jar:1.7.10:compile
+[DEBUG]             org.slf4j:jul-to-slf4j:jar:1.7.10:compile
+[DEBUG]             org.slf4j:log4j-over-slf4j:jar:1.7.10:compile
+[DEBUG]             ch.qos.logback:logback-classic:jar:1.1.2:compile
+[DEBUG]                ch.qos.logback:logback-core:jar:1.1.2:compile
+[DEBUG]          org.yaml:snakeyaml:jar:1.14:compile
+[DEBUG]       org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-core:jar:8.0.18:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-el:jar:8.0.18:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-logging-juli:jar:8.0.18:compile
+[DEBUG]          org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.0.18:compile
+[DEBUG]       com.fasterxml.jackson.core:jackson-databind:jar:2.4.5:compile
+[DEBUG]          com.fasterxml.jackson.core:jackson-annotations:jar:2.4.5:compile (version managed from 2.4.0 by org.springframework.boot:spring-boot-dependencies:1.2.2.BUILD-SNAPSHOT)
+[DEBUG]          com.fasterxml.jackson.core:jackson-core:jar:2.4.5:compile
+[DEBUG]       org.hibernate:hibernate-validator:jar:5.1.3.Final:compile
+[DEBUG]          javax.validation:validation-api:jar:1.1.0.Final:compile
+[DEBUG]          org.jboss.logging:jboss-logging:jar:3.1.3.GA:compile
+[DEBUG]          com.fasterxml:classmate:jar:1.0.0:compile
+[DEBUG]       org.springframework:spring-core:jar:4.1.5.RELEASE:compile
+[DEBUG]       org.springframework:spring-web:jar:4.1.5.RELEASE:compile
+[DEBUG]          org.springframework:spring-aop:jar:4.1.5.RELEASE:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          org.springframework:spring-beans:jar:4.1.5.RELEASE:compile
+[DEBUG]          org.springframework:spring-context:jar:4.1.5.RELEASE:compile
+[DEBUG]       org.springframework:spring-webmvc:jar:4.1.5.RELEASE:compile
+[DEBUG]          org.springframework:spring-expression:jar:4.1.5.RELEASE:compile
+[DEBUG]    junit:junit:jar:4.12:test
+[DEBUG]       org.hamcrest:hamcrest-core:jar:1.3:test
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ myspringboot ---
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.transfer < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.metadata < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.collection < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.version < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.artifact < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.spi < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.graph < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.impl < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.deployment < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.installation < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.sonatype.aether.resolution < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG] Populating class realm maven.api
+[DEBUG] org.apache.maven.plugins:maven-clean-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-clean-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-clean-plugin:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-clean-plugin:2.5:clean from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-clean-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-clean-plugin:2.5:clean' with basic configurator -->
+[DEBUG]   (f) directory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG]   (f) excludeDefaultDirectories = false
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) followSymLinks = false
+[DEBUG]   (f) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]   (f) reportDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\site
+[DEBUG]   (f) retryOnError = true
+[DEBUG]   (f) skip = false
+[DEBUG]   (f) testOutputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG] -- end configuration --
+[INFO] Deleting D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes\com\rooney\myspringboot\ExampleTest.class
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes\com\rooney\myspringboot
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes\com\rooney
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes\com
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports\TEST-com.rooney.myspringboot.ExampleTest.xml
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports\com.rooney.myspringboot.ExampleTest.txt
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefire_01988540562262019888tmp
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefirebooter5282278145860357635.jar
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefire5382912896308901511tmp
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\myspringboot-0.0.1-SNAPSHOT.jar.original
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\myspringboot-0.0.1-SNAPSHOT.jar
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\inputFiles.lst
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile\createdFiles.lst
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\testCompile\default-testCompile
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\testCompile
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\compile\default-compile\inputFiles.lst
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\compile\default-compile\createdFiles.lst
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\compile\default-compile
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin\compile
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status\maven-compiler-plugin
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-status
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-archiver\pom.properties
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\maven-archiver
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-test-sources\test-annotations
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-test-sources
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-sources\annotations
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-sources
+[INFO] Deleting file D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes\com\rooney\myspringboot\Example.class
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes\com\rooney\myspringboot
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes\com\rooney
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes\com
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[INFO] Deleting directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG] Skipping non-existing directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG] Skipping non-existing directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG] Skipping non-existing directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\site
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ myspringboot ---
+[DEBUG] org.apache.maven.plugins:maven-resources-plugin:jar:2.6:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]       junit:junit:jar:3.8.1:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:2.0.5:compile
+[DEBUG]    org.apache.maven.shared:maven-filtering:jar:1.1:compile
+[DEBUG]       org.sonatype.plexus:plexus-build-api:jar:0.0.4:compile
+[DEBUG]    org.codehaus.plexus:plexus-interpolation:jar:1.13:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-resources-plugin:2.6
+[DEBUG]   Included: org.apache.maven.plugins:maven-resources-plugin:jar:2.6
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:2.0.5
+[DEBUG]   Included: org.apache.maven.shared:maven-filtering:jar:1.1
+[DEBUG]   Included: org.sonatype.plexus:plexus-build-api:jar:0.0.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.13
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:resources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:resources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (s) delimiters = [@]
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.rooney:myspringboot:0.0.1-SNAPSHOT @ D:\netqos\Dev\Code\Other\Repo1\myspringboot\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: true, FileSet {directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources, PatternSet [includes: {**/application.yml, **/application.properties}, excludes: {}]}}, Resource {targetPath: null, filtering: false, FileSet {directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources, PatternSet [includes: {}, excludes: {**/application.yml, **/application.properties}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {spring-batch.version=3.0.3.RELEASE, file.encoding.pkg=sun.io, env.PROMPT=$P$G, undertow.version=1.1.1.Final, httpclient.version=4.3.6, env.=D:=D:\netqos\Dev\Code\Other\Repo1\myspringboot, java.home=D:\netqos\Dev\Apps\Java\jdk1.7\jre, hibernate.version=4.3.8.Final, groovy.version=2.3.10, spring-social-linkedin.version=1.0.1.RELEASE, classworlds.conf=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\bin\m2.conf, java.endorsed.dirs=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\endorsed, jmustache.version=1.10, spring-cloud-connectors.version=1.1.1.RELEASE, env.USERNAME=prooney, mockito.version=1.10.19, sun.os.patch.level=Service Pack 1, java.vendor.url=http://java.oracle.com/, env.COMPUTERNAME=PC-DUB2-ENG045, env.=C:=C:\Users\prooney, bitronix.version=2.1.4, java.version=1.7.0_55, commons-beanutils.version=1.9.2, atomikos.version=3.9.3, gradle.version=1.6, jersey.version=2.14, jaxen.version=1.1.6, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.USERPROFILE=C:\Users\prooney, sun-mail.version=1.5.2, wsdl4j.version=1.6.3, jedis.version=2.5.2, javax-mail.version=1.5.2, env.JAVA_OPTS=-Xms1G -Xmx1G -Dlog4j.configuration=log4j.xml, user.name=prooney, sun.io.unicode.encoding=UnicodeLittle, sun.jnu.encoding=Cp1252, java.runtime.name=Java(TM) SE Runtime Environment, activemq.version=5.10.1, spring-security-jwt.version=1.0.3.RELEASE, env.LOCALAPPDATA=C:\Users\prooney\AppData\Local, spring-mobile.version=1.1.3.RELEASE, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, commons-dbcp.version=1.4, env.RFC_INI=C:\WINDOWS\SysWOW64\saprfc.ini, java.specification.name=Java Platform API Specification, log4j2.version=2.1, aspectj.version=1.8.5, user.timezone=Europe/London, janino.version=2.6.1, user.script=, path.separator=;, tomcat.version=8.0.18, env.MAVEN_CMD_LINE_ARGS=-X clean package, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel, file.encoding=Cp1252, thymeleaf-extras-springsecurity3.version=2.1.1.RELEASE, env.HOME=H:\, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean package, velocity.version=1.7, spring-social-twitter.version=1.1.0.RELEASE, env.NUMBER_OF_PROCESSORS=24, env.APPDATA=C:\Users\prooney\AppData\Roaming, flyway.version=3.1, snakeyaml.version=1.14, thymeleaf-extras-conditionalcomments.version=2.1.1.RELEASE, resource.delimiter=@, env.WINDIR=C:\WINDOWS, hikaricp.version=2.2.5, java.io.tmpdir=d:\tmp_win\, javax-transaction.version=1.2, glassfish-el.version=3.0.0, user.language=en, line.separator=
+, crashub.version=1.3.1, spring-security.version=3.2.5.RELEASE, spring-social.version=1.1.0.RELEASE, solr.version=4.7.2, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, gemfire.version=7.0.2, java.vm.info=mixed mode, sun.desktop=windows, java.vm.specification.name=Java Virtual Machine Specification, servlet-api.version=3.1.0, project.reporting.outputEncoding=UTF-8, joda-time.version=2.5, hibernate-validator.version=5.1.3.Final, env.M2_HOME=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\.., commons-collections.version=3.2.1, liquibase.version=3.3.2, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw, env.OSSINFO=C:\Informatica\9.5.1\clients\DT, hornetq.version=2.4.5.Final, env.LOGONSERVER=\\EU-DUB2-DC01-P, env.PSMODULEPATH=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;c:\Program Files\Microsoft Security Client\MpProvider\, spring-integration.version=4.1.2.RELEASE, java.awt.printerjob=sun.awt.windows.WPrinterJob, mongodb.version=2.12.5, env.PUBLIC=C:\Users\Public, env.USERDOMAIN=GLOBAL, env.VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, jetty.version=9.2.7.v20150116, env.PROCESSOR_LEVEL=6, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.=EXITCODE=00000000, env.CLASSPATH=C:\Informatica\9.5.1\clients\DT\api\lib\CM_JavaAPI.jar; , os.name=Windows 7, java.specification.vendor=Oracle Corporation, env.TMP=d:\tmp_win, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, simple-json.version=1.1.1, env.OS=Windows_NT, java.library.path=D:\netqos\Dev\Apps\Java\jdk1.7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\netqos\Dev\Apps\Java\jdk1.7\bin;D:\netqos\Dev\Apps;C:\Informatica\9.5.1\clients\DT\bin;C:\Informatica\9.5.1\clients\tools\datadirect;C:\Informatica\9.5.1\clients\tools\odbcdrv;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;D:\netqos\Dev\Apps\apache-storm-0.9.1-incubating\bin;D:\netqos\Dev\Apps\apache-maven-3.0.5\bin;C:\Program Files\SlikSvn\bin;D:\netqos\Dev\Apps\gradle-1.12\bin;D:\netqos\Dev\Apps\nodejs\;D:\netqos\Dev\Apps\Vagrant\bin;d:\netqos\Dev\Apps\Anaconda;d:\netqos\Dev\Apps\Anaconda\Scripts;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\prooney\AppData\Roaming\npm;C:\Program Files\Boot2Docker for Windows;., env.PROGRAMW6432=C:\Program Files, env.PATH=D:\netqos\Dev\Apps\Java\jdk1.7\bin;D:\netqos\Dev\Apps;C:\Informatica\9.5.1\clients\DT\bin;C:\Informatica\9.5.1\clients\tools\datadirect;C:\Informatica\9.5.1\clients\tools\odbcdrv;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;D:\netqos\Dev\Apps\apache-storm-0.9.1-incubating\bin;D:\netqos\Dev\Apps\apache-maven-3.0.5\bin;C:\Program Files\SlikSvn\bin;D:\netqos\Dev\Apps\gradle-1.12\bin;D:\netqos\Dev\Apps\nodejs\;D:\netqos\Dev\Apps\Vagrant\bin;d:\netqos\Dev\Apps\Anaconda;d:\netqos\Dev\Apps\Anaconda\Scripts;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\prooney\AppData\Roaming\npm;C:\Program Files\Boot2Docker for Windows, java.class.version=51.0, spring-boot.version=1.2.2.BUILD-SNAPSHOT, env.TNS_ADMIN=\\global.tektronix.net\global\network\admin, freemarker.version=2.3.21, env.JAVA_CLASSPATH=".\conf;.\lib\*;", httpasyncclient.version=4.0.2, spring-social-facebook.version=1.1.1.RELEASE, env.HOMEDRIVE=H:, env.HOMESHARE=\\global.tektronix.net\global\Europe\Dublin\Home\prooney, env.SYSTEMROOT=C:\WINDOWS, spring-plugin.version=1.1.0.RELEASE, spring.version=4.1.5.RELEASE, env.COMSPEC=C:\WINDOWS\system32\cmd.exe, sun.boot.library.path=D:\netqos\Dev\Apps\Java\jdk1.7\jre\bin, project.build.sourceEncoding=UTF-8, env.SYSTEMDRIVE=C:, env.PROCESSOR_REVISION=3e04, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, user.variant=, commons-dbcp2.version=2.0.1, hibernate-entitymanager.version=4.3.8.Final, hamcrest.version=1.3, junit.version=4.12, javax-cache.version=1.0.0, env.PROGRAMFILES=C:\Program Files, java.vm.specification.version=1.7, env.MAVEN_JAVA_EXE="D:\netqos\Dev\Apps\Java\jdk1.7\bin\java.exe", env.IFCONTENTMASTER_HOME=C:\Informatica\9.5.1\clients\DT, env.PROGRAMDATA=C:\ProgramData, mysql.version=5.1.34, slf4j.version=1.7.10, awt.toolkit=sun.awt.windows.WToolkit, sun.cpu.isalist=amd64, java.ext.dirs=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, derby.version=10.10.2.0, os.version=6.1, velocity-tools.version=2.0, thymeleaf-layout-dialect.version=1.2.7, user.home=C:\Users\prooney, env.ERROR_CODE=0, java.vm.vendor=Oracle Corporation, logback.version=1.1.2, env.JAVA_HOME=D:\netqos\Dev\Apps\Java\jdk1.7, env.USERDNSDOMAIN=GLOBAL.TEKTRONIX.NET, user.dir=D:\netqos\Dev\Code\Other\Repo1\myspringboot, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.FP_NO_HOST_CHECK=NO, log4j.version=1.2.17, sun.cpu.endian=little, env.ALLUSERSPROFILE=C:\ProgramData, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PROCESSOR_ARCHITECTURE=AMD64, java.vm.version=24.55-b03, env.HOMEPATH=\, env.=::=::\, java.class.path=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\boot\plexus-classworlds-2.4.jar, thymeleaf-extras-data-attribute.version=1.3, jdom2.version=2.0.6, env.UATDATA=C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77, jetty-jsp.version=2.2.0.v201112011158, javassist.version=3.18.1-GA, os.arch=amd64, maven.build.version=Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 13:51:28+0000), json-path.version=0.9.1, spring-hateoas.version=0.16.0.RELEASE, env.WINDOWS_TRACING_FLAGS=3, env.SESSIONNAME=Console, spring-data-releasetrain.version=Evans-SR2, sun.java.launcher=SUN_STANDARD, spring-ws.version=2.2.0.RELEASE, dropwizard-metrics.version=3.1.0, commons-pool.version=1.6, jstl.version=1.2, java.vm.specification.vendor=Oracle Corporation, file.separator=\, gson.version=2.3.1, h2.version=1.4.185, java.runtime.version=1.7.0_55-b13, jolokia.version=1.2.3, sun.boot.class.path=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\resources.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\rt.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\sunrsasign.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jsse.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jce.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\charsets.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jfr.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\classes, commons-digester.version=2.1, jackson.version=2.4.5, maven.version=3.0.5, env.TEMP=d:\tmp_win, user.country=IE, maven.home=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\.., maven.compiler.target=1.6, thymeleaf.version=2.1.4.RELEASE, reactor-spring.version=1.1.3.RELEASE, spring-loaded.version=1.2.1.RELEASE, commons-pool2.version=2.2, spock.version=0.7-groovy-2.0, reactor.version=1.1.5.RELEASE, env.CMD_LINE_ARGS=-r 100000 -p 11104 -f ..\data\S1MME_TMNL\OHDR.20131218.234009.s1mme, java.vendor=Oracle Corporation, env.CLASSWORLDS_JAR="D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\boot\plexus-classworlds-2.4.jar", spring-amqp.version=1.4.3.RELEASE, maven.compiler.source=1.6, hsqldb.version=2.3.2, java.specification.version=1.7, sun.arch.data.model=64}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources
+excludes []
+includes [**/application.yml, **/application.properties]
+[INFO] skip non existing resourceDirectory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources
+[DEBUG] resource with targetPath null
+directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources
+excludes [**/application.yml, **/application.properties]
+includes []
+[INFO] skip non existing resourceDirectory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ myspringboot ---
+[DEBUG] org.apache.maven.plugins:maven-compiler-plugin:jar:3.1:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]       org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:1.0:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-utils:jar:0.1:compile
+[DEBUG]       com.google.code.findbugs:jsr305:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-shared-incremental:jar:1.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-api:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-manager:jar:2.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-compiler-javac:jar:2.2:runtime
+[DEBUG]    org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.2.2:compile
+[DEBUG]       org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]          log4j:log4j:jar:1.2.12:compile
+[DEBUG]          commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]       com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]       junit:junit:jar:3.8.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1
+[DEBUG]   Included: org.apache.maven.plugins:maven-compiler-plugin:jar:3.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:0.1
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-incremental:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-api:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-manager:jar:2.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-compiler-javac:jar:2.2
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.12
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:3.8.2
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:1.0
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.5.5
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.2.2
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:compile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:compile' with basic configurator -->
+[DEBUG]   (f) basedir = D:\netqos\Dev\Code\Other\Repo1\myspringboot
+[DEBUG]   (f) buildDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG]   (f) classpathElements = [D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes, d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar, d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar, d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar, d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar, d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar, d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar, d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar, d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar, d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar, d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar, d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar, d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar, d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar, d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar]
+[DEBUG]   (f) compileSourceRoots = [D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedSourcesDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-sources\annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:compile {execution: default-compile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]   (f) projectArtifact = com.rooney:myspringboot:jar:0.0.1-SNAPSHOT
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.6
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.6
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\java]
+[DEBUG] Classpath: [D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar
+ d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar
+ d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar
+ d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar
+ d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar
+ d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar
+ d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar
+ d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar
+ d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar
+ d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+ d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar
+ d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar
+ d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar
+ d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar]
+[DEBUG] Output directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\java\com\rooney\myspringboot\Example.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar
+[DEBUG]  d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar
+[DEBUG]  d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar
+[DEBUG]  d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar
+[DEBUG]  d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar
+[DEBUG]  d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar
+[DEBUG] Source roots:
+[DEBUG]  D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\java
+[DEBUG] Command line options:
+[DEBUG] -d D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes -classpath D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes;d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar;d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar;d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar;d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar;d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar;d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar;d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar;d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar;d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar;d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar;d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar; -sourcepath D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\main\java; -s D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-sources\annotations -g -nowarn -target 1.6 -source 1.6 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 1 source file to D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ myspringboot ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-resources-plugin:2.6:testResources from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-resources-plugin:2.6, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-resources-plugin:2.6:testResources' with basic configurator -->
+[DEBUG]   (f) buildFilters = []
+[DEBUG]   (s) delimiters = [@]
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) escapeWindowsPaths = true
+[DEBUG]   (s) includeEmptyDirs = false
+[DEBUG]   (s) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG]   (s) overwrite = false
+[DEBUG]   (f) project = MavenProject: com.rooney:myspringboot:0.0.1-SNAPSHOT @ D:\netqos\Dev\Code\Other\Repo1\myspringboot\pom.xml
+[DEBUG]   (s) resources = [Resource {targetPath: null, filtering: false, FileSet {directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\resources, PatternSet [includes: {}, excludes: {}]}}]
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG]   (f) supportMultiLineFiltering = false
+[DEBUG]   (f) useBuildFilters = true
+[DEBUG]   (s) useDefaultDelimiters = true
+[DEBUG] -- end configuration --
+[DEBUG] properties used {spring-batch.version=3.0.3.RELEASE, file.encoding.pkg=sun.io, env.PROMPT=$P$G, undertow.version=1.1.1.Final, httpclient.version=4.3.6, env.=D:=D:\netqos\Dev\Code\Other\Repo1\myspringboot, java.home=D:\netqos\Dev\Apps\Java\jdk1.7\jre, hibernate.version=4.3.8.Final, groovy.version=2.3.10, spring-social-linkedin.version=1.0.1.RELEASE, classworlds.conf=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\bin\m2.conf, java.endorsed.dirs=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\endorsed, jmustache.version=1.10, spring-cloud-connectors.version=1.1.1.RELEASE, env.USERNAME=prooney, mockito.version=1.10.19, sun.os.patch.level=Service Pack 1, java.vendor.url=http://java.oracle.com/, env.COMPUTERNAME=PC-DUB2-ENG045, env.=C:=C:\Users\prooney, bitronix.version=2.1.4, java.version=1.7.0_55, commons-beanutils.version=1.9.2, atomikos.version=3.9.3, gradle.version=1.6, jersey.version=2.14, jaxen.version=1.1.6, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, env.USERPROFILE=C:\Users\prooney, sun-mail.version=1.5.2, wsdl4j.version=1.6.3, jedis.version=2.5.2, javax-mail.version=1.5.2, env.JAVA_OPTS=-Xms1G -Xmx1G -Dlog4j.configuration=log4j.xml, user.name=prooney, sun.io.unicode.encoding=UnicodeLittle, sun.jnu.encoding=Cp1252, java.runtime.name=Java(TM) SE Runtime Environment, activemq.version=5.10.1, spring-security-jwt.version=1.0.3.RELEASE, env.LOCALAPPDATA=C:\Users\prooney\AppData\Local, spring-mobile.version=1.1.3.RELEASE, env.COMMONPROGRAMW6432=C:\Program Files\Common Files, commons-dbcp.version=1.4, env.RFC_INI=C:\WINDOWS\SysWOW64\saprfc.ini, java.specification.name=Java Platform API Specification, log4j2.version=2.1, aspectj.version=1.8.5, user.timezone=Europe/London, janino.version=2.6.1, user.script=, path.separator=;, tomcat.version=8.0.18, env.MAVEN_CMD_LINE_ARGS=-X clean package, env.PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 62 Stepping 4, GenuineIntel, file.encoding=Cp1252, thymeleaf-extras-springsecurity3.version=2.1.1.RELEASE, env.HOME=H:\, sun.java.command=org.codehaus.plexus.classworlds.launcher.Launcher -X clean package, velocity.version=1.7, spring-social-twitter.version=1.1.0.RELEASE, env.NUMBER_OF_PROCESSORS=24, env.APPDATA=C:\Users\prooney\AppData\Roaming, flyway.version=3.1, snakeyaml.version=1.14, thymeleaf-extras-conditionalcomments.version=2.1.1.RELEASE, resource.delimiter=@, env.WINDIR=C:\WINDOWS, hikaricp.version=2.2.5, java.io.tmpdir=d:\tmp_win\, javax-transaction.version=1.2, glassfish-el.version=3.0.0, user.language=en, line.separator=
+, crashub.version=1.3.1, spring-security.version=3.2.5.RELEASE, spring-social.version=1.1.0.RELEASE, solr.version=4.7.2, env.COMMONPROGRAMFILES=C:\Program Files\Common Files, gemfire.version=7.0.2, java.vm.info=mixed mode, sun.desktop=windows, java.vm.specification.name=Java Virtual Machine Specification, servlet-api.version=3.1.0, project.reporting.outputEncoding=UTF-8, joda-time.version=2.5, hibernate-validator.version=5.1.3.Final, env.M2_HOME=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\.., commons-collections.version=3.2.1, liquibase.version=3.3.2, env.PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.py;.pyw, env.OSSINFO=C:\Informatica\9.5.1\clients\DT, hornetq.version=2.4.5.Final, env.LOGONSERVER=\\EU-DUB2-DC01-P, env.PSMODULEPATH=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;c:\Program Files\Microsoft Security Client\MpProvider\, spring-integration.version=4.1.2.RELEASE, java.awt.printerjob=sun.awt.windows.WPrinterJob, mongodb.version=2.12.5, env.PUBLIC=C:\Users\Public, env.USERDOMAIN=GLOBAL, env.VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\, jetty.version=9.2.7.v20150116, env.PROCESSOR_LEVEL=6, env.PROGRAMFILES(X86)=C:\Program Files (x86), env.=EXITCODE=00000000, env.CLASSPATH=C:\Informatica\9.5.1\clients\DT\api\lib\CM_JavaAPI.jar; , os.name=Windows 7, java.specification.vendor=Oracle Corporation, env.TMP=d:\tmp_win, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, simple-json.version=1.1.1, env.OS=Windows_NT, java.library.path=D:\netqos\Dev\Apps\Java\jdk1.7\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\netqos\Dev\Apps\Java\jdk1.7\bin;D:\netqos\Dev\Apps;C:\Informatica\9.5.1\clients\DT\bin;C:\Informatica\9.5.1\clients\tools\datadirect;C:\Informatica\9.5.1\clients\tools\odbcdrv;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;D:\netqos\Dev\Apps\apache-storm-0.9.1-incubating\bin;D:\netqos\Dev\Apps\apache-maven-3.0.5\bin;C:\Program Files\SlikSvn\bin;D:\netqos\Dev\Apps\gradle-1.12\bin;D:\netqos\Dev\Apps\nodejs\;D:\netqos\Dev\Apps\Vagrant\bin;d:\netqos\Dev\Apps\Anaconda;d:\netqos\Dev\Apps\Anaconda\Scripts;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\prooney\AppData\Roaming\npm;C:\Program Files\Boot2Docker for Windows;., env.PROGRAMW6432=C:\Program Files, env.PATH=D:\netqos\Dev\Apps\Java\jdk1.7\bin;D:\netqos\Dev\Apps;C:\Informatica\9.5.1\clients\DT\bin;C:\Informatica\9.5.1\clients\tools\datadirect;C:\Informatica\9.5.1\clients\tools\odbcdrv;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;D:\netqos\Dev\Apps\apache-storm-0.9.1-incubating\bin;D:\netqos\Dev\Apps\apache-maven-3.0.5\bin;C:\Program Files\SlikSvn\bin;D:\netqos\Dev\Apps\gradle-1.12\bin;D:\netqos\Dev\Apps\nodejs\;D:\netqos\Dev\Apps\Vagrant\bin;d:\netqos\Dev\Apps\Anaconda;d:\netqos\Dev\Apps\Anaconda\Scripts;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\IDM Computer Solutions\UltraEdit\;C:\Users\prooney\AppData\Roaming\npm;C:\Program Files\Boot2Docker for Windows, java.class.version=51.0, spring-boot.version=1.2.2.BUILD-SNAPSHOT, env.TNS_ADMIN=\\global.tektronix.net\global\network\admin, freemarker.version=2.3.21, env.JAVA_CLASSPATH=".\conf;.\lib\*;", httpasyncclient.version=4.0.2, spring-social-facebook.version=1.1.1.RELEASE, env.HOMEDRIVE=H:, env.HOMESHARE=\\global.tektronix.net\global\Europe\Dublin\Home\prooney, env.SYSTEMROOT=C:\WINDOWS, spring-plugin.version=1.1.0.RELEASE, spring.version=4.1.5.RELEASE, env.COMSPEC=C:\WINDOWS\system32\cmd.exe, sun.boot.library.path=D:\netqos\Dev\Apps\Java\jdk1.7\jre\bin, project.build.sourceEncoding=UTF-8, env.SYSTEMDRIVE=C:, env.PROCESSOR_REVISION=3e04, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment, user.variant=, commons-dbcp2.version=2.0.1, hibernate-entitymanager.version=4.3.8.Final, hamcrest.version=1.3, junit.version=4.12, javax-cache.version=1.0.0, env.PROGRAMFILES=C:\Program Files, java.vm.specification.version=1.7, env.MAVEN_JAVA_EXE="D:\netqos\Dev\Apps\Java\jdk1.7\bin\java.exe", env.IFCONTENTMASTER_HOME=C:\Informatica\9.5.1\clients\DT, env.PROGRAMDATA=C:\ProgramData, mysql.version=5.1.34, slf4j.version=1.7.10, awt.toolkit=sun.awt.windows.WToolkit, sun.cpu.isalist=amd64, java.ext.dirs=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext, derby.version=10.10.2.0, os.version=6.1, velocity-tools.version=2.0, thymeleaf-layout-dialect.version=1.2.7, user.home=C:\Users\prooney, env.ERROR_CODE=0, java.vm.vendor=Oracle Corporation, logback.version=1.1.2, env.JAVA_HOME=D:\netqos\Dev\Apps\Java\jdk1.7, env.USERDNSDOMAIN=GLOBAL.TEKTRONIX.NET, user.dir=D:\netqos\Dev\Code\Other\Repo1\myspringboot, env.COMMONPROGRAMFILES(X86)=C:\Program Files (x86)\Common Files, env.FP_NO_HOST_CHECK=NO, log4j.version=1.2.17, sun.cpu.endian=little, env.ALLUSERSPROFILE=C:\ProgramData, env.CLASSWORLDS_LAUNCHER=org.codehaus.plexus.classworlds.launcher.Launcher, env.PROCESSOR_ARCHITECTURE=AMD64, java.vm.version=24.55-b03, env.HOMEPATH=\, env.=::=::\, java.class.path=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\boot\plexus-classworlds-2.4.jar, thymeleaf-extras-data-attribute.version=1.3, jdom2.version=2.0.6, env.UATDATA=C:\WINDOWS\CCM\UATData\D9F8C395-CAB8-491d-B8AC-179A1FE1BE77, jetty-jsp.version=2.2.0.v201112011158, javassist.version=3.18.1-GA, os.arch=amd64, maven.build.version=Apache Maven 3.0.5 (r01de14724cdef164cd33c7c8c2fe155faf9602da; 2013-02-19 13:51:28+0000), json-path.version=0.9.1, spring-hateoas.version=0.16.0.RELEASE, env.WINDOWS_TRACING_FLAGS=3, env.SESSIONNAME=Console, spring-data-releasetrain.version=Evans-SR2, sun.java.launcher=SUN_STANDARD, spring-ws.version=2.2.0.RELEASE, dropwizard-metrics.version=3.1.0, commons-pool.version=1.6, jstl.version=1.2, java.vm.specification.vendor=Oracle Corporation, file.separator=\, gson.version=2.3.1, h2.version=1.4.185, java.runtime.version=1.7.0_55-b13, jolokia.version=1.2.3, sun.boot.class.path=D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\resources.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\rt.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\sunrsasign.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jsse.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jce.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\charsets.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\lib\jfr.jar;D:\netqos\Dev\Apps\Java\jdk1.7\jre\classes, commons-digester.version=2.1, jackson.version=2.4.5, maven.version=3.0.5, env.TEMP=d:\tmp_win, user.country=IE, maven.home=D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\.., maven.compiler.target=1.6, thymeleaf.version=2.1.4.RELEASE, reactor-spring.version=1.1.3.RELEASE, spring-loaded.version=1.2.1.RELEASE, commons-pool2.version=2.2, spock.version=0.7-groovy-2.0, reactor.version=1.1.5.RELEASE, env.CMD_LINE_ARGS=-r 100000 -p 11104 -f ..\data\S1MME_TMNL\OHDR.20131218.234009.s1mme, java.vendor=Oracle Corporation, env.CLASSWORLDS_JAR="D:\netqos\Dev\Apps\apache-maven-3.0.5\bin\..\boot\plexus-classworlds-2.4.jar", spring-amqp.version=1.4.3.RELEASE, maven.compiler.source=1.6, hsqldb.version=2.3.2, java.specification.version=1.7, sun.arch.data.model=64}
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[DEBUG] resource with targetPath null
+directory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\resources
+excludes []
+includes []
+[INFO] skip non existing resourceDirectory D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\resources
+[DEBUG] no use filter components
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ myspringboot ---
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-compiler-plugin:3.1, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile' with basic configurator -->
+[DEBUG]   (f) basedir = D:\netqos\Dev\Code\Other\Repo1\myspringboot
+[DEBUG]   (f) buildDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG]   (f) classpathElements = [D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes, D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes, d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar, d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar, d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar, d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar, d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar, d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar, d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar, d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar, d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar, d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar, d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar, d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar, d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar, d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar, d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar, d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar, d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar, d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar, d:\netqos\repository\junit\junit\4.12\junit-4.12.jar, d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar]
+[DEBUG]   (f) compileSourceRoots = [D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java]
+[DEBUG]   (f) compilerId = javac
+[DEBUG]   (f) debug = true
+[DEBUG]   (f) encoding = UTF-8
+[DEBUG]   (f) failOnError = true
+[DEBUG]   (f) forceJavacCompilerUse = false
+[DEBUG]   (f) fork = false
+[DEBUG]   (f) generatedTestSourcesDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-test-sources\test-annotations
+[DEBUG]   (f) mojoExecution = org.apache.maven.plugins:maven-compiler-plugin:3.1:testCompile {execution: default-testCompile}
+[DEBUG]   (f) optimize = false
+[DEBUG]   (f) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG]   (f) showDeprecation = false
+[DEBUG]   (f) showWarnings = false
+[DEBUG]   (f) skipMultiThreadWarning = false
+[DEBUG]   (f) source = 1.6
+[DEBUG]   (f) staleMillis = 0
+[DEBUG]   (f) target = 1.6
+[DEBUG]   (f) useIncrementalCompilation = true
+[DEBUG]   (f) verbose = false
+[DEBUG]   (f) mavenSession = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG] -- end configuration --
+[DEBUG] Using compiler 'javac'.
+[DEBUG] Source directories: [D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java]
+[DEBUG] Classpath: [D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+ D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar
+ d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar
+ d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar
+ d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar
+ d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar
+ d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar
+ d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar
+ d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar
+ d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar
+ d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar
+ d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar
+ d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar
+ d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+ d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar
+ d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar
+ d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar
+ d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar
+ d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar
+ d:\netqos\repository\junit\junit\4.12\junit-4.12.jar
+ d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar]
+[DEBUG] Output directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG] CompilerReuseStrategy: reuseCreated
+[DEBUG] useIncrementalCompilation enabled
+[DEBUG] Stale source detected: D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java\com\rooney\myspringboot\ExampleTest.java
+[INFO] Changes detected - recompiling the module!
+[DEBUG] Classpath:
+[DEBUG]  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG]  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar
+[DEBUG]  d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar
+[DEBUG]  d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar
+[DEBUG]  d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar
+[DEBUG]  d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar
+[DEBUG]  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar
+[DEBUG]  d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar
+[DEBUG]  d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar
+[DEBUG]  d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar
+[DEBUG]  d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar
+[DEBUG]  d:\netqos\repository\junit\junit\4.12\junit-4.12.jar
+[DEBUG]  d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
+[DEBUG] Source roots:
+[DEBUG]  D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java
+[DEBUG] Command line options:
+[DEBUG] -d D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes -classpath D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes;D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes;d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar;d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar;d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar;d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar;d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar;d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar;d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar;d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar;d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar;d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar;d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar;d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar;d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar;d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar;d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar;d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar;d:\netqos\repository\junit\junit\4.12\junit-4.12.jar;d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar; -sourcepath D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java; -s D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\generated-test-sources\test-annotations -g -nowarn -target 1.6 -source 1.6 -encoding UTF-8
+[DEBUG] incrementalBuildHelper#beforeRebuildExecution
+[INFO] Compiling 1 source file to D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG] incrementalBuildHelper#afterRebuildExecution
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.17:test (default-test) @ myspringboot ---
+[DEBUG] org.apache.maven.plugins:maven-surefire-plugin:jar:2.17:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.surefire:maven-surefire-common:jar:2.17:compile
+[DEBUG]       org.apache.maven.surefire:surefire-booter:jar:2.17:compile
+[DEBUG]       org.apache.maven:maven-artifact:jar:2.0.9:compile
+[DEBUG]          org.codehaus.plexus:plexus-utils:jar:1.5.1:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.9:compile
+[DEBUG]          org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]             junit:junit:jar:3.8.1:test (scope managed from compile)
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-settings:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-profile:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.9:compile
+[DEBUG]       org.apache.maven:maven-core:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9:compile
+[DEBUG]          org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-repository-metadata:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-error-diagnostics:jar:2.0.9:compile
+[DEBUG]          org.apache.maven:maven-monitor:jar:2.0.9:compile
+[DEBUG]          classworlds:classworlds:jar:1.1:compile
+[DEBUG]       org.apache.commons:commons-lang3:jar:3.1:compile
+[DEBUG]    org.apache.maven.surefire:surefire-api:jar:2.17:compile
+[DEBUG]    org.apache.maven:maven-toolchain:jar:2.0.9:compile
+[DEBUG]    org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.17
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.17
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-surefire-plugin:2.17
+[DEBUG]   Included: org.apache.maven.plugins:maven-surefire-plugin:jar:2.17
+[DEBUG]   Included: org.apache.maven.surefire:maven-surefire-common:jar:2.17
+[DEBUG]   Included: org.apache.maven.surefire:surefire-booter:jar:2.17
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.5.1
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.9
+[DEBUG]   Included: org.apache.commons:commons-lang3:jar:3.1
+[DEBUG]   Included: org.apache.maven.surefire:surefire-api:jar:2.17
+[DEBUG]   Included: org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.2
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.9
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: junit:junit:jar:3.8.1
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.9
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.9
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-toolchain:jar:2.0.9
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-surefire-plugin:2.17:test from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-surefire-plugin:2.17, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-surefire-plugin:2.17:test' with basic configurator -->
+[DEBUG]   (s) additionalClasspathElements = []
+[DEBUG]   (s) basedir = D:\netqos\Dev\Code\Other\Repo1\myspringboot
+[DEBUG]   (s) childDelegation = false
+[DEBUG]   (s) classesDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]   (s) classpathDependencyExcludes = []
+[DEBUG]   (s) dependenciesToScan = []
+[DEBUG]   (s) disableXmlReport = false
+[DEBUG]   (s) enableAssertions = true
+[DEBUG]   (s) excludes = [**/Abstract*.java]
+[DEBUG]   (f) forkCount = 1
+[DEBUG]   (s) forkMode = once
+[DEBUG]   (s) includes = [**/*Tests.java, **/*Test.java]
+[DEBUG]   (s) junitArtifactName = junit:junit
+[DEBUG]   (s) localRepository =        id: local
+      url: file:///d:/netqos/repository/
+   layout: none
+
+[DEBUG]   (f) parallelMavenExecution = false
+[DEBUG]   (s) parallelOptimized = true
+[DEBUG]   (s) perCoreThreadCount = true
+[DEBUG]   (s) pluginArtifactMap = {org.apache.maven.plugins:maven-surefire-plugin=org.apache.maven.plugins:maven-surefire-plugin:maven-plugin:2.17:, org.apache.maven.surefire:maven-surefire-common=org.apache.maven.surefire:maven-surefire-common:jar:2.17:compile, org.apache.maven.surefire:surefire-booter=org.apache.maven.surefire:surefire-booter:jar:2.17:compile, org.codehaus.plexus:plexus-utils=org.codehaus.plexus:plexus-utils:jar:1.5.1:compile, org.apache.maven.reporting:maven-reporting-api=org.apache.maven.reporting:maven-reporting-api:jar:2.0.9:compile, org.apache.commons:commons-lang3=org.apache.commons:commons-lang3:jar:3.1:compile, org.apache.maven.surefire:surefire-api=org.apache.maven.surefire:surefire-api:jar:2.17:compile, org.apache.maven.plugin-tools:maven-plugin-annotations=org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.2:compile}
+[DEBUG]   (f) pluginDescriptor = Component Descriptor: role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.SurefirePlugin', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.17:test'
+role: 'org.apache.maven.plugin.Mojo', implementation: 'org.apache.maven.plugin.surefire.HelpMojo', role hint: 'org.apache.maven.plugins:maven-surefire-plugin:2.17:help'
+---
+[DEBUG]   (s) printSummary = true
+[DEBUG]   (s) projectArtifactMap = {org.springframework.boot:spring-boot-starter-web=org.springframework.boot:spring-boot-starter-web:jar:1.2.2.BUILD-SNAPSHOT:compile, org.springframework.boot:spring-boot-starter=org.springframework.boot:spring-boot-starter:jar:1.2.2.BUILD-SNAPSHOT:compile, org.springframework.boot:spring-boot=org.springframework.boot:spring-boot:jar:1.2.2.BUILD-SNAPSHOT:compile, org.springframework.boot:spring-boot-autoconfigure=org.springframework.boot:spring-boot-autoconfigure:jar:1.2.2.BUILD-SNAPSHOT:compile, org.springframework.boot:spring-boot-starter-logging=org.springframework.boot:spring-boot-starter-logging:jar:1.2.2.BUILD-SNAPSHOT:compile, org.slf4j:jcl-over-slf4j=org.slf4j:jcl-over-slf4j:jar:1.7.10:compile, org.slf4j:slf4j-api=org.slf4j:slf4j-api:jar:1.7.10:compile, org.slf4j:jul-to-slf4j=org.slf4j:jul-to-slf4j:jar:1.7.10:compile, org.slf4j:log4j-over-slf4j=org.slf4j:log4j-over-slf4j:jar:1.7.10:compile, ch.qos.logback:logback-classic=ch.qos.logback:logback-classic:jar:1.1.2:compile, ch.qos.logback:logback-core=ch.qos.logback:logback-core:jar:1.1.2:compile, org.yaml:snakeyaml=org.yaml:snakeyaml:jar:1.14:compile, org.springframework.boot:spring-boot-starter-tomcat=org.springframework.boot:spring-boot-starter-tomcat:jar:1.2.2.BUILD-SNAPSHOT:compile, org.apache.tomcat.embed:tomcat-embed-core=org.apache.tomcat.embed:tomcat-embed-core:jar:8.0.18:compile, org.apache.tomcat.embed:tomcat-embed-el=org.apache.tomcat.embed:tomcat-embed-el:jar:8.0.18:compile, org.apache.tomcat.embed:tomcat-embed-logging-juli=org.apache.tomcat.embed:tomcat-embed-logging-juli:jar:8.0.18:compile, org.apache.tomcat.embed:tomcat-embed-websocket=org.apache.tomcat.embed:tomcat-embed-websocket:jar:8.0.18:compile, com.fasterxml.jackson.core:jackson-databind=com.fasterxml.jackson.core:jackson-databind:jar:2.4.5:compile, com.fasterxml.jackson.core:jackson-annotations=com.fasterxml.jackson.core:jackson-annotations:jar:2.4.5:compile, com.fasterxml.jackson.core:jackson-core=com.fasterxml.jackson.core:jackson-core:jar:2.4.5:compile, org.hibernate:hibernate-validator=org.hibernate:hibernate-validator:jar:5.1.3.Final:compile, javax.validation:validation-api=javax.validation:validation-api:jar:1.1.0.Final:compile, org.jboss.logging:jboss-logging=org.jboss.logging:jboss-logging:jar:3.1.3.GA:compile, com.fasterxml:classmate=com.fasterxml:classmate:jar:1.0.0:compile, org.springframework:spring-core=org.springframework:spring-core:jar:4.1.5.RELEASE:compile, org.springframework:spring-web=org.springframework:spring-web:jar:4.1.5.RELEASE:compile, org.springframework:spring-aop=org.springframework:spring-aop:jar:4.1.5.RELEASE:compile, aopalliance:aopalliance=aopalliance:aopalliance:jar:1.0:compile, org.springframework:spring-beans=org.springframework:spring-beans:jar:4.1.5.RELEASE:compile, org.springframework:spring-context=org.springframework:spring-context:jar:4.1.5.RELEASE:compile, org.springframework:spring-webmvc=org.springframework:spring-webmvc:jar:4.1.5.RELEASE:compile, org.springframework:spring-expression=org.springframework:spring-expression:jar:4.1.5.RELEASE:compile, junit:junit=junit:junit:jar:4.12:test, org.hamcrest:hamcrest-core=org.hamcrest:hamcrest-core:jar:1.3:test}
+[DEBUG]   (s) redirectTestOutputToFile = false
+[DEBUG]   (s) remoteRepositories = [       id: spring-snapshots
+      url: http://repo.spring.io/snapshot
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,        id: spring-milestones
+      url: http://repo.spring.io/milestone
+   layout: default
+snapshots: [enabled => true, update => daily]
+ releases: [enabled => true, update => daily]
+,        id: central
+      url: http://repo.maven.apache.org/maven2
+   layout: default
+snapshots: [enabled => false, update => daily]
+ releases: [enabled => true, update => never]
+]
+[DEBUG]   (s) reportFormat = brief
+[DEBUG]   (s) reportsDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports
+[DEBUG]   (f) reuseForks = true
+[DEBUG]   (s) runOrder = filesystem
+[DEBUG]   (s) skip = false
+[DEBUG]   (s) skipTests = false
+[DEBUG]   (s) testClassesDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes
+[DEBUG]   (s) testFailureIgnore = false
+[DEBUG]   (s) testNGArtifactName = org.testng:testng
+[DEBUG]   (s) testSourceDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\src\test\java
+[DEBUG]   (s) threadCountClasses = 0
+[DEBUG]   (s) threadCountMethods = 0
+[DEBUG]   (s) threadCountSuites = 0
+[DEBUG]   (s) trimStackTrace = true
+[DEBUG]   (s) useFile = true
+[DEBUG]   (s) useManifestOnlyJar = true
+[DEBUG]   (s) useSystemClassLoader = true
+[DEBUG]   (s) useUnlimitedThreads = false
+[DEBUG]   (s) workingDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot
+[DEBUG]   (s) project = MavenProject: com.rooney:myspringboot:0.0.1-SNAPSHOT @ D:\netqos\Dev\Code\Other\Repo1\myspringboot\pom.xml
+[DEBUG]   (s) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG] -- end configuration --
+[INFO] Surefire report directory: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire-reports
+[DEBUG] Setting system property [user.dir]=[D:\netqos\Dev\Code\Other\Repo1\myspringboot]
+[DEBUG] Setting system property [localRepository]=[d:\netqos\repository]
+[DEBUG] Setting system property [basedir]=[D:\netqos\Dev\Code\Other\Repo1\myspringboot]
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-booter:jar:2.17:compile (selected for compile)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.17:compile (selected for compile)
+[DEBUG] Adding to surefire booter test classpath: d:\netqos\repository\org\apache\maven\surefire\surefire-booter\2.17\surefire-booter-2.17.jar Scope: compile
+[DEBUG] Adding to surefire booter test classpath: d:\netqos\repository\org\apache\maven\surefire\surefire-api\2.17\surefire-api-2.17.jar Scope: compile
+[DEBUG] Using JVM: D:\netqos\Dev\Apps\Java\jdk1.7\jre\bin\java
+[DEBUG] dummy:dummy:jar:1.0 (selected for null)
+[DEBUG]   org.apache.maven.surefire:surefire-junit4:jar:2.17:test (selected for test)
+[DEBUG]     org.apache.maven.surefire:surefire-api:jar:2.17:test (selected for test)
+[DEBUG] Adding to surefire test classpath: d:\netqos\repository\org\apache\maven\surefire\surefire-junit4\2.17\surefire-junit4-2.17.jar Scope: test
+[DEBUG] Adding to surefire test classpath: d:\netqos\repository\org\apache\maven\surefire\surefire-api\2.17\surefire-api-2.17.jar Scope: test
+[DEBUG] test classpath:  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes  d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar  d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar  d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar  d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar  d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar  d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar  d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar  d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar  d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar  d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar  d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar  d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar  d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar  d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar  d:\netqos\repository\junit\junit\4.12\junit-4.12.jar  d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar
+[DEBUG] provider classpath:  d:\netqos\repository\org\apache\maven\surefire\surefire-junit4\2.17\surefire-junit4-2.17.jar  d:\netqos\repository\org\apache\maven\surefire\surefire-api\2.17\surefire-api-2.17.jar
+[DEBUG] test(compact) classpath:  test-classes  classes  spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar  jcl-over-slf4j-1.7.10.jar  slf4j-api-1.7.10.jar  jul-to-slf4j-1.7.10.jar  log4j-over-slf4j-1.7.10.jar  logback-classic-1.1.2.jar  logback-core-1.1.2.jar  snakeyaml-1.14.jar  spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar  tomcat-embed-core-8.0.18.jar  tomcat-embed-el-8.0.18.jar  tomcat-embed-logging-juli-8.0.18.jar  tomcat-embed-websocket-8.0.18.jar  jackson-databind-2.4.5.jar  jackson-annotations-2.4.5.jar  jackson-core-2.4.5.jar  hibernate-validator-5.1.3.Final.jar  validation-api-1.1.0.Final.jar  jboss-logging-3.1.3.GA.jar  classmate-1.0.0.jar  spring-core-4.1.5.RELEASE.jar  spring-web-4.1.5.RELEASE.jar  spring-aop-4.1.5.RELEASE.jar  aopalliance-1.0.jar  spring-beans-4.1.5.RELEASE.jar  spring-context-4.1.5.RELEASE.jar  spring-webmvc-4.1.5.RELEASE.jar  spring-expression-4.1.5.RELEASE.jar  junit-4.12.jar  hamcrest-core-1.3.jar
+[DEBUG] provider(compact) classpath:  surefire-junit4-2.17.jar  surefire-api-2.17.jar
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+[DEBUG] boot classpath:  d:\netqos\repository\org\apache\maven\surefire\surefire-booter\2.17\surefire-booter-2.17.jar  d:\netqos\repository\org\apache\maven\surefire\surefire-api\2.17\surefire-api-2.17.jar  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\test-classes  D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes  d:\netqos\repository\org\springframework\boot\spring-boot-starter-web\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot\1.2.2.BUILD-SNAPSHOT\spring-boot-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-autoconfigure\1.2.2.BUILD-SNAPSHOT\spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter-logging\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\slf4j\jcl-over-slf4j\1.7.10\jcl-over-slf4j-1.7.10.jar  d:\netqos\repository\org\slf4j\slf4j-api\1.7.10\slf4j-api-1.7.10.jar  d:\netqos\repository\org\slf4j\jul-to-slf4j\1.7.10\jul-to-slf4j-1.7.10.jar  d:\netqos\repository\org\slf4j\log4j-over-slf4j\1.7.10\log4j-over-slf4j-1.7.10.jar  d:\netqos\repository\ch\qos\logback\logback-classic\1.1.2\logback-classic-1.1.2.jar  d:\netqos\repository\ch\qos\logback\logback-core\1.1.2\logback-core-1.1.2.jar  d:\netqos\repository\org\yaml\snakeyaml\1.14\snakeyaml-1.14.jar  d:\netqos\repository\org\springframework\boot\spring-boot-starter-tomcat\1.2.2.BUILD-SNAPSHOT\spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-core\8.0.18\tomcat-embed-core-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-el\8.0.18\tomcat-embed-el-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-logging-juli\8.0.18\tomcat-embed-logging-juli-8.0.18.jar  d:\netqos\repository\org\apache\tomcat\embed\tomcat-embed-websocket\8.0.18\tomcat-embed-websocket-8.0.18.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-databind\2.4.5\jackson-databind-2.4.5.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-annotations\2.4.5\jackson-annotations-2.4.5.jar  d:\netqos\repository\com\fasterxml\jackson\core\jackson-core\2.4.5\jackson-core-2.4.5.jar  d:\netqos\repository\org\hibernate\hibernate-validator\5.1.3.Final\hibernate-validator-5.1.3.Final.jar  d:\netqos\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar  d:\netqos\repository\org\jboss\logging\jboss-logging\3.1.3.GA\jboss-logging-3.1.3.GA.jar  d:\netqos\repository\com\fasterxml\classmate\1.0.0\classmate-1.0.0.jar  d:\netqos\repository\org\springframework\spring-core\4.1.5.RELEASE\spring-core-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-web\4.1.5.RELEASE\spring-web-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-aop\4.1.5.RELEASE\spring-aop-4.1.5.RELEASE.jar  d:\netqos\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar  d:\netqos\repository\org\springframework\spring-beans\4.1.5.RELEASE\spring-beans-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-context\4.1.5.RELEASE\spring-context-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-webmvc\4.1.5.RELEASE\spring-webmvc-4.1.5.RELEASE.jar  d:\netqos\repository\org\springframework\spring-expression\4.1.5.RELEASE\spring-expression-4.1.5.RELEASE.jar  d:\netqos\repository\junit\junit\4.12\junit-4.12.jar  d:\netqos\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar  d:\netqos\repository\org\apache\maven\surefire\surefire-junit4\2.17\surefire-junit4-2.17.jar
+[DEBUG] boot(compact) classpath:  surefire-booter-2.17.jar  surefire-api-2.17.jar  test-classes  classes  spring-boot-starter-web-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-starter-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-autoconfigure-1.2.2.BUILD-SNAPSHOT.jar  spring-boot-starter-logging-1.2.2.BUILD-SNAPSHOT.jar  jcl-over-slf4j-1.7.10.jar  slf4j-api-1.7.10.jar  jul-to-slf4j-1.7.10.jar  log4j-over-slf4j-1.7.10.jar  logback-classic-1.1.2.jar  logback-core-1.1.2.jar  snakeyaml-1.14.jar  spring-boot-starter-tomcat-1.2.2.BUILD-SNAPSHOT.jar  tomcat-embed-core-8.0.18.jar  tomcat-embed-el-8.0.18.jar  tomcat-embed-logging-juli-8.0.18.jar  tomcat-embed-websocket-8.0.18.jar  jackson-databind-2.4.5.jar  jackson-annotations-2.4.5.jar  jackson-core-2.4.5.jar  hibernate-validator-5.1.3.Final.jar  validation-api-1.1.0.Final.jar  jboss-logging-3.1.3.GA.jar  classmate-1.0.0.jar  spring-core-4.1.5.RELEASE.jar  spring-web-4.1.5.RELEASE.jar  spring-aop-4.1.5.RELEASE.jar  aopalliance-1.0.jar  spring-beans-4.1.5.RELEASE.jar  spring-context-4.1.5.RELEASE.jar  spring-webmvc-4.1.5.RELEASE.jar  spring-expression-4.1.5.RELEASE.jar  junit-4.12.jar  hamcrest-core-1.3.jar  surefire-junit4-2.17.jar
+Forking command line: cmd.exe /X /C "D:\netqos\Dev\Apps\Java\jdk1.7\jre\bin\java -jar D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefirebooter6255821690334040796.jar D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefire7429492418054996531tmp D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\surefire\surefire_02437981706739334394tmp"
+Running com.rooney.myspringboot.ExampleTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 sec - in com.rooney.myspringboot.ExampleTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] 
+[INFO] --- maven-jar-plugin:2.5:jar (default-jar) @ myspringboot ---
+[DEBUG] org.apache.maven.plugins:maven-jar-plugin:jar:2.5:
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-core:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-settings:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6:compile
+[DEBUG]       org.apache.maven.reporting:maven-reporting-api:jar:2.0.6:compile
+[DEBUG]          org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7:compile
+[DEBUG]       org.apache.maven:maven-profile:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-model:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1:compile
+[DEBUG]          junit:junit:jar:3.8.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-error-diagnostics:jar:2.0.6:compile
+[DEBUG]       commons-cli:commons-cli:jar:1.0:compile
+[DEBUG]       org.apache.maven:maven-plugin-descriptor:jar:2.0.6:compile
+[DEBUG]       org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4:compile
+[DEBUG]       org.apache.maven:maven-artifact-manager:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-monitor:jar:2.0.6:compile
+[DEBUG]       classworlds:classworlds:jar:1.1:compile
+[DEBUG]    org.apache.maven:maven-project:jar:2.0.6:compile
+[DEBUG]       org.apache.maven:maven-plugin-registry:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:2.0.6:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.15:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.15:runtime
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.4.4:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.10:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.5:compile
+[DEBUG]          org.tukaani:xz:jar:1.2:compile
+[DEBUG] Created new class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.5
+[DEBUG] Importing foreign packages into class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.5
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.apache.maven.plugins:maven-jar-plugin:2.5
+[DEBUG]   Included: org.apache.maven.plugins:maven-jar-plugin:jar:2.5
+[DEBUG]   Included: org.apache.maven.reporting:maven-reporting-api:jar:2.0.6
+[DEBUG]   Included: org.apache.maven.doxia:doxia-sink-api:jar:1.0-alpha-7
+[DEBUG]   Included: junit:junit:jar:3.8.1
+[DEBUG]   Included: commons-cli:commons-cli:jar:1.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-interactivity-api:jar:1.0-alpha-4
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.15
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.4.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.10
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.5
+[DEBUG]   Included: org.tukaani:xz:jar:1.2
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-parameter-documenter:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:2.0.6
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.0-alpha-9-stable-1
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-error-diagnostics:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-descriptor:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-monitor:jar:2.0.6
+[DEBUG]   Excluded: classworlds:classworlds:jar:1.1
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.6
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:2.0.6
+[DEBUG] Configuring mojo org.apache.maven.plugins:maven-jar-plugin:2.5:jar from plugin realm ClassRealm[plugin>org.apache.maven.plugins:maven-jar-plugin:2.5, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.apache.maven.plugins:maven-jar-plugin:2.5:jar' with basic configurator -->
+[DEBUG]   (s) addDefaultImplementationEntries = true
+[DEBUG]   (s) manifest = org.apache.maven.archiver.ManifestConfiguration@6354b4c3
+[DEBUG]   (f) archive = org.apache.maven.archiver.MavenArchiveConfiguration@4e27a127
+[DEBUG]   (f) classesDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes
+[DEBUG]   (f) defaultManifestFile = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\classes\META-INF\MANIFEST.MF
+[DEBUG]   (f) finalName = myspringboot-0.0.1-SNAPSHOT
+[DEBUG]   (f) forceCreation = false
+[DEBUG]   (f) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG]   (f) skipIfEmpty = false
+[DEBUG]   (f) useDefaultManifestFile = false
+[DEBUG]   (f) project = MavenProject: com.rooney:myspringboot:0.0.1-SNAPSHOT @ D:\netqos\Dev\Code\Other\Repo1\myspringboot\pom.xml
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@72744f71
+[DEBUG] -- end configuration --
+[DEBUG] isUp2date: false (Destination D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\myspringboot-0.0.1-SNAPSHOT.jar not found.)
+[INFO] Building jar: D:\netqos\Dev\Code\Other\Repo1\myspringboot\target\myspringboot-0.0.1-SNAPSHOT.jar
+[DEBUG] adding directory META-INF/
+[DEBUG] adding entry META-INF/MANIFEST.MF
+[DEBUG] adding directory com/
+[DEBUG] adding directory com/rooney/
+[DEBUG] adding directory com/rooney/myspringboot/
+[DEBUG] adding entry com/rooney/myspringboot/Example.class
+[DEBUG] adding directory META-INF/maven/
+[DEBUG] adding directory META-INF/maven/com.rooney/
+[DEBUG] adding directory META-INF/maven/com.rooney/myspringboot/
+[DEBUG] adding entry META-INF/maven/com.rooney/myspringboot/pom.xml
+[DEBUG] adding entry META-INF/maven/com.rooney/myspringboot/pom.properties
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT:repackage (default) @ myspringboot ---
+[DEBUG] Could not find metadata org.springframework.boot:spring-boot-loader-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in local (d:\netqos\repository)
+[DEBUG] Skipped remote update check for org.springframework.boot:spring-boot-loader-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml, locally cached metadata up-to-date.
+[DEBUG] Failure to find org.springframework.boot:spring-boot-loader-tools:1.2.2.BUILD-SNAPSHOT/maven-metadata.xml in http://repo.spring.io/milestone was cached in the local repository, resolution will not be reattempted until the update interval of spring-milestones has elapsed or updates are forced
+[DEBUG] org.springframework.boot:spring-boot-maven-plugin:jar:1.2.2.BUILD-20150223.154920-86:
+[DEBUG]    org.springframework.boot:spring-boot-loader-tools:jar:1.2.2.BUILD-SNAPSHOT:compile
+[DEBUG]       org.springframework:spring-core:jar:4.1.5.RELEASE:compile
+[DEBUG]          commons-logging:commons-logging:jar:1.2:compile
+[DEBUG]    org.apache.maven:maven-archiver:jar:2.5:compile
+[DEBUG]       org.codehaus.plexus:plexus-interpolation:jar:1.15:compile
+[DEBUG]    org.apache.maven:maven-artifact:jar:3.1.1:compile
+[DEBUG]    org.apache.maven:maven-core:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-settings-builder:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-repository-metadata:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-model-builder:jar:3.1.1:compile
+[DEBUG]       org.apache.maven:maven-aether-provider:jar:3.2.1:compile (version managed from 3.1.1)
+[DEBUG]          org.eclipse.aether:aether-spi:jar:0.9.1.v20140329:compile (version managed from 0.9.0.M2)
+[DEBUG]       org.eclipse.aether:aether-impl:jar:0.9.1.v20140329:compile (version managed from 0.9.0.M2)
+[DEBUG]       org.eclipse.aether:aether-api:jar:0.9.1.v20140329:compile (version managed from 0.9.0.M2)
+[DEBUG]       org.eclipse.aether:aether-util:jar:0.9.1.v20140329:compile (version managed from 0.9.0.M2)
+[DEBUG]       org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M5:compile
+[DEBUG]          javax.enterprise:cdi-api:jar:1.0:compile
+[DEBUG]             javax.annotation:jsr250-api:jar:1.0:compile
+[DEBUG]             javax.inject:javax.inject:jar:1:compile
+[DEBUG]          org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0:compile
+[DEBUG]             aopalliance:aopalliance:jar:1.0:compile
+[DEBUG]          org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5:compile
+[DEBUG]       org.codehaus.plexus:plexus-classworlds:jar:2.5.1:compile
+[DEBUG]       org.codehaus.plexus:plexus-component-annotations:jar:1.5.5:compile
+[DEBUG]       org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3:compile
+[DEBUG]          org.sonatype.plexus:plexus-cipher:jar:1.4:compile
+[DEBUG]    org.apache.maven:maven-model:jar:3.1.1:compile
+[DEBUG]    org.apache.maven:maven-plugin-api:jar:3.1.1:compile
+[DEBUG]    org.apache.maven:maven-settings:jar:3.1.1:compile
+[DEBUG]    org.apache.maven.shared:maven-common-artifact-filters:jar:1.4:compile
+[DEBUG]       org.apache.maven:maven-project:jar:2.0.8:compile
+[DEBUG]          org.apache.maven:maven-profile:jar:2.0.8:compile
+[DEBUG]          org.apache.maven:maven-artifact-manager:jar:2.0.8:compile
+[DEBUG]          org.apache.maven:maven-plugin-registry:jar:2.0.8:compile
+[DEBUG]       org.codehaus.plexus:plexus-container-default:jar:1.5.5:compile
+[DEBUG]          org.apache.xbean:xbean-reflect:jar:3.4:compile
+[DEBUG]             log4j:log4j:jar:1.2.17:compile (version managed from 1.2.12)
+[DEBUG]             commons-logging:commons-logging-api:jar:1.1:compile
+[DEBUG]          com.google.collections:google-collections:jar:1.0:compile
+[DEBUG]          junit:junit:jar:4.12:compile (version managed from 3.8.2)
+[DEBUG]             org.hamcrest:hamcrest-core:jar:1.3:compile
+[DEBUG]    org.codehaus.plexus:plexus-archiver:jar:2.4.4:compile
+[DEBUG]       org.codehaus.plexus:plexus-io:jar:2.0.10:compile
+[DEBUG]       org.apache.commons:commons-compress:jar:1.5:compile
+[DEBUG]          org.tukaani:xz:jar:1.2:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:3.0.17:compile
+[DEBUG]    org.apache.maven.plugins:maven-shade-plugin:jar:2.2:compile
+[DEBUG]       org.apache.maven:maven-compat:jar:3.0:compile
+[DEBUG]          org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2:compile
+[DEBUG]             org.sonatype.sisu:sisu-inject-bean:jar:1.4.2:compile
+[DEBUG]                org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7:compile
+[DEBUG]          org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-6:compile
+[DEBUG]       asm:asm:jar:3.3.1:compile
+[DEBUG]       asm:asm-commons:jar:3.3.1:compile
+[DEBUG]          asm:asm-tree:jar:3.3.1:compile
+[DEBUG]       org.jdom:jdom:jar:1.1:compile
+[DEBUG]       org.apache.maven.shared:maven-dependency-tree:jar:2.1:compile
+[DEBUG]       org.vafer:jdependency:jar:0.7:compile
+[DEBUG]          commons-io:commons-io:jar:1.3.2:compile
+[DEBUG]          asm:asm-analysis:jar:3.2:compile
+[DEBUG]          asm:asm-util:jar:3.2:compile
+[DEBUG]       com.google.guava:guava:jar:11.0.2:compile
+[DEBUG]          com.google.code.findbugs:jsr305:jar:1.3.9:compile
+[DEBUG] Created new class realm plugin>org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT
+[DEBUG] Importing foreign packages into class realm plugin>org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT
+[DEBUG]   Included: org.springframework.boot:spring-boot-maven-plugin:jar:1.2.2.BUILD-SNAPSHOT
+[DEBUG]   Included: org.springframework.boot:spring-boot-loader-tools:jar:1.2.2.BUILD-SNAPSHOT
+[DEBUG]   Included: org.springframework:spring-core:jar:4.1.5.RELEASE
+[DEBUG]   Included: commons-logging:commons-logging:jar:1.2
+[DEBUG]   Included: org.apache.maven:maven-archiver:jar:2.5
+[DEBUG]   Included: org.codehaus.plexus:plexus-interpolation:jar:1.15
+[DEBUG]   Included: org.eclipse.aether:aether-spi:jar:0.9.1.v20140329
+[DEBUG]   Included: org.eclipse.aether:aether-impl:jar:0.9.1.v20140329
+[DEBUG]   Included: org.eclipse.aether:aether-api:jar:0.9.1.v20140329
+[DEBUG]   Included: org.eclipse.aether:aether-util:jar:0.9.1.v20140329
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.0.0.M5
+[DEBUG]   Included: javax.enterprise:cdi-api:jar:1.0
+[DEBUG]   Included: javax.annotation:jsr250-api:jar:1.0
+[DEBUG]   Included: javax.inject:javax.inject:jar:1
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:no_aop:3.1.0
+[DEBUG]   Included: aopalliance:aopalliance:jar:1.0
+[DEBUG]   Included: org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.0.0.M5
+[DEBUG]   Included: org.codehaus.plexus:plexus-component-annotations:jar:1.5.5
+[DEBUG]   Included: org.sonatype.plexus:plexus-sec-dispatcher:jar:1.3
+[DEBUG]   Included: org.sonatype.plexus:plexus-cipher:jar:1.4
+[DEBUG]   Included: org.apache.maven.shared:maven-common-artifact-filters:jar:1.4
+[DEBUG]   Included: org.apache.xbean:xbean-reflect:jar:3.4
+[DEBUG]   Included: log4j:log4j:jar:1.2.17
+[DEBUG]   Included: commons-logging:commons-logging-api:jar:1.1
+[DEBUG]   Included: com.google.collections:google-collections:jar:1.0
+[DEBUG]   Included: junit:junit:jar:4.12
+[DEBUG]   Included: org.hamcrest:hamcrest-core:jar:1.3
+[DEBUG]   Included: org.codehaus.plexus:plexus-archiver:jar:2.4.4
+[DEBUG]   Included: org.codehaus.plexus:plexus-io:jar:2.0.10
+[DEBUG]   Included: org.apache.commons:commons-compress:jar:1.5
+[DEBUG]   Included: org.tukaani:xz:jar:1.2
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:3.0.17
+[DEBUG]   Included: org.apache.maven.plugins:maven-shade-plugin:jar:2.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-inject-bean:jar:1.4.2
+[DEBUG]   Included: org.sonatype.sisu:sisu-guice:jar:noaop:2.1.7
+[DEBUG]   Included: asm:asm:jar:3.3.1
+[DEBUG]   Included: asm:asm-commons:jar:3.3.1
+[DEBUG]   Included: asm:asm-tree:jar:3.3.1
+[DEBUG]   Included: org.jdom:jdom:jar:1.1
+[DEBUG]   Included: org.apache.maven.shared:maven-dependency-tree:jar:2.1
+[DEBUG]   Included: org.vafer:jdependency:jar:0.7
+[DEBUG]   Included: commons-io:commons-io:jar:1.3.2
+[DEBUG]   Included: asm:asm-analysis:jar:3.2
+[DEBUG]   Included: asm:asm-util:jar:3.2
+[DEBUG]   Included: com.google.guava:guava:jar:11.0.2
+[DEBUG]   Included: com.google.code.findbugs:jsr305:jar:1.3.9
+[DEBUG]   Excluded: org.apache.maven:maven-artifact:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-core:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-settings-builder:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-repository-metadata:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-model-builder:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-aether-provider:jar:3.2.1
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-classworlds:jar:2.5.1
+[DEBUG]   Excluded: org.apache.maven:maven-model:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-api:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-settings:jar:3.1.1
+[DEBUG]   Excluded: org.apache.maven:maven-project:jar:2.0.8
+[DEBUG]   Excluded: org.apache.maven:maven-profile:jar:2.0.8
+[DEBUG]   Excluded: org.apache.maven:maven-artifact-manager:jar:2.0.8
+[DEBUG]   Excluded: org.apache.maven:maven-plugin-registry:jar:2.0.8
+[DEBUG]   Excluded: org.codehaus.plexus:plexus-container-default:jar:1.5.5
+[DEBUG]   Excluded: org.apache.maven:maven-compat:jar:3.0
+[DEBUG]   Excluded: org.sonatype.sisu:sisu-inject-plexus:jar:1.4.2
+[DEBUG]   Excluded: org.apache.maven.wagon:wagon-provider-api:jar:1.0-beta-6
+[DEBUG] Configuring mojo org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT:repackage from plugin realm ClassRealm[plugin>org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT, parent: sun.misc.Launcher$AppClassLoader@6cc2060e]
+[DEBUG] Configuring mojo 'org.springframework.boot:spring-boot-maven-plugin:1.2.2.BUILD-SNAPSHOT:repackage' with basic configurator -->
+[DEBUG]   (f) finalName = myspringboot-0.0.1-SNAPSHOT
+[DEBUG]   (f) outputDirectory = D:\netqos\Dev\Code\Other\Repo1\myspringboot\target
+[DEBUG]   (f) project = MavenProject: com.rooney:myspringboot:0.0.1-SNAPSHOT @ D:\netqos\Dev\Code\Other\Repo1\myspringboot\pom.xml
+[DEBUG]   (f) skip = false
+[DEBUG] -- end configuration --
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.657s
+[INFO] Finished at: Mon Feb 23 16:31:24 GMT 2015
+[INFO] Final Memory: 19M/490M
+[INFO] ------------------------------------------------------------------------
