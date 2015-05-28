@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:p="http://www.springframework.org/schema/p"	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+                            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+                            http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx.xsd
+                            http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- SET PROP FOR JBOSS SLF4J LOGGING -->
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean" 
+		p:targetObject="#{@systemProperties}" p:targetMethod="setProperty"
+		p:arguments="#{{'org.jboss.logging.provider','slf4j'}}"/>
+
+	<context:property-placeholder location="classpath:application.properties" />
+	<context:component-scan base-package="com.websystique.spring" />
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager"
+		p:sessionFactory-ref="sessionFactory" />
+		
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}" p:username="${jdbc.username}" p:password="${jdbc.password}"/>
+
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		p:dataSource-ref="dataSource" p:packagesToScan="#{{'com.websystique.spring.model'}}" >
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql:false}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql:false}</prop>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="persistenceExceptionTranslationPostProcessor" class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+
+	<!--provides a H2 console to look into the db if necessary-->
+<!-- 	<bean id="org.h2.tools.Server-WebServer" class="org.h2.tools.Server" factory-method="createWebServer" depends-on="dataSource" init-method="start" lazy-init="false"> -->
+<!-- 		<constructor-arg value="-web,-webPort,8082" /> -->
+<!-- 	</bean> -->
+</beans>
+
+
