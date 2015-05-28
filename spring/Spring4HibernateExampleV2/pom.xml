@@ -9,9 +9,8 @@
 	<name>Spring4HibernateExampleV2</name>
 
 	<properties>
-		<springframework.version>4.1.6.RELEASE</springframework.version>
+		<spring.version>4.1.6.RELEASE</spring.version>
 		<hibernate.version>4.3.10.Final</hibernate.version>
-<!-- 		<mysql.version>5.1.31</mysql.version> -->
 		<joda-time.version>2.3</joda-time.version>
 		<slf4j.version>1.7.12</slf4j.version>
 	</properties>
@@ -31,30 +30,33 @@
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>${springframework.version}</version>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
 			<exclusions> <!-- slf4j instead -->
 				<exclusion>
 					<artifactId>commons-logging</artifactId>
 					<groupId>commons-logging</groupId>
 				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>${springframework.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-tx</artifactId>
-			<version>${springframework.version}</version>
+			</exclusions>			
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>${springframework.version}</version>
+			<version>${spring.version}</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+
 
 		<!-- Hibernate -->
 		<dependency>
@@ -62,13 +64,6 @@
 			<artifactId>hibernate-core</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
-
-		<!-- MySQL -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>mysql</groupId> -->
-<!-- 			<artifactId>mysql-connector-java</artifactId> -->
-<!-- 			<version>${mysql.version}</version> -->
-<!-- 		</dependency> -->
 
 		<!-- Joda-Time -->
 		<dependency>
@@ -90,12 +85,7 @@
 			<version>1.4.187</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
-			<version>4.1.6.RELEASE</version>
-			<scope>test</scope>
-		</dependency>
+
 
 		<dependency>
 			<groupId>junit</groupId>
