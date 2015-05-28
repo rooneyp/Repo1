@@ -78,6 +78,6 @@ public class TestApp {
             System.out.println(emp);
         }
 
-        Thread.sleep(300 * 1000);
+        // Thread.sleep(300 * 1000); //allow time to look at results in DB
     }
 }
