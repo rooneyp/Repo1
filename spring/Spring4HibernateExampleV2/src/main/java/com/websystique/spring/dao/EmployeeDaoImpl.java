@@ -3,7 +3,6 @@ package com.websystique.spring.dao;
 import java.util.List;
 
 import org.hibernate.Criteria;
-import org.hibernate.Query;
 import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
@@ -23,9 +22,18 @@ public class EmployeeDaoImpl extends AbstractDao implements EmployeeDao{
 	}
 
 	public void deleteEmployeeBySsn(String ssn) {
-		Query query = getSession().createSQLQuery("delete from Employee where ssn = :ssn");
-		query.setString("ssn", ssn);
-		query.executeUpdate();
+	    //BULK SQL - doesn't work when have child entities
+//		Query query = getSession().createSQLQuery("delete from Employee where ssn = :ssn");
+//		query.setString("ssn", ssn);
+//		query.executeUpdate();
+	    
+	    //Retrieve each, and deleting explicitly and thus getting CASCADE delete for free
+	    Criteria criteria = getSession().createCriteria(Employee.class);
+	    criteria.add(Restrictions.eq("ssn", ssn));
+	    
+	    for (Object employee : criteria.list()) {
+	        getSession().delete(employee);
+        }
 	}
 
 	

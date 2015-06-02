@@ -14,7 +14,11 @@ public abstract class AbstractDao {
 	}
 
 	public void persist(Object entity) {
-		getSession().persist(entity);
+	  //TODO which is better? Save exe's immediately and returns gen'd ID
+	  //Can't call persist twice on an entity?  
+//		getSession().persist(entity);
+		getSession().saveOrUpdate(entity); 
+	    
 	}
 
 	public void delete(Object entity) {
