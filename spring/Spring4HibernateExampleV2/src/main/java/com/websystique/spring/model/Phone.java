@@ -10,7 +10,7 @@ import javax.persistence.*;
  * Created by paul on 01/06/15.
  */
 @Entity
-@Table
+@Table 
 public class Phone {
     @Id
     @GeneratedValue
@@ -23,9 +23,9 @@ public class Phone {
     @Column
     private int number;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "EMP_ID", nullable = false)
-    private Employee employee;
+//    @ManyToOne(fetch = FetchType.LAZY)
+////    @JoinColumn(name = "EMPLOYEE_ID", nullable = false)
+//    private Employee employee;
 
     //http://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch01.html#tutorial-associations-unidirset
     public Phone() {
@@ -71,14 +71,14 @@ public class Phone {
         this.manufacturer = manufacturer;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-    
+//    public Employee getEmployee() {
+//        return employee;
+//    }
+//
+//    public void setEmployee(Employee employee) {
+//        this.employee = employee;
+//    }
+//    
     @Override public int hashCode() {
         final int prime = 31;
         int result = 1;

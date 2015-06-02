@@ -40,13 +40,12 @@ public class TestApp {
         employee1.setSsn("ssn00000001");
         Address address1 = new Address("street1", "city1", "state1", "zipcode1");
         employee1.setAddress(address1);
-        service.saveEmployee(employee1); //TODO had to move this up for phones, as we add to the Set which has field annotation
 
         Phone phone1 = new Phone("model1", "manu1", 11111);
-        phone1.setEmployee(employee1);
-        employee1.getPhones().add(phone1);
+//        phone1.setEmployee(employee1); //for bi-directional
+        employee1.getPhones().add(phone1); 
         
-        service.saveEmployee(employee1); //doesn't work with Session.persist, saveOrUpdate needed
+        service.saveEmployee(employee1); //only 1 save required
 
         /*
          * Create Employee2
@@ -56,17 +55,15 @@ public class TestApp {
         employee2.setJoiningDate(new LocalDate(2012, 11, 11));
         employee2.setSalary(new BigDecimal(20000));
         employee2.setSsn("ssn00000002");
-        service.saveEmployee(employee2);
 
         Address address2 = new Address("street2", "city2", "state2", "zipcode2");
         employee2.setAddress(address2);
 
         Phone phone2 = new Phone("model2", "manu2", 22222);
-        phone2.setEmployee(employee2);
+//        phone2.setEmployee(employee2);
         employee2.getPhones().add(phone2);
         
         service.saveEmployee(employee2);
-
 
         /*
          * Get all employees list from database
@@ -93,12 +90,12 @@ public class TestApp {
         /*
          * Get all employees list from database
          */
-        List<Employee> employeeList = service.findAllEmployees();
+        List<Employee> employeeList = service.findAllEmployees(); //runs DB select with "left outer join"
         System.out.println("All Employees after deleting 2nd, and updating 1st");
         for (Employee emp : employeeList) {
             System.out.println(emp);
         }
 
-        // Thread.sleep(300 * 1000); //allow time to look at results in DB
+//         Thread.sleep(300 * 1000); //allow time to look at results in DB
     }
 }

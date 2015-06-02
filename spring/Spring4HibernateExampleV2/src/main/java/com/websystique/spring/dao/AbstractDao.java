@@ -14,10 +14,10 @@ public abstract class AbstractDao {
 	}
 
 	public void persist(Object entity) {
-	  //TODO which is better? Save exe's immediately and returns gen'd ID
+	  //TODO which is better? Save exe's immediately and returns gen'd ID. persist exe's at flush?
 	  //Can't call persist twice on an entity?  
-//		getSession().persist(entity);
-		getSession().saveOrUpdate(entity); 
+		getSession().persist(entity);
+//		getSession().saveOrUpdate(entity); 
 	    
 	}
 

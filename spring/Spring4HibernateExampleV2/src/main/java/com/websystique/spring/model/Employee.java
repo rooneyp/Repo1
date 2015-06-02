@@ -14,7 +14,7 @@ import org.joda.time.LocalDate;
 
 
 /**
- * TODO annotate fields or methods
+ * TODO annotate fields or methods?
  */
 @Entity
 @Table(name="EMPLOYEE")
@@ -37,13 +37,13 @@ public class Employee {
 	@Column(name = "SSN", unique=true, nullable = false)
 	private String ssn;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL, optional = false) //'optional' controls inner vs left-outer join
     private Address address;
 
-    //@JoinColumn(name="ID_EMPLOYEE") TODO default is "EMPLOYEE_id"
-//  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL) 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //using eager as entity is passed back outside Transactional boundary
-    private Set<Phone> phones = new HashSet<Phone>();
+    //TODO how to avoid LOJ on eager fetch
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //using 'eager' not 'lazy' as entity is passed back outside Transactional boundary.
+    @JoinColumn(name="EMPLOYEE_ID", nullable = false) //without this a JOIN Table is created/used. default name is PHONES_ID. 'nullable = false' does not get rid of LOJs 
+    private Set<Phone> phones = new HashSet<Phone>(); //appears to be needed
 
     
     //http://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch01.html#tutorial-associations-unidirset
@@ -51,6 +51,8 @@ public class Employee {
         super();
     }
 
+//    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //using 'eager' not 'lazy' as entity is passed back outside Transactional boundary.
+//    @JoinColumn(name="EMPLOYEE_ID") //without this a JOIN Table is created/used. default name is PHONES_ID
     public Set<Phone> getPhones() {
         return this.phones;
     }
@@ -59,15 +61,19 @@ public class Employee {
         this.phones = phones;
     }
 
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	public Long getId() {
 		return id;
 	}
 
-	//not needed http://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch01.html#tutorial-associations-unidirset	
-//	public void setId(int id) {
+	//not needed http://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch01.html#tutorial-associations-unidirset
+    // but needed if annotate methods
+//	public void setId(Long id) {
 //		this.id = id;
 //	}
 
+//    @Column(name = "NAME", nullable = false)
 	public String getName() {
 		return name;
 	}
@@ -76,6 +82,8 @@ public class Employee {
 		this.name = name;
 	}
 
+//    @Column(name = "JOINING_DATE", nullable = false)
+//    @Type(type="org.jadira.usertype.dateandtime.joda.PersistentLocalDate")
 	public LocalDate getJoiningDate() {
 		return joiningDate;
 	}
@@ -84,6 +92,7 @@ public class Employee {
 		this.joiningDate = joiningDate;
 	}
 
+//	@Column(name = "SALARY", nullable = false)
 	public BigDecimal getSalary() {
 		return salary;
 	}
@@ -92,10 +101,10 @@ public class Employee {
 		this.salary = salary;
 	}
 
+//	@Column(name = "SSN", unique=true, nullable = false)
 	public String getSsn() {
 		return ssn;
 	}
-
 
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
@@ -104,7 +113,8 @@ public class Employee {
 	public void setAddress(Address address) {
 		this.address = address;
 	}
-
+//
+//	@ManyToOne(cascade = CascadeType.ALL)
 	public Address getAddress() {
 		return this.address;
 	}
@@ -143,7 +153,4 @@ public class Employee {
         return "Employee [id=" + id + ", name=" + name + ", joiningDate=" + joiningDate + ", salary=" + salary + ", ssn=" + ssn + ", address=" + address + ", phones=" + phones
                 + "]";
     }
-
-
-
 }

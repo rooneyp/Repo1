@@ -10,23 +10,23 @@ import javax.persistence.Table;
  * http://www.dzone.com/tutorials/java/hibernate/hibernate-example/hibernate-mapping-many-to-one-using-annotations-1.html
  */
 @Entity
-@Table(name = "ADDRESS")
+@Table
 public class Address {
     @Id
     @GeneratedValue
-    @Column(name = "ADDRESS_ID")
+    @Column(name = "ID")
     private Long id;
 
-    @Column(name = "ADDRESS_STREET", nullable = false, length=250)
+    @Column(name = "STREET", nullable = false, length=250)
     private String street;
 
-    @Column(name = "ADDRESS_CITY", nullable = false, length=50)
+    @Column(name = "CITY", nullable = false, length=50)
     private String city;
 
-    @Column(name = "ADDRESS_STATE", nullable = false, length=50)
+    @Column(name = "STATE", nullable = false, length=50)
     private String state;
 
-    @Column(name = "ADDRESS_ZIPCODE", nullable = false, length=10)
+    @Column(name = "ZIPCODE", nullable = false, length=10)
     private String zipcode;
 
     //http://docs.jboss.org/hibernate/orm/4.3/manual/en-US/html/ch01.html#tutorial-associations-unidirset
