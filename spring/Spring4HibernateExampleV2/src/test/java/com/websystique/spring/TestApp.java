@@ -3,6 +3,8 @@ package com.websystique.spring;
 import java.math.BigDecimal;
 import java.util.List;
 
+import com.websystique.spring.model.Address;
+import com.websystique.spring.model.Phone;
 import org.joda.time.LocalDate;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -33,6 +35,15 @@ public class TestApp {
         employee1.setJoiningDate(new LocalDate(2010, 10, 10));
         employee1.setSalary(new BigDecimal(10000));
         employee1.setSsn("ssn00000001");
+        service.saveEmployee(employee1); //TODO had to move this up for phones
+
+        Address address1 = new Address("street1", "city1", "state1", "zipcode1");
+        employee1.setAddress(address1);
+        Phone phone1 = new Phone("model1", "manu1", 11111);
+        phone1.setEmployee(employee1);
+        employee1.getPhones().add(phone1);
+        //service.savePhone   TODO
+
 
         /*
          * Create Employee2
@@ -42,12 +53,18 @@ public class TestApp {
         employee2.setJoiningDate(new LocalDate(2012, 11, 11));
         employee2.setSalary(new BigDecimal(20000));
         employee2.setSsn("ssn00000002");
+        service.saveEmployee(employee2);
+
+        Address address2 = new Address("street2", "city2", "state2", "zipcode2");
+        employee2.setAddress(address2);
+
+        Phone phone2 = new Phone("model2", "manu2", 22222);
+        phone2.setEmployee(employee2);
+        employee2.getPhones().add(phone2);
 
         /*
          * Persist both Employees
          */
-        service.saveEmployee(employee1);
-        service.saveEmployee(employee2);
 
         /*
          * Get all employees list from database
