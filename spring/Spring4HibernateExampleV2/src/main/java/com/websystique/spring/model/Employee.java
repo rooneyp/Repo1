@@ -41,7 +41,7 @@ public class Employee {
     private Address address;
 
     //TODO how to avoid LOJ on eager fetch
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //using 'eager' not 'lazy' as entity is passed back outside Transactional boundary.
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL) //using 'eager' not 'lazy' as entity is passed back outside Transactional boundary. For BiDi use mappedBy="employee"
     @JoinColumn(name="EMPLOYEE_ID", nullable = false) //without this a JOIN Table is created/used. default name is PHONES_ID. 'nullable = false' does not get rid of LOJs 
     private Set<Phone> phones = new HashSet<Phone>(); //appears to be needed
 
