@@ -6,14 +6,18 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @EnableAutoConfiguration
-public class ExampleImpl implements Example {
+public class ExampleImpl { //implements Example {
 
-    public String home() {
-        // return new Result("Hello World!");
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public String home(@RequestParam(value="query", required=false) String query) {
+        System.out.println(query);
         return "Hello World!";
+//        return new MyResult("Hello World! - ");
     }
 
-    public MyResult result(@PathVariable Long id) {
+    @RequestMapping(value = "/result/{id}", method = RequestMethod.GET)
+    public MyResult result(@PathVariable Long id, @RequestParam(value="query", required=false) String query) {
+        System.out.println(query);
         return new MyResult("Hello World! - " + id);
     }
 
