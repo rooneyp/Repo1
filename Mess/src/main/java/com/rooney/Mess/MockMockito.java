@@ -5,6 +5,7 @@ import static org.mockito.Mockito.*;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
@@ -15,6 +16,30 @@ public class MockMockito {
     Inner inner = new Inner();
     @Spy Inner spyInner = inner;
     boolean otherBehaviour;
+    
+    @Mock MyPojo mockInterface;
+
+    
+    @Test
+    public void messWithMockInterface() {
+//        Builder<MyPojo> builder = new Builder<MyPojo>();
+        
+        //todo add boolean
+//        builder.addfilter(
+////            eq(mockInterface.getFoo(), "mocked"),
+//            eq("foo", "mocked"),
+//            lt(mockInterface.getBar(), 100),
+//            gt(mockInterface.getDonkey(), 100)
+//            ).
+//            sort(mockInterface.getBar(), DESC_ENUM).
+//            start(0).
+//            limit(20),
+//            page(2);
+            
+            
+        when(mockInterface.getFoo()).thenReturn("Mocked");
+
+    }
     
     @Test 
     public void testVoidDoNothing() {
@@ -49,5 +74,11 @@ public class MockMockito {
         void callFoo() {
             this.fooCalled = true;
         }
+    }
+    
+    public static interface MyPojo{
+        String getFoo();
+        Long getBar();
+        String getDonkey();
     }
 }

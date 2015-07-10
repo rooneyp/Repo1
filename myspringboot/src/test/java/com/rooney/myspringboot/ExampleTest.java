@@ -34,15 +34,30 @@ public class ExampleTest extends TestCase {
 		
 		feignExample = Feign.builder()
                 .decoder(new JacksonDecoder())
+                .encoder(new JacksonEncoder())
                 .target(FeignExample.class, "http://localhost:" + port) ; // + "/example");
 	}
 
-	@Test public void testFeignResult() {
+	@Test 
+	public void testFeignResult() {
 	    MyResult result = feignExample.result(99L);
 	    assertThat(result.result, is("Hello World! - 99"));
 	}
 	
-	@Test public void testHome() {
+	@Test 
+	public void testFeignGetWithQueryParams() {
+	    MyResult result = feignExample.getWithQueryParams("foo", "bar");
+	    assertThat(result.result, is("Hello World! - getWithQueryParams: foobar"));
+	}
+	
+    @Test 
+    public void testFeignGetWithQueryParam() {
+        MyResult result = feignExample.getWithQueryParam("foo");
+        assertThat(result.result, is("Hello World! - getWithQueryParams: foo"));
+    }	
+	
+	@Test 
+	public void testRESTHome() {
 	    Response response = 
         when().
                 get("/").
@@ -57,7 +72,8 @@ public class ExampleTest extends TestCase {
     }
 	
 	
-    @Test public void testResult() {
+    @Test 
+    public void testRESTResult() {
         when().
                 get("/result/{id}", "99").
         then().

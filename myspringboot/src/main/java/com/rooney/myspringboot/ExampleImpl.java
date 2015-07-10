@@ -26,6 +26,18 @@ public class ExampleImpl { //implements Example {
         return new MyResult("Hello World! - " + id);
     }
 
+    @RequestMapping(value = "/getWithQueryParams", method = RequestMethod.GET)
+    public MyResult getWithQueryParams(@RequestParam(required = false) String foo, @RequestParam(required = false) String bar) {
+        System.out.println("foo: " + foo + " bar: " + bar);
+        return new MyResult("Hello World! - getWithQueryParams: " + foo + bar);
+    }
+    
+    @RequestMapping(value = "/getWithQueryParam", method = RequestMethod.GET)
+    public MyResult getWithQueryParams(@RequestParam(required = false) String foo) {
+        System.out.println("foo: " + foo);
+        return new MyResult("Hello World! - getWithQueryParams: " + foo);
+    }    
+    
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ExampleImpl.class, args);
     }
