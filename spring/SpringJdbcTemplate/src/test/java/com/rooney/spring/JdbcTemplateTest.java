@@ -1,19 +1,22 @@
 package com.rooney.spring;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Types;
 import java.util.List;
+
+import javax.sql.DataSource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.core.RowMapper;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.jdbc.support.KeyHolder;
+import org.springframework.jdbc.core.SqlParameter;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.jdbc.object.MappingSqlQuery;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -24,9 +27,27 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "classpath:JdbcTemplateTest-context.xml" })
 @RunWith(SpringJUnit4ClassRunner.class)
 public class JdbcTemplateTest {
-
-	@Autowired
+    private static final String TABLE = "CUSTOMER";
+    private static final String SEQUENCE = "CUSTOMER_SEQ";
+    private static final String SEQUENCE_SQL =  "SELECT " + SEQUENCE + ".nextval from dual";
+    private static final String SELECT_ALL_SQL = "select * from " +  TABLE;
+    private static final String SELECT_BY_ID_SQL = SELECT_ALL_SQL + " where id = ?";
+    CustomerRowMapper rowMapper = new CustomerRowMapper();
+    BeanPropertyRowMapper<Customer> beanRowMapper = new BeanPropertyRowMapper<Customer>(Customer.class);
+            
+            
+//	@Autowired
 	JdbcTemplate jdbcTemplate;
+    private SimpleJdbcInsert insert;
+    private CustomerMappingQuery customerMappingQuery;
+	
+    @Autowired
+    public void setDataSource(DataSource dataSource) {
+        this.jdbcTemplate = new JdbcTemplate(dataSource);
+        this.insert = new SimpleJdbcInsert(dataSource).withTableName(TABLE);
+        this.customerMappingQuery = new CustomerMappingQuery(dataSource);
+    }
+	
 
     @Test
 	public void testBasicJDBCTemplate() {
@@ -53,6 +74,50 @@ public class JdbcTemplateTest {
         }
 	}
 
+    public Long generatePrimaryKey() {
+        return jdbcTemplate.queryForObject(SEQUENCE_SQL, Long.class);
+    }
+    
+    public void createCustomer(Customer customer) {
+        customer.setId(generatePrimaryKey());
+        insert.execute(new BeanPropertySqlParameterSource(customer));
+    }    
+    
+    public List<Customer> findAllCustomers() {
+        return jdbcTemplate.query(SELECT_ALL_SQL, beanRowMapper);
+    }
+    
+    public Customer findById(long id) {
+//        return rcrMappingQuery.findObject(id);
+//        return jdbcTemplate.queryForObject(SELECT_ALL_SQL, new Object[] { id }, rowMapper);         
+        return jdbcTemplate.queryForObject(SELECT_BY_ID_SQL, new Object[] { id }, beanRowMapper);         
+        
+    }    
+    
+    
+    public class CustomerMappingQuery extends MappingSqlQuery<Customer> {
+        public CustomerMappingQuery(DataSource ds) {
+            super(ds, SELECT_BY_ID_SQL);
+            super.declareParameter(new SqlParameter("id", Types.INTEGER));
+            compile();
+        }
+
+        @Override
+        protected Customer mapRow(ResultSet rs, int rowNumber) throws SQLException {
+            return rowMapper.mapRow(rs, rowNumber);
+        }
+    }     
+    
+    public class CustomerRowMapper implements RowMapper<Customer> {
+
+        public Customer mapRow(ResultSet rs, int rowNumber) throws SQLException {
+            Customer cust = new Customer();
+            cust.setId(rs.getLong("id")); 
+            //, rs.getString("first_name"), rs.getString("last_name"));
+            return cust;
+        }
+    }
+    
 //TODO test using oracle sequence (maybe h2 in oracle mode)
 //    KeyHolder keyHolder = new GeneratedKeyHolder();
 //    getJdbcTemplate().update(
@@ -93,11 +158,39 @@ public class JdbcTemplateTest {
             this.lastName = lastName;
         }
 
+        public Customer() {
+            // TODO Auto-generated constructor stub
+        }
+
         @Override
         public String toString() {
             return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
         }
         // getters & setters omitted for brevity
+
+        public long getId() {
+            return id;
+        }
+
+        public void setId(long id) {
+            this.id = id;
+        }
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public void setFirstName(String firstName) {
+            this.firstName = firstName;
+        }
+
+        public String getLastName() {
+            return lastName;
+        }
+
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
     }
 
 }
