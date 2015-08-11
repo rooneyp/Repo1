@@ -14,6 +14,17 @@ public class JodaMess {
 //        parseISODateTimeAsUTLStoreAndRetrieveAsUTC();
         parseDateAndStoreAndRetrieve();
     }
+    
+    private void learnDateTime() {
+        //        new DateTime("2015-06-16T12:33:24.051+01:00", DateTimeZone.UTC);
+                DateTime dateTimeIST = new DateTime("2015-06-16T12:33:24.051+01:00", DateTimeZone.forID("Europe/Dublin"));
+                DateTime dateTimeUTC = new DateTime("2015-06-16T12:33:24.051+01:00", DateTimeZone.UTC);
+                DateTime dateTimeISTConvertedToUTC = new DateTime(dateTimeIST, DateTimeZone.UTC);
+                
+                System.out.println("dateTimeUTC \t\t\t" + dateTimeUTC + " " + dateTimeUTC.getZone());
+                System.out.println("dateTimeIST \t\t\t" + dateTimeIST + " " + dateTimeIST.getZone());
+                System.out.println("dateTimeISTConvertedToUTC \t" + dateTimeISTConvertedToUTC + " " + dateTimeISTConvertedToUTC.getZone());
+    }    
 
     private static void misc() {
         DateTime dtDefault = new DateTime();

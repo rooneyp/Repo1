@@ -1,16 +1,19 @@
 package com.websystique.spring.model;
 
-import org.apache.commons.lang3.builder.EqualsBuilder;
-import org.apache.commons.lang3.builder.HashCodeBuilder;
-import org.apache.commons.lang3.builder.ToStringBuilder;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
+import org.hibernate.envers.Audited;
 
 /**
  * Created by paul on 01/06/15.
  */
 @Entity
-@Table 
+@Table
+@Audited
 public class Phone {
     @Id
     @GeneratedValue

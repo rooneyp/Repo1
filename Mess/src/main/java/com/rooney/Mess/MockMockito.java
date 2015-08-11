@@ -26,15 +26,14 @@ public class MockMockito {
         
         //todo add boolean
 //        builder.addfilter(
-////            eq(mockInterface.getFoo(), "mocked"),
-//            eq("foo", "mocked"),
+//            eq(mockInterface.getFoo(), "mocked"),
 //            lt(mockInterface.getBar(), 100),
 //            gt(mockInterface.getDonkey(), 100)
-//            ).
-//            sort(mockInterface.getBar(), DESC_ENUM).
-//            start(0).
-//            limit(20),
-//            page(2);
+//            )
+//            .sort(mockInterface.getBar(), DESC)
+//            .start(0)
+//            .limit(20)
+//            .page(2);
             
             
         when(mockInterface.getFoo()).thenReturn("Mocked");

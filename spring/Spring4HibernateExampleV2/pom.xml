@@ -10,7 +10,7 @@
 
 	<properties>
 		<spring.version>4.1.6.RELEASE</spring.version>
-		<hibernate.version>4.3.10.Final</hibernate.version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
 		<joda-time.version>2.3</joda-time.version>
 		<slf4j.version>1.7.12</slf4j.version>
 	</properties>
@@ -68,6 +68,13 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		
+		<!-- auditing -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
 			<version>${hibernate.version}</version>
 		</dependency>
 
