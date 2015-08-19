@@ -14,9 +14,8 @@
     <artifactId>rxjava</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-
     <dependencies>
-        <!-- Add typical dependencies for a web application -->
+     !-- Add typical dependencies for a webn -->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>

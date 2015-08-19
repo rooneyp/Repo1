@@ -27,10 +27,13 @@ public class Jaxenter {
         //listing26();
 
 //        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).collect(Collectors.toList()));
-        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).toArray().length);
+//        System.out.println(people.stream().filter((it) -> it.getAge() >= 40).toArray().length);
+
+        useMyFntIf();
 	  }
 
 	private static void listing4() {
+        //providing params chooses method we are implementing
 		Comparator<String> c = (lhs, rhs) -> lhs.compareTo(rhs); //params on left. type is optional where it can be figured out
 		int result = c.compare("Hello", "World");
 		System.out.println("result is " + result);
@@ -48,7 +51,7 @@ public class Jaxenter {
 	}
 
 	private static void listing3() {
-		//auto conf form closure to functional i/f
+		//auto conf form closure to functional i/f. provide impl for
 		Runnable r2 = () -> System.out.println("Howdy, world!");
 	    r2.run();
 
@@ -85,6 +88,28 @@ public class Jaxenter {
                     ", age=" + age +
                     '}';
         }
+    }
+
+    public static void useMyFntIf() {
+        MyFunctionalInterface<String> mfi = (it) ->  "hello" + it;
+
+        System.out.println(mfi.foo("foo"));
+    }
+
+    @FunctionalInterface
+    public interface MyFunctionalInterface<T> {
+        T foo(T a);
+
+//        T foo(T a, T b); not allowed
+//        T bar(T a, T b); not allowed
+
+//        String bar(String s, String s2); not allowed
+//        boolean equalsXXX(Object obj); //not allowed
+
+        @Override
+        boolean equals(Object obj);
+
+
     }
 
 }

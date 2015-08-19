@@ -38,6 +38,7 @@ public class ExampleTest extends TestCase {
                 .target(FeignExample.class, "http://localhost:" + port) ; // + "/example");
 	}
 
+
 	@Test 
 	public void testFeignResult() {
 	    MyResult result = feignExample.result(99L);

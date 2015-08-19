@@ -21,14 +21,14 @@ public class ExampleImpl { //implements Example {
     }
 
     @RequestMapping(value = "/result/{id}", method = RequestMethod.GET)
-    public MyResult result(@PathVariable Long id, @RequestParam(value="query", required=false) String query) {
-        System.out.println(query);
-        return new MyResult("Hello World! - " + id);
+    public MyResult result(@PathVariable String id, @RequestParam(value="query", required=false) String query) {
+        System.out.println("**************** Hello World! - " + id + "**************** " + query);
+        return new MyResult("**************** Hello World! - " + id + "****************");
     }
 
     @RequestMapping(value = "/getWithQueryParams", method = RequestMethod.GET)
     public MyResult getWithQueryParams(@RequestParam(required = false) String foo, @RequestParam(required = false) String bar) {
-        System.out.println("foo: " + foo + " bar: " + bar);
+        System.out.println("****************foo: " + foo + " bar: " + bar + " ***********************");
         return new MyResult("Hello World! - getWithQueryParams: " + foo + bar);
     }
     
