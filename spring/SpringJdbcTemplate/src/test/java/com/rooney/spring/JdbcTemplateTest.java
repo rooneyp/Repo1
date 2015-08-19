@@ -118,6 +118,16 @@ public class JdbcTemplateTest {
         }
     }
     
+    /*
+     * Uncomment to view contents of the db: http://localhost:8082/
+     * use login details from the '@TestPropertySource' annotation on this class
+    @After
+    public void after() throws Exception {
+        Server.createWebServer("-web","-webAllowOthers","-webPort","8082").start();
+        Thread.sleep(300 * 1000);
+    }
+     */    
+    
 //TODO test using oracle sequence (maybe h2 in oracle mode)
 //    KeyHolder keyHolder = new GeneratedKeyHolder();
 //    getJdbcTemplate().update(
