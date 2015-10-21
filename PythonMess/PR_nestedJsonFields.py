@@ -72,5 +72,5 @@ def processNestedReturnString(data, indent='', result=''):
 #processNestedFields(json.loads('{"xml":["somestring1","somestring2",{"nested":["nestedstring1","nestedstring2",{"nestedNested1":["nestedNestedstring1","nestedNestedstring2"]}]}]}'))
 #print processNestedReturnString(json.loads('{"xml":["somestring1","somestring2",{"nested":["nestedstring1","nestedstring2",{"nestedNested1":["nestedNestedstring1","nestedNestedstring2"]}]}]}'))
 #print processNestedBuildUsingList(json.loads('{"xml":["somestring1","somestring2",{"nested":["nestedstring1","nestedstring2",{"nestedNested1":["nestedNestedstring1","nestedNestedstring2"]}]}]}')
-print processNestedBuildUsingList(json.loads('{"xml":["Impact","RcrType","RcrStyle",{"RcrFieldChange":["ChangeType","NewValue","TargetLabel"]}]}')
+print processNestedBuildUsingList(json.loads('{"xml":["Impact","Type","Style",{"FieldChange":["ChangeType","NewValue","TargetLabel"]}]}')
                                   ,joinChar='\n')

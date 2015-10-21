@@ -1,7 +1,10 @@
 package com.rooney.Mess;
 
+import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
+
+import java.util.Map;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,6 +13,8 @@ import org.mockito.Spy;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.runners.MockitoJUnitRunner;
 import org.mockito.stubbing.Answer;
+
+import com.google.common.collect.ImmutableMap;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MockMockito {
@@ -20,6 +25,49 @@ public class MockMockito {
     @Mock MyPojo mockInterface;
 
     
+//    public static class ReturnFromMap implements Answer<T> {
+//        private Map<String, String> cannedData;
+//        
+//        public ReturnFromMap(Map<String, T> cannedData) {
+//            this.cannedData = cannedData;
+//        }
+//
+//        @Override
+//        public <T> answer(InvocationOnMock invocation) throws Throwable {
+//            return cannedData.get(invocation.getArguments()[0]);
+//        }
+//        
+//        public static Answer<String> returnFromMap(Map<String, T> cannedData) {
+//            return new ReturnFromMap(cannedData);
+//        }
+//    }
+//    
+    @Test
+    public void testReturnFromMap() throws Exception {
+        Map<String, String> cannedData = ImmutableMap.of("foo1", "bar1", "foo2", "bar2");
+        
+//        when(mockInterface.useParam(eq("foo1"))).thenReturn("bar1");
+        
+//        when(mockInterface.useParam(contains(cannedData))).thenReturn("bar1");
+        
+        when(mockInterface.useParam(anyString())).then(returnFromMap(cannedData));
+        
+        assertThat(mockInterface.useParam("foo1"), is("bar1"));
+        assertThat(mockInterface.useParam("foo2"), is("bar2"));
+    }
+
+    
+    private Answer<String> returnFromMap(final Map<String, String> cannedData) {
+        return new Answer<String>() {
+            @Override
+            public String answer(InvocationOnMock invocation) throws Throwable {
+                return cannedData.get(invocation.getArguments()[0]);
+            }
+        };
+    }
+
+
+
     @Test
     public void messWithMockInterface() {
 //        Builder<MyPojo> builder = new Builder<MyPojo>();
@@ -79,5 +127,6 @@ public class MockMockito {
         String getFoo();
         Long getBar();
         String getDonkey();
+        String useParam(String param);
     }
 }

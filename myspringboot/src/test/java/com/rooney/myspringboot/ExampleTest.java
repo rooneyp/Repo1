@@ -20,6 +20,7 @@ import com.jayway.restassured.response.Response;
 import feign.*;
 import feign.jackson.*;
 
+@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ExampleImpl.class)
 @WebIntegrationTest(randomPort = true)
@@ -35,20 +36,20 @@ public class ExampleTest extends TestCase {
 		feignExample = Feign.builder()
                 .decoder(new JacksonDecoder())
                 .encoder(new JacksonEncoder())
-                .target(FeignExample.class, "http://localhost:" + port) ; // + "/example");
+                .target(FeignExample.class, "http://localhost:" + port + "/example") ; 
 	}
 
 
 	@Test 
 	public void testFeignResult() {
 	    MyResult result = feignExample.result(99L);
-	    assertThat(result.result, is("Hello World! - 99"));
+	    assertThat(result.result, is("**************** Hello World! - 99****************"));
 	}
 	
 	@Test 
 	public void testFeignGetWithQueryParams() {
-	    MyResult result = feignExample.getWithQueryParams("foo", "bar");
-	    assertThat(result.result, is("Hello World! - getWithQueryParams: foobar"));
+	    MyResult result = feignExample.getWithQueryParams("foo foo", "bar bar");
+	    assertThat(result.result, is("Hello World! - getWithQueryParams: foo foobar bar"));
 	}
 	
     @Test 
@@ -61,7 +62,7 @@ public class ExampleTest extends TestCase {
 	public void testRESTHome() {
 	    Response response = 
         when().
-                get("/").
+                get("/example").
         then().
                 statusCode(HttpStatus.SC_OK).
                 content(Matchers.is("Hello World!")).
@@ -76,10 +77,10 @@ public class ExampleTest extends TestCase {
     @Test 
     public void testRESTResult() {
         when().
-                get("/result/{id}", "99").
+                get("/example/result/{id}", "99").
         then().
                 statusCode(HttpStatus.SC_OK).
-                body("result", Matchers.is("Hello World! - 99"));
+                body("result", Matchers.is("**************** Hello World! - 99****************"));
         
     }	
 }

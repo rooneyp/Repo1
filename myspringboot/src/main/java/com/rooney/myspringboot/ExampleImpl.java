@@ -13,26 +13,26 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExampleImpl { //implements Example {
     //TODO test with feign and test controller sharing Interface
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/example", method = RequestMethod.GET)
     public String home(@RequestParam(value="query", required=false) String query) {
         System.out.println(query);
         return "Hello World!";
 //        return new MyResult("Hello World! - ");
     }
 
-    @RequestMapping(value = "/result/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/example/result/{id}", method = RequestMethod.GET)
     public MyResult result(@PathVariable String id, @RequestParam(value="query", required=false) String query) {
         System.out.println("**************** Hello World! - " + id + "**************** " + query);
         return new MyResult("**************** Hello World! - " + id + "****************");
     }
 
-    @RequestMapping(value = "/getWithQueryParams", method = RequestMethod.GET)
+    @RequestMapping(value = "/example/getWithQueryParams", method = RequestMethod.GET)
     public MyResult getWithQueryParams(@RequestParam(required = false) String foo, @RequestParam(required = false) String bar) {
         System.out.println("****************foo: " + foo + " bar: " + bar + " ***********************");
         return new MyResult("Hello World! - getWithQueryParams: " + foo + bar);
     }
     
-    @RequestMapping(value = "/getWithQueryParam", method = RequestMethod.GET)
+    @RequestMapping(value = "/example/getWithQueryParam", method = RequestMethod.GET)
     public MyResult getWithQueryParams(@RequestParam(required = false) String foo) {
         System.out.println("foo: " + foo);
         return new MyResult("Hello World! - getWithQueryParams: " + foo);
