@@ -34,17 +34,22 @@ public class SimpleMDC {
         logger.info("I am not a crook.");
         logger.info("Attributed to the former US president. 17 Nov 1973.");
 
-        ExecutorService executor = Executors.newCachedThreadPool();
         
         //This shows only 2 different MDCs being using. As MDC is only propagated on thread creation
+        ExecutorService executor = Executors.newCachedThreadPool();
         for(int i=0; i<5; i++) {
             MDC.put("first", "dumb" + i);
             MDC.put("last", "dumb" + i);
             
             executor.execute(new DumbMDCRunnableImplementation());
         }
+        executor.shutdown();
+        executor.awaitTermination(5, TimeUnit.SECONDS);
+        
+        
         
         //This shows only 2 different MDCs being using. As MDC is only propagated on thread creation
+        executor = Executors.newCachedThreadPool();
         for(int i=0; i<5; i++) {
             MDC.put("first", "explicit" + i);
             MDC.put("last", "explicit" + i);
@@ -52,19 +57,21 @@ public class SimpleMDC {
             Map<String, String> mdcContext = MDC.getCopyOfContextMap();
             executor.execute(new ExplicitMDCRunnableImplementation(mdcContext));
         }
+        executor.shutdown();
+        executor.awaitTermination(5, TimeUnit.SECONDS);
         
-        
-        executor = ExecutorServiceMdcDecorator.decorate(executor);
         
         //This shows auto propagation of MDC by decorating ExecutorService
+        executor = ExecutorServiceMdcDecorator.decorate(Executors.newCachedThreadPool());
         for(int i=0; i<5; i++) {
             MDC.put("first", "decorated" + i);
             MDC.put("last", "decorated" + i);
             
             executor.execute(new DumbMDCRunnableImplementation());
         }        
-
-        Thread.sleep(1000 * 10);
+        executor.shutdown();
+        executor.awaitTermination(5, TimeUnit.SECONDS);
+        
     }
 
     private static final class DumbMDCRunnableImplementation implements Runnable {
