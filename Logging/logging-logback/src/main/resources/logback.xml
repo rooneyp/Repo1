@@ -4,10 +4,10 @@
         <property name="LOG_PATTERN" value="%d [%thread] %-5level %logger{36} - %msg - [{&quot;cid&quot;:&quot;%X{Correlation-ID}&quot;,&quot;jobId&quot;:&quot;%X{jobId}&quot;,&quot;bf&quot;:&quot;%X{Business-Function}&quot;}]%n" />
 
         <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-                <file>/tmp/Rooney_mdc.log</file>
+                <file>logs/SimpleMDC.log</file>
                 <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
                         <!-- daily rollover -->
-                        <fileNamePattern>logs/%d{yyyy-MM,aux}/RecordChangeRequestService.%d.log.gz</fileNamePattern>
+                        <fileNamePattern>logs/%d{yyyy-MM,aux}/SimpleMDC.%d.log.gz</fileNamePattern>
                 </rollingPolicy>
 
                 <encoder>
