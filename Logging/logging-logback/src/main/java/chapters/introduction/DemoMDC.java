@@ -7,8 +7,8 @@ import org.slf4j.MDC;
 public class DemoMDC {
     static Logger logger = LoggerFactory.getLogger(DemoMDC.class);
     static public void main(String[] args) throws Exception {
-        int numMdc = 5;
-        int numLogPerMdc = 10;
+        int numMdc = 1;
+        int numLogPerMdc = 1;
         
         if(args.length > 0) {
             numMdc = Integer.valueOf(args[0]);
