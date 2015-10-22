@@ -1,15 +1,32 @@
 <configuration>
+        <!--property name="LOG_PATTERN" value="%d [%thread] %-5level %logger{36} - [%X{cid} %X{bid}] - %msg%n" /-->
+        <!--Property Name="Log_pattern" Value="%D [%Thread] %-5level %Logger{36} - [{&Quot;Cid&Quot;:&Quot;%X{Correlation-Id}&Quot;,&Quot;Jobid&Quot;:&Quot;%X{Jobid}&Quot;,&Quot;Bf&Quot;:&Quot;%X{Business-Function}&Quot;}] - %Msg%N" /-->
+        <property name="LOG_PATTERN" value="%d [%thread] %-5level %logger{36} - %msg - [{&quot;cid&quot;:&quot;%X{Correlation-ID}&quot;,&quot;jobId&quot;:&quot;%X{jobId}&quot;,&quot;bf&quot;:&quot;%X{Business-Function}&quot;}]%n" />
+
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>/tmp/Rooney_mdc.log</file>
+                <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                        <!-- daily rollover -->
+                        <fileNamePattern>logs/%d{yyyy-MM,aux}/RecordChangeRequestService.%d.log.gz</fileNamePattern>
+                </rollingPolicy>
+
+                <encoder>
+                        <pattern>${LOG_PATTERN}</pattern>
+                </encoder>
+        </appender>
+
+        <root level="INFO">
+                <appender-ref ref="FILE" />
+        </root>
 
   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-    <!-- encoders are assigned the type
-         ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
-      <!--pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern-->
-      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %X{first} %X{last} - %msg%n</pattern>
+    <pattern>${LOG_PATTERN}</pattern>
     </encoder>
   </appender>
-
+  
   <root level="debug">
     <appender-ref ref="STDOUT" />
+    <appender-ref ref="FILE" />
   </root>
 </configuration>
