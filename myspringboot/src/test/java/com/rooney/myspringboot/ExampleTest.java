@@ -35,7 +35,7 @@ public class ExampleTest extends TestCase {
 		
 		feignExample = Feign.builder()
                 .decoder(new JacksonDecoder())
-                .encoder(new JacksonEncoder())
+                .encoder(new JacksonEncoder()) // could add something here if we wanted to encode object into request params
                 .target(FeignExample.class, "http://localhost:" + port + "/example") ; 
 	}
 

@@ -11,7 +11,7 @@ import no.priv.garshol.duke.matchers.PrintMatchListener;
 public class LearnDuke {
 
     public static void main(String[] argv) throws Exception {
-        String fileURL = "classpath:countries.xml";
+        String fileURL = "classpath:countries_multival.xml";
 
         Configuration config = ConfigLoader.load(fileURL);
         Processor proc = new Processor(config);

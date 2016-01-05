@@ -38,6 +38,7 @@ public class ExampleImpl { //implements Example {
         return new MyResult("Hello World! - getWithQueryParams: " + foo);
     }    
     
+    
     public static void main(String[] args) throws Exception {
         SpringApplication.run(ExampleImpl.class, args);
     }

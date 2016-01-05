@@ -36,7 +36,14 @@
       <comparator>no.priv.garshol.duke.comparators.Levenshtein</comparator>
       <low>0.12</low>
       <high>0.61</high>
-    </property>    
+    </property>
+    <property>
+      <name>MULTIVAL</name> 
+      <comparator>no.priv.garshol.duke.comparators.ExactComparator</comparator>
+      <low>0.12</low>
+      <high>0.61</high>
+    </property>      
+        
   </schema>
 
   <database class="no.priv.garshol.duke.databases.InMemoryDatabase">    
@@ -44,7 +51,7 @@
   
   <group>
     <csv>
-      <param name="input-file" value="./src/main/resources/countries-dbpedia.csv"/>
+      <param name="input-file" value="./src/main/resources/countries-dbpedia_multival.csv"/>
       <param name="header-line" value="false"/>
       
       <column name="1" property="ID"/>
@@ -56,12 +63,15 @@
       <column name="4"
               property="CAPITAL"
               cleaner="no.priv.garshol.duke.examples.CapitalCleaner"/>
+	  <column name="5"
+              property="MULTIVAL"
+              split-on=";"/>              
     </csv>
   </group>
 
   <group>
     <csv>
-      <param name="input-file" value="./src/main/resources/countries-mondial.csv"/>
+      <param name="input-file" value="./src/main/resources/countries-mondial_multival.csv"/>
       
       <column name="id" property="ID"/>
       <column name="country"
@@ -72,6 +82,9 @@
               cleaner="no.priv.garshol.duke.cleaners.LowerCaseNormalizeCleaner"/>
       <column name="area"
               property="AREA"/>
+	  <column name="multival"
+              property="MULTIVAL"
+              split-on=";"/>                
     </csv>
   </group>
 

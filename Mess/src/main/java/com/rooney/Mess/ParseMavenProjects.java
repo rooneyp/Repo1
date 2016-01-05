@@ -29,8 +29,8 @@ public class ParseMavenProjects {
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-//        parseCustConfigServices("c:\\temp\\hsbc\\depends.txt");
-          getVerOfSharedServices("c:\\temp\\bpllive\\devstack.txt");
+        parseCustConfigServices("c:\\temp\\hsbc\\depends.txt");
+//          getVerOfSharedServices("c:\\temp\\bpllive\\devstack.txt");
     }
 
     private static void getVerOfSharedServices(String fileName) throws Exception {
