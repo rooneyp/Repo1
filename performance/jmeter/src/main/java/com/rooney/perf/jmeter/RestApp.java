@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.Callable;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ConcurrentHashMap;
@@ -80,7 +81,7 @@ public class RestApp {
     
     
     public static class Worker implements Callable {
-    	long sleep = 30000L;
+    	long sleep = 3000L;
     	String workerId;
     	String result;
 
@@ -92,7 +93,7 @@ public class RestApp {
 		@Override
 		public Object call() throws Exception {
 			System.out.println(Thread.currentThread() + " Work Start");
-			Thread.sleep(sleep);
+			Thread.sleep(sleep + new Random(sleep).nextInt());
 			System.out.println(Thread.currentThread() + " Work Complete");
 			result = workerId + "COMPLETE";
 			return this;
