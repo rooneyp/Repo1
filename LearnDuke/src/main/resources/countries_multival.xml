@@ -11,6 +11,11 @@
           name="AreaComparator">
     <param name="min-ratio" value="0.7"/>
   </object>
+  
+  <object class="com.rooney.learnduke.MyComparator" name="MyComparator">
+  </object>
+
+
 
   <schema>
     <threshold>0.7</threshold>
@@ -43,6 +48,12 @@
       <low>0.12</low>
       <high>0.61</high>
     </property>      
+    <property>
+      <name>SERIES</name> 
+      <comparator>MyComparator</comparator>
+      <low>0.12</low>
+      <high>0.61</high>
+    </property>      
         
   </schema>
 
@@ -66,6 +77,9 @@
 	  <column name="5"
               property="MULTIVAL"
               split-on=";"/>              
+	  <column name="6"
+              property="SERIES"
+              />              
     </csv>
   </group>
 
@@ -85,6 +99,9 @@
 	  <column name="multival"
               property="MULTIVAL"
               split-on=";"/>                
+	  <column name="series"
+              property="SERIES"
+              />                
     </csv>
   </group>
 
