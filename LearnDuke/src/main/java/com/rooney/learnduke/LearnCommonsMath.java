@@ -11,8 +11,18 @@ import org.apache.commons.math3.stat.descriptive.moment.Mean;
 public class LearnCommonsMath {
 	public static void main(String[] args) {
 //		stats();
-		correlation();
+		//correlation();
+		chiSquared();
 	}
+
+	
+	
+	private static void chiSquared() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
 
 	private static void correlation() {
 		// peasons has -1 to +1 as a result
