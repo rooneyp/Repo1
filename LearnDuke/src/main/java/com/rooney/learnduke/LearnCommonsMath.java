@@ -24,7 +24,11 @@ public class LearnCommonsMath {
 		double[] lhs = {100, 110, 120 };
 		double[] rhs;
 		
-		correlation(lhs, 90, 80, 70 ); //-1 -100
+		correlation(lhs, 90.0, 80.0, 70.0 ); //-1 -100
+		
+		correlation(lhs, 90.0, 10.0, 70.0 ); //-1 -100
+		
+		
 		correlation(lhs, 3, 2, 1 ); //-1 -10
 		
 		correlation(lhs, 110, 120, 130 ); //1 100
@@ -42,7 +46,7 @@ public class LearnCommonsMath {
 
 	private static void correlation(double[] lhs, double... rhs) {
 		System.out.println("PearsonsCorrelation: " + Arrays.toString(lhs) + ", " + Arrays.toString(rhs)  + " result = "+ new PearsonsCorrelation().correlation(lhs, rhs));
-		System.out.println("unbiased covariance: " + Arrays.toString(lhs) + ", " + Arrays.toString(rhs)  + " result = "+ new Covariance().covariance(lhs, rhs));
+//		System.out.println("unbiased covariance: " + Arrays.toString(lhs) + ", " + Arrays.toString(rhs)  + " result = "+ new Covariance().covariance(lhs, rhs));
 	}
 
 	private static void stats() {
