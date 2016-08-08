@@ -1,0 +1,27 @@
+grammar org.example.domainmodel.Domainmodel with org.eclipse.xtext.common.Terminals
+ 
+generate domainmodel "http://www.example.org/domainmodel/Domainmodel"
+ 
+//start rule 
+Domainmodel :
+    (elements+=Type)*; //elements is a feature
+  
+Type:
+    DataType | Entity; //one or another rule
+  
+DataType:
+    'datatype' name=ID; //datatype is the keyword, ID from Terminals
+ 
+Entity:
+    'entity' name=ID ('extends' superType=[Entity])? '{' //? is optional, has a feature named 'supertype'
+        (features+=Feature)*                             // [] is rxref
+    '}';												//between curly braces >=0 Features
+ 
+Feature:
+    (many?='many')? name=ID ':' type=[Type]; //many shall be used to model a multi-valued feature
+    										//?= means boolean type/assignment
+    										//equals is assignment
+    										// keywords is in ''
+    										//multival assignments use +=
+    										//cardinalities ? is optional, * is any amt, + is >1
+//See full grammer https://eclipse.org/Xtext/documentation/301_grammarlanguage.html 
