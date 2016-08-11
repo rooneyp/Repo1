@@ -6,7 +6,7 @@
 
 	<appender name="FILEA"
 		class="ch.qos.logback.core.FileAppender">
-		<file>/logs/ServiceA.log</file>
+		<file>./target/logs/ServiceA.log</file>
 
 		<encoder>
 			<pattern>${LOG_PATTERN}</pattern>
@@ -15,7 +15,7 @@
 
 	<appender name="FILEB"
 		class="ch.qos.logback.core.FileAppender">
-		<file>/logs/ServiceB.log</file>
+		<file>./target/logs/ServiceB.log</file>
 
 		<encoder>
 			<pattern>${LOG_PATTERN}</pattern>
@@ -24,13 +24,27 @@
 
 	<appender name="FILEC"
 		class="ch.qos.logback.core.FileAppender">
-		<file>/logs/ServiceC.log</file>
+		<file>./target/logs/ServiceC.log</file>
 
 		<encoder>
 			<pattern>${LOG_PATTERN}</pattern>
 		</encoder>
 	</appender>
 
+
+	<appender name="PERF-APPENDER" class="ch.qos.logback.core.FileAppender">
+		<file>./target/logs/perf.log</file>
+
+		<encoder>
+			<pattern>${LOG_PATTERN}</pattern>
+		</encoder>
+	</appender>
+	
+	
+	<logger name="PERF_LOGGER" level="DEBUG" additivity="false">
+        <appender-ref ref="PERF-APPENDER"/>
+    </logger>
+	
 
 	<root level="INFO">
 		<appender-ref ref="FILEA" />
