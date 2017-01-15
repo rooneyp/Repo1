@@ -3,6 +3,9 @@ package com.rooney.myspringboot;
 import static com.jayway.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
+
+import java.util.Arrays;
+
 import junit.framework.*;
 
 import org.apache.http.*;
@@ -20,7 +23,7 @@ import com.jayway.restassured.response.Response;
 import feign.*;
 import feign.jackson.*;
 
-@Ignore
+//@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ExampleImpl.class)
 @WebIntegrationTest(randomPort = true)
@@ -57,6 +60,15 @@ public class ExampleTest extends TestCase {
         MyResult result = feignExample.getWithQueryParam("foo");
         assertThat(result.result, is("Hello World! - getWithQueryParams: foo"));
     }	
+    
+    @Test 
+    public void testFeignPutWithObject() {
+//        ParentPojo parentPojo = new ParentPojo("parFoo1", 10, Arrays.asList(new ChildPojo("cldBar1", 100), new ChildPojo("cldBar2", 200)));
+        ParentPojo parentPojo = new ParentPojo("parFoo1", 10);
+		ParentPojo result = feignExample.create(parentPojo );
+        assertThat(result, is(parentPojo));
+    }	
+    
 	
 	@Test 
 	public void testRESTHome() {

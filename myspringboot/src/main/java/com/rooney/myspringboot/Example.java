@@ -10,5 +10,8 @@ public interface Example {
     
     @RequestMapping(value = "/result/{id}", method = RequestMethod.GET)
     MyResult result(Long id);
+    
+    @RequestMapping(value = "/create", method = RequestMethod.POST)
+    public ParentPojo create(@RequestBody ParentPojo parentPojo);
 
 }

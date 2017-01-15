@@ -2,6 +2,7 @@ package com.rooney.myspringboot;
 
 import javax.inject.Named;
 
+import feign.Headers;
 import feign.Param;
 import feign.RequestLine;
 
@@ -25,4 +26,8 @@ public interface FeignExample {
     //TODO @Body
     
     //TODO feign using url named params, controller use Map or query params
+    
+    @RequestLine("POST /create")
+    @Headers("Content-Type: application/json")
+    public ParentPojo create(ParentPojo parentPojo);
 }
