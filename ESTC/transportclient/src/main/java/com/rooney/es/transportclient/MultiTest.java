@@ -108,15 +108,16 @@ public class MultiTest {
     	}
     	
     	executor.shutdown();
+    	client.close();
     }
 
 	private Callable<Result> createLoader(List<String> ids, Client client) {
 		if(multiMode.equalsIgnoreCase("mget")){
-			return new MGetLoader(ids, client);
+			return new MGet(ids, client);
 		} else if(multiMode.equalsIgnoreCase("search")){
-			return new SearchLoader(ids, client);
+			return new Search(ids, client);
 		} else if(multiMode.equalsIgnoreCase("msearch")){
-			return new MSearchLoader(Lists.partition(ids, msearchTerms), client);
+			return new MSearch(Lists.partition(ids, msearchTerms), client);
 		}
 		throw new RuntimeException("unknown mode: " + multiMode);
 	}
@@ -171,11 +172,11 @@ public class MultiTest {
     }
     
     
-    public static class MGetLoader implements Callable<Result> {
+    public static class MGet implements Callable<Result> {
 		private List<String> ids;
 		private Client client;
 
-		public MGetLoader(List<String> ids, Client client) {
+		public MGet(List<String> ids, Client client) {
 			super();
 			this.ids = ids;
 			this.client = client;
@@ -188,7 +189,7 @@ public class MultiTest {
 	    		    .add(indexName, typeName, ids)
 	    		    .get();
 	    	
-	    	System.out.println(Thread.currentThread() + " start id " + ids.get(0) + " end id " + ids.get(ids.size()-1) + " time is " + sw.toString() + " for batch of " + ids.size());
+//	    	System.out.println(Thread.currentThread() + " start id " + ids.get(0) + " end id " + ids.get(ids.size()-1) + " time is " + sw.toString() + " for batch of " + ids.size());
 	    	
 	    	if(verbose) {
 	    		for (MultiGetItemResponse multiGetItemResponse : multiGetItemResponses) {
@@ -205,11 +206,11 @@ public class MultiTest {
 		}
     }
     	
-    public static class SearchLoader implements Callable<Result> {
+    public static class Search implements Callable<Result> {
 		private List<String> ids;
 		private Client client;
 
-		public SearchLoader(List<String> ids, Client client) {
+		public Search(List<String> ids, Client client) {
 			super();
 			this.ids = ids;
 			this.client = client;
@@ -222,6 +223,7 @@ public class MultiTest {
 			
 			SearchResponse response = client.prepareSearch(indexName)
 //			        .setSearchType(SearchType.DFS_QUERY_THEN_FETCH)
+					.addFields("_DOCUMENTS.ID_ISIN","_DOCUMENTS.ID_BB_UNIQUE_ID_BB_GLOBAL")
 			        .setQuery(QueryBuilders.constantScoreQuery(QueryBuilders.termsQuery("_DOCUMENTS.ID_ISIN.raw", ids)))
 			        .setSize(10000)
 			        .execute()
@@ -229,8 +231,8 @@ public class MultiTest {
 			
 			//https://www.elastic.co/guide/en/elasticsearch/client/java-api/2.4/java-search-msearch.html
 
-			System.out.println(Thread.currentThread() + " start id " + ids.get(0) + " end id " + ids.get(ids.size() - 1)
-					+ " time is " + sw.toString() + " for batch of " + ids.size());
+//			System.out.println(Thread.currentThread() + " start id " + ids.get(0) + " end id " + ids.get(ids.size() - 1)
+//					+ " time is " + sw.toString() + " for batch of " + ids.size());
 
 			if (verbose) {
 				System.out.println("Retrieved " + response);
@@ -243,11 +245,11 @@ public class MultiTest {
     	
     }
     
-    public static class MSearchLoader implements Callable<Result> {
+    public static class MSearch implements Callable<Result> {
 		private List<List<String>> ids;
 		private Client client;
 
-		public MSearchLoader(List<List<String>> ids, Client client) {
+		public MSearch(List<List<String>> ids, Client client) {
 			super();
 			this.ids = ids;
 			this.client = client;
@@ -282,8 +284,8 @@ public class MultiTest {
 					.execute()
 					.actionGet();
 
-			System.out.println(Thread.currentThread() + " start id " + ids.get(0).get(0) + " end id " + ids.get(ids.size() - 1).get(ids.get(ids.size() - 1).size() -1)
-					+ " time is " + sw.toString() + " for batch of " + ids.size());
+//			System.out.println(Thread.currentThread() + " start id " + ids.get(0).get(0) + " end id " + ids.get(ids.size() - 1).get(ids.get(ids.size() - 1).size() -1)
+//					+ " time is " + sw.toString() + " for batch of " + ids.size());
 
 			if (verbose) {
 				for (MultiSearchResponse.Item item : sr.getResponses()) {
