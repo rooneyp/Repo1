@@ -1,25 +1,29 @@
 package com.rooney.myspark;
-/* SimpleApp.java */
-import org.apache.spark.api.java.*;
-import org.apache.spark.SparkConf;
-import org.apache.spark.api.java.function.Function;
+import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.Dataset;
 
-//http://spark.apache.org/docs/latest/quick-start.html
 public class SimpleApp {
   public static void main(String[] args) {
-    String logFile = "YOUR_SPARK_HOME/README.md"; // Should be some file on your system
-    SparkConf conf = new SparkConf().setAppName("Simple Application");
-    JavaSparkContext sc = new JavaSparkContext(conf);
-    JavaRDD<String> logData = sc.textFile(logFile).cache();
+    String logFile = "/Users/paul/Dev/Apps/spark-3.1.1-bin-hadoop3.2/README.md"; // Should be some file on your system
+    //SparkSession spark = SparkSession.builder().appName("Simple Application").getOrCreate();
+    SparkSession spark = SparkSession.builder().appName("Simple Application").master("local[*]").getOrCreate();
 
-    long numAs = logData.filter(new Function<String, Boolean>() {
-      public Boolean call(String s) { return s.contains("a"); }
-    }).count();
+    Dataset<String> logData = spark.read().textFile(logFile).cache();
 
-    long numBs = logData.filter(new Function<String, Boolean>() {
-      public Boolean call(String s) { return s.contains("b"); }
-    }).count();
+    //not working in java due to ambiguous filter method
+    //See https://stackoverflow.com/questions/59712047/java8-maven-raise-error-reference-to-filter-is-ambiguous
+    //long numAs = logData.filter(s -> s.contains("a")).count();
+    //long numBs = logData.filter(s -> s.contains("b")).count();
+
+    long numAs = logData.filter((org.apache.spark.api.java.function.FilterFunction<String>)s -> s.contains("a")).count();
+    long numBs = logData.filter((org.apache.spark.api.java.function.FilterFunction<String>)s -> s.contains("b")).count();
+
 
     System.out.println("Lines with a: " + numAs + ", lines with b: " + numBs);
+
+
+
+    spark.stop();
   }
+
 }

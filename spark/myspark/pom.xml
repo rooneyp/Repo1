@@ -12,52 +12,59 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>11</maven.compiler.release>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>Akka repository</id>
-      <url>http://repo.akka.io/releases</url>
-    </repository>
-  </repositories>
-  
   <dependencies>
+<!--    With logback-classic we see this WARN -->
+<!--    log4j:WARN No appenders could be found for logger (org.apache.htrace.core.Tracer).-->
+<!--    log4j:WARN Please initialize the log4j system properly.-->
+<!--    log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.-->
+
+<!--    Tracer has apache commons logging Log LOG = LogFactory.getLog(Tracer.class);-->
+<!--      Factory for creating Log instances, which always delegates to an instance of SLF4JLogFactory.-->
+<!--      from /Users/paul/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.30/jcl-over-slf4j-1.7.30.jar-->
+
+<!--    <dependency>-->
+<!--      <groupId>ch.qos.logback</groupId>-->
+<!--      <artifactId>logback-classic</artifactId>-->
+<!--      <version>1.2.3</version>-->
+<!--    </dependency>-->
+
     <dependency> <!-- Spark dependency -->
       <groupId>org.apache.spark</groupId>
-      <artifactId>spark-core_2.10</artifactId>
-      <version>1.0.1</version>
+      <artifactId>spark-sql_2.12</artifactId>
+      <version>3.1.1</version>
+      <exclusions>
+<!--        <exclusion>-->
+<!--          &lt;!&ndash; excluding this stops SLF4J complaining about multiple bindings &ndash;&gt;-->
+<!--&lt;!&ndash;          But Tracer uses Apache logging... and must react to the log4j jar on the classpath&ndash;&gt;-->
+<!--&lt;!&ndash;          log4j:WARN No appenders could be found for logger (org.apache.htrace.core.Tracer).&ndash;&gt;-->
+<!--&lt;!&ndash;          log4j:WARN Please initialize the log4j system properly.&ndash;&gt;-->
+<!--&lt;!&ndash;          log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.&ndash;&gt;-->
+<!--          <artifactId>slf4j-log4j12</artifactId>-->
+<!--          <groupId>org.slf4j</groupId>-->
+<!--        </exclusion>-->
+
+<!--        exclusion causes error. something is referencing java.lang.NoClassDefFoundError: org/apache/log4j/spi/Filter-->
+<!--        <exclusion>-->
+<!--          <artifactId>log4j</artifactId>-->
+<!--          <groupId>log4j</groupId>-->
+<!--        </exclusion>-->
+      </exclusions>
+      <!--scope>provided</scope-->
     </dependency>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+
   </dependencies>
-  
-<build>
+
+  <build>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.3.1</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <executable>ls </executable>
-          <!-- optional -->
-          <workingDirectory>/tmp</workingDirectory>
-          <!--arguments>
-            <argument>myproject:dist</argument>
-          </arguments-->
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>  
-  
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.8.1</version>
+    </plugin>
+  </plugins>
+  </build>
+
 </project>
