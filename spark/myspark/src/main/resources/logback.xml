@@ -6,12 +6,16 @@
         </encoder>
     </appender>
 
-    <logger name="org.apache.spark" level="ERROR" additivity="false">
+    <logger name="org.apache.spark" level="WARN" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+    </logger>
+
+    <logger name="com.rooney" level="INFO" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 
 
-    <root level="ERROR">
+    <root level="WARN">
         <appender-ref ref="CONSOLE"/>
     </root>
 

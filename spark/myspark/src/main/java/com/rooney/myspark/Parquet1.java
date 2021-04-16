@@ -17,7 +17,7 @@ import static org.apache.spark.sql.functions.*;
 public class Parquet1 {
 
     public static void main(String[] args) {
-        SparkSession spark = SparkSession.builder().appName("Parquet1 Application").master("local[*]").getOrCreate();
+        SparkSession spark = SparkSession.builder().appName("Parquet1 Application").master("local[*,3]").getOrCreate(); //3 is retries
         Parquet1 parquet1 = new Parquet1();
         //jsonToParquetAndSql(spark);
 

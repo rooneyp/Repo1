@@ -2,7 +2,7 @@ package com.rooney.myspark;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 
-public class SimpleApp {
+public class MySimpleApp {
   public static void main(String[] args) {
     String logFile = "/Users/paul/Dev/Apps/spark-3.1.1-bin-hadoop3.2/README.md"; // Should be some file on your system
     //SparkSession spark = SparkSession.builder().appName("Simple Application").getOrCreate();
