@@ -10,7 +10,7 @@
 
 	<properties>
 		<spring.version>4.1.6.RELEASE</spring.version>
-		<hibernate.version>4.3.11.Final</hibernate.version>
+		<hibernate.version>5.3.20.Final</hibernate.version>
 		<joda-time.version>2.3</joda-time.version>
 		<slf4j.version>1.7.12</slf4j.version>
 	</properties>
